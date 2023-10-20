@@ -1,0 +1,32 @@
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-container{
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+  }
+}
+.container1{
+    border: 1px solid grey;
+    box-shadow: 2px 1px 3px red;
+    margin:  20px;
+}
+button{
+    padding-left: 10px;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    color: green;
+    cursor: pointer;
+    box-shadow: 2px 4px 1px grey;
+}
+ol
+li{
+  list-style-type: none;
+  color: rgb(230, 177, 81);
+}
