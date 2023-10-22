@@ -16,26 +16,23 @@ const [data, setData] = useState([
    } 
 
     
-    const sortItems = () => {
-    const newdata = [...data].toSorted((a, b) => a.year > b.year ? 1 : -1) 
-    setData(newdata)
+    const sortItems = () => { 
+    setData([...data].toSorted((a, b) => a.year > b.year ? 1 : -1) )
    }
 
    const addItem = () => {
-    const addData = data.map(elm => ({...elm, isActive: "true"} )) 
-    console.log(addData)
-    setData(addData)
-    console.log(data)
+    setData(data.map(elm => ({...elm, isActive: "true"} )))
+    
    }
   
     return(
     <div className='hw'>
       <h1>Homework</h1>
       <button className='sort' onClick = {sortItems}>Sort by year</button>
-      <button className='add' onClick = {addItem}>add</button>
+      <button className='add' onClick = {addItem}>Add info</button>
 
       {
-        data.map((elm,ind) => <li className='list' key = {ind}>id:{elm.id}, name:{elm.name}, year:{elm.year},  {elm.isactive ? 'isactive: true' : false}<span className="delbtn"onClick = {() => deleteItem(ind)} >x</span></li> )
+        data.map((elm,ind) => <li className='list' key = {ind}>id:{elm.id}, name:{elm.name}, year:{elm.year},  {elm.isActive ? 'isActive: true' : false}<span className="delbtn"onClick = {() => deleteItem(ind)} >x</span></li> )
       }
       
     </div>
