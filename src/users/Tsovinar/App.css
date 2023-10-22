@@ -25,7 +25,9 @@ font-size: 20px;
     margin-left: 5px;
     padding: 5px;
 }
-.sort:hover{
+.sort:hover,
+.add:hover
+{
     transform: scaleY(1.1);
     transform: translateY(-5px);
     background-color: grey;
