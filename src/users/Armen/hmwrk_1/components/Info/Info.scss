@@ -1,0 +1,118 @@
+.Info {
+	min-height: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	color: lavender;
+	transform-style: preserve-3d;
+	perspective: 2000px;
+
+	&-person {
+		--height: 300px;
+		min-height: var(--height);
+		max-height: 80%;
+		flex-basis: 22%;
+		min-width: 170px;
+		border: 2px solid purple;
+		position: relative;
+		padding: 20px;
+		border-radius: 8px;
+		overflow: hidden;
+		background: linear-gradient(to bottom right, cyan, teal);
+		box-shadow: 3px 6px 6px #0004;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: 0.4s ease;
+		transform: translateX(calc(var(--index) * -15%)) translateZ(100px) rotateY(20deg);
+
+		&_shake {
+			animation: rotation 0.004s linear 50;
+		}
+
+		&_removed {
+			transform: translateY(-70vh) translateZ(100px) rotateY(0deg);
+			transition: 0.7s ease;
+		}
+	}
+
+	&-id {
+		position: absolute;
+		top: -50%;
+		left: 0;
+		opacity: 0.4;
+		mix-blend-mode: overlay;
+		font-size: calc(var(--height) * 1.3);
+		z-index: 1;
+	}
+
+	&-remove {
+		position: absolute;
+		bottom: 10px;
+		font-size: 1.6em;
+		color: teal;
+		cursor: pointer;
+		z-index: 1;
+		opacity: 0.5;
+		transition: 0.3s ease;
+
+		&:hover {
+			transition: 0.3s ease;
+			scale: 1.08;
+			opacity: 1;
+		}
+
+		&:active {
+			scale: 0.95;
+			color: rgb(211, 0, 0);
+			transition: 0.3s ease;
+		}
+	}
+
+	&-nameWrapper {
+		background: linear-gradient(to bottom right, rgb(255, 0, 225) 50%, rgb(173, 0, 153) 51%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		z-index: 2;
+	}
+
+	&-name {
+		font-size: 4em;
+		font-style: italic;
+		text-shadow: 2px 4px 4px #0004;
+	}
+
+	&-status {
+		width: 70%;
+		height: 4px;
+		border-radius: 50%;
+		background: linear-gradient(to right, transparent, cyan, transparent);
+		margin-top: -16px;
+		transition: 0.8s ease;
+
+		&_active {
+			transition: 0.8s ease;
+			background: linear-gradient(to right, transparent, rgb(255, 0, 247), transparent);
+			box-shadow: 0 0 10 3px rgba(255, 0, 247, 50%), 0 0 15px 6px rgba(255, 0, 247, 30%);
+		}
+	}
+
+	&-year {
+		color: teal;
+		mix-blend-mode: color-burn;
+		text-align: center;
+		font-size: 1.8em;
+	}
+}
+
+@keyframes rotation {
+	0% {
+		transform: translateX(calc(var(--index) * -15% - 20px)) translateZ(100px);
+	}
+	100% {
+		transform: translateX(calc(var(--index) * -15% + 20px)) translateZ(100px);
+	}
+}

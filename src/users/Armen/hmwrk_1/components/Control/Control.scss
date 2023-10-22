@@ -1,0 +1,32 @@
+.Control {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+
+	&-btn {
+		border: 0;
+		border-radius: 6px;
+		width: 180px;
+		height: 40px;
+		background: purple;
+		color: lavender;
+		box-shadow: 2px 4px 5px 2px #0003;
+		font-size: 1.4em;
+		cursor: pointer;
+		transition: 0.1s ease;
+
+		&:hover {
+			background: lavenderblush;
+			color: purple;
+			transition: 0.1s linear;
+		}
+
+		&:active {
+			scale: 0.98;
+			box-shadow: none;
+			background: greenyellow;
+			color: purple;
+			transition: 0.1s linear;
+		}
+	}
+}
