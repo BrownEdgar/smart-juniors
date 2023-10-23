@@ -1,0 +1,93 @@
+.NoDataScreen {
+	border: 8px solid rgb(24, 145, 231);
+	border-left: 0;
+	border-right: 0;
+	background: #010101;
+	box-shadow: 0 0 12px 3px rgba(24, 145, 231, 30%), inset 0 0 12px 3px rgba(24, 145, 231, 30%);
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	&-logoWrapper {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		width: 250px;
+		height: 250px;
+
+		& > * {
+			position: absolute;
+			border-radius: 50%;
+			box-shadow: 0 0 8px 2px rgba(24, 145, 231, 20%), inset 0 0 8px 2px rgba(24, 145, 231, 20%),
+				0 0 20px 4px rgba(24, 145, 231, 10%), inset 0 0 20px 4px rgba(24, 145, 231, 10%);
+		}
+	}
+
+	&-ovalOne,
+	&-ovalTwo,
+	&-ovalThree {
+		width: 200px;
+		height: 80px;
+		border: 10px solid rgb(24, 145, 231);
+		animation: rotate 12s linear infinite;
+	}
+
+	&-ovalTwo {
+		animation-delay: -4s;
+	}
+
+	&-ovalThree {
+		animation-delay: -8s;
+	}
+
+	&-circle {
+		width: 40px;
+		height: 40px;
+		background: rgb(24, 145, 231);
+	}
+
+	&-text {
+		color: aliceblue;
+		letter-spacing: 1px;
+
+		:nth-child(1) {
+			animation-delay: 0s;
+		}
+		:nth-child(2) {
+			animation-delay: 0.2s;
+		}
+		:nth-child(3) {
+			animation-delay: 0.4s;
+		}
+
+		& span {
+			animation: loading 0.6s ease infinite;
+		}
+	}
+}
+
+@keyframes rotate {
+	0% {
+		rotate: 0;
+	}
+	100% {
+		rotate: 1turn;
+	}
+}
+
+@keyframes loading {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

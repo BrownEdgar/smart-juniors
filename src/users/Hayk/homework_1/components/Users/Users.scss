@@ -1,0 +1,41 @@
+.Users {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 20px;
+
+    &-item {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        position: relative;
+        max-width: 400px;
+        padding: 12px 36px;
+        border-radius: 10px;
+        background-color: antiquewhite;
+        font-size: 24px;
+        transition: all .3s linear;
+
+        &:hover {
+            color: white;
+            background-color: lightseagreen;
+        }
+
+        &_active {
+            color: white;
+            background-color: lightseagreen;
+        }
+
+        &_deletebtn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 16px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
