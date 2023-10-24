@@ -5,7 +5,7 @@ import "./App.css"
 export default function App() {
 
   const [data, setData] = useState([
-    { id: 1, name: "Wes", year: 1988 },
+    { id: 1, name: "Wes", year: 19 },
     { id: 2, name: "Kait", year: 1986 },
     { id: 3, name: "Irv", year: 1970 },
     { id: 4, name: "Lux", year: 2015 }])
