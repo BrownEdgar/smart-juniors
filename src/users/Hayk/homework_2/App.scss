@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700&family=Roboto&display=swap');
+
+body {
+  line-height: 1.6;
+    background-color: rgb(31, 31, 31);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(22, 22, 22);
+}
+
+::-webkit-scrollbar-button {
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(50, 50, 50);
+}
+
+.App {
+    display: grid;
+    gap: 30px;
+    justify-content: space-between;
+    grid-template-columns: 1fr 3fr;
+    padding: 30px;
+    font-family: "Playpen Sans";
+
+    &-header,
+    &-info{
+        background-color: #303030;
+        padding: 20px 0;
+
+        & h1 {
+
+            color: white;
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+    
+    &-leftSide {
+        width: 400px;
+    }
+
+    &-rightSide {
+        background-color: rgb(50, 50, 50);
+        padding: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+}
