@@ -1,52 +1,42 @@
 .App {
-    margin: 20px;
-    text-align: center;
-    &-table {   
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        & th, & td {
-            background-color: #f2f2f2;
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-        & th {
-            background-color: grey !important;
-        }
+  margin: 20px;
+  text-align: center;
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    & th,
+    & td {
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      padding: 10px;
     }
-    &-btn {
-        cursor: pointer;
-        padding: 5px 10px;
-        font-size: 16px;
-        border: none;
-        background-color: grey;
-        &_active {
-            cursor: pointer;
-            padding: 5px 10px;
-            font-size: 16px;
-            border: none;
-            background-color: grey;
-            color: green;
-        }
-        &_delete {
-            cursor: pointer;
-            padding: 5px 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: #ccc;
-            color: white;
-        }
-        &_delete:hover {
-            background-color: red;
-        }
+    & th {
+      background-color: grey !important;
     }
-    &-span {
-        padding: 5px 10px;
-        color: #ccc;
-        &_active {
-            padding: 5px 10px;
-            color: green;
-        }
+  }
+  &-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    background-color: grey;
+    &_active {
+      color: green;
     }
+    &_delete {
+      color: white;
+      &:hover {
+        background-color: red;
+      }
+    }
+  }
+  &-span {
+    padding: 5px 10px;
+    color: #ccc;
+    &_active {
+      padding: 5px 10px;
+      color: green;
+    }
+  }
 }
