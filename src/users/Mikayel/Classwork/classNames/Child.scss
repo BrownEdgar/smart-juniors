@@ -1,0 +1,22 @@
+.btn {
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 12px;
+    padding: 0.6em 1em;
+    margin: 1em;
+    &-danger {
+        background-color: #ff0505;
+        color: #fff;
+    };
+    &-success {
+        background-color: #12d1ab;
+        color: #fff;
+    }
+    &-default {
+        background-color: #ccc;
+        color: #000;
+        border: 1px solid #000;
+    }
+}

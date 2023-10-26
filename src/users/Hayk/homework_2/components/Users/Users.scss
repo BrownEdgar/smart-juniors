@@ -1,0 +1,32 @@
+.Users {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 3px rgb(27, 27, 27);
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    &-child {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        background: rgb(60, 60, 60);
+        padding: 12px;
+
+        &:nth-child(2n + 1) {
+            background-color: rgb(40, 40, 40); 
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: darkcyan;
+        }
+
+         &_active {
+            background-color: darkcyan !important;
+        }
+    }
+}
