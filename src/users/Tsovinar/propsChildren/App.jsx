@@ -10,16 +10,16 @@ export default function App() {
     const[isOpen, setIsopen] = useState(false)
     const toggleModal = () => setIsopen(!isOpen)
     const[currentIndex, setCurrentIndex] = useState(null)
-    const deleteItem = (ind) => {
+    const deleteItem = () => {
         setTodos(todos.toSpliced(currentIndex, 1)),
         toggleModal()}
 
     useEffect(() => {
         axios({
             baseURL:"https://jsonplaceholder.typicode.com/",
-            url:"todos",
+            url:"posts",
             params: {
-                _limit: 10
+                _limit: 6
             }  
         })
         .then(res => setTodos(res.data))
@@ -30,27 +30,27 @@ export default function App() {
     <div className='App'>
          {
         isOpen ? (
-            <Modal toggleModal = {toggleModal} theme >
-                <h2>Are you sure?</h2>
-                <button onClick={deleteItem}>yes</button>
+            <Modal toggleModal = {toggleModal} theme ="dark" >
+                <h2>Are you sure to delete the selected item?</h2>
+                <button onClick={deleteItem}>delete</button>
                 <button onClick={toggleModal}>cancel</button>
             </Modal>
                 ) : null
        }
        <div className="todos">
        {
-            todos.map((todo,ind) => {
+            todos.map((post,ind) => {
                 return (
-                <Fragment key={todo.id}>
+                <Fragment key={post.id}>
                     <div >
                         <button onClick= {() => {
                             toggleModal(),
                             setCurrentIndex(ind)
-                            }}>x</button>
-                         <p>{todo.id}</p>
-                         <p>{todo.title}</p>
+                            }}><span className='delete'>x</span></button>
+                         <h2>id: {post.id}</h2>
+                         <p><span className='title'>Title:</span> {post.title.toUpperCase()}</p>
+                         <p><span className='title'>Content:</span> {post.body.replace(post.body[0] , post.body[0].toUpperCase())}</p>
                     </div>
-               
                 </Fragment>
                 )
             })
