@@ -7,22 +7,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99;
+    z-index: 5;
     &-content{
         min-width: 200px;
         padding: 1em 2em;
-        background-color: rgb(239, 242, 245);
+        background-color: rgb(131, 170, 209);
         color: #000000;
         border-radius: 12px;
         text-align: center;
         font-size: 12px;
         &_dark{
-            background-color: rgb(139, 102, 0);
-            color: coral;
+            background-color: rgb(128, 216, 117);
+            color: rgb(26, 25, 24);
         }
         &_light{
             color: brown;
             background-color: chartreuse;
+        }
+        & > button {
+            margin:5px 5px;
+            border-radius: 8px;
+            padding: 5px;
         }
     }
 

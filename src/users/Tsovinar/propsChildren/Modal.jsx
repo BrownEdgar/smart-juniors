@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Modal.scss"
 import { useEffect } from 'react'
-
 import classNames from 'classnames'
 
 export default function Modal({children, toggleModal, theme}) {
