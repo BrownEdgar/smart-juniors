@@ -10,7 +10,7 @@ export default function App() {
     const[isOpen, setIsopen] = useState(false)
     const toggleModal = () => setIsopen(!isOpen)
     const[currentIndex, setCurrentIndex] = useState(null)
-    const deleteItem = (ind) => {
+    const deleteItem = () => {
         setTodos(todos.toSpliced(currentIndex, 1)),
         toggleModal()}
 
@@ -51,7 +51,6 @@ export default function App() {
                          <p><span className='title'>Title:</span> {post.title.toUpperCase()}</p>
                          <p><span className='title'>Content:</span> {post.body.replace(post.body[0] , post.body[0].toUpperCase())}</p>
                     </div>
-               
                 </Fragment>
                 )
             })
