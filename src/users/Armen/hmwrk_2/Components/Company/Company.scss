@@ -1,0 +1,22 @@
+.Company {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-size: 0.7em;
+	overflow: hidden;
+
+	&_opened {
+		height: 70%;
+	}
+
+	&_closed {
+		height: 1%;
+	}
+
+	& > p {
+		& > span {
+			color: orange;
+			margin-right: 10px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.User {
+    &-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    &-name {
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+    }
+}

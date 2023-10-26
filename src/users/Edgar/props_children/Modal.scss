@@ -1,0 +1,30 @@
+.Modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-content {
+    min-width: 300px;
+    height: 200px;
+    text-align: center;
+    font-size: 22px;
+    padding: 1em 2em;
+    background-color: #fff;
+    color: #111;
+    border-radius: 12px;
+    &_dark {
+      background-color: #222;
+      color: orange;
+    }
+    &_light {
+      background-color: #fff;
+      color: #222;
+    }
+  }
+}
