@@ -1,0 +1,27 @@
+.Posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Playpen Sans";
+    padding: 30px 20px;
+    border-radius: 20px;
+    background: darkslateblue;
+    box-shadow: 4px 4px 4px 3px rgba(40, 40, 40, 0.63);
+    position: relative;
+
+    &>* {
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    &_title {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 24px;
+    }
+  }
+}

@@ -8,7 +8,7 @@ export default function App() {
   const [currentIndex, setcurrentIndex] = useState(null)
    useEffect(()=>{
      axios
-    .get("https://jsonplaceholder.typicode.com/posts?_limit=10")
+    .get("https://jsonplaceholder.typicode.com/posts?_limit=20")
     .then(res => Setposts(res.data))
     .catch(err =>console.log(err))
    },[])
