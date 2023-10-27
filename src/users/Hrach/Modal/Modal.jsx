@@ -14,7 +14,7 @@ export default function Modal ({children,toggleModal}) {
     return () => {
       window.removeEventListener("click",handleClick)
     };
-  }, [])
+  },[])
   return (
     <div className='Modal'>
       <div className="Modal-content">
