@@ -1,0 +1,85 @@
+.Modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: #0008;
+  backdrop-filter: blur(5px);
+  overflow-y: hidden;
+
+  &-box {
+    background: darksalmon;
+    border-radius: 20px;
+    padding: 20px;
+
+    &_content {
+      padding: 20px;
+
+      &_btns {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      &>* {
+        margin: 10px 0;
+      }
+    }
+
+    &_btnGroup {
+      padding: 20px;
+      position: relative;
+
+      &_close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 24px;
+
+        &:hover {
+          cursor: pointer;
+
+        }
+      }
+    }
+
+    &_loadBlur {
+      filter: blur(1000px);
+    }
+
+    &_fromTop {
+      transform: translateY(-1000px);
+    }
+
+    &_fromLeft {
+      transform: translateX(-1000px);
+    }
+
+    &_fromRight {
+      transform: translateY(1000px);
+    }
+
+    &_fromBottom {
+      transform: translateY(1000px);
+    }
+
+    &_fromScale {
+      transform: scale(0);
+    }
+
+    animation: modalanim 1s ease 0s forwards;
+  }
+}
+
+@keyframes modalanim {
+  to {
+    transform: translateY(0);
+    transform: translateX(0);
+    transform: scale(1.0);
+    filter: blur(0px);
+  }
+}
