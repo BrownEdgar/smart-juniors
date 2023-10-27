@@ -11,7 +11,7 @@ export default function Container() {
 			baseURL: 'https://jsonplaceholder.typicode.com/',
 			url: 'posts',
 			params: {
-				_limit: 9,
+				_limit: 5,
 			},
 		})
 			.then((res) => setPosts(res.data))
