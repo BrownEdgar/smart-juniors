@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Company({ company, companyStatus }) {
 	return (
-		<div className={`Company ${companyStatus === 'opened' ? 'Company_opened' : 'Company_closed'}`}>
+		<div className={`Company ${companyStatus[0] === 'opened' ? 'Company_opened' : 'Company_closed'}`}>
 			<p className="name">
 				<span>name</span> {company.name}
 			</p>
