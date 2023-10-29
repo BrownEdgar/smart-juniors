@@ -1,9 +1,9 @@
 .Address {
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
 	font-size: 0.7em;
 	overflow: hidden;
+	transition: 0.3s ease;
 
 	&_opened {
 		height: 70%;
@@ -19,8 +19,11 @@
 			color: orange;
 			margin-right: 10px;
 		}
-		& > p {
+		& small {
 			color: lightpink;
+			font-size: 14px;
+			margin-left: 5px;
+			text-wrap: nowrap;
 		}
 	}
 }
