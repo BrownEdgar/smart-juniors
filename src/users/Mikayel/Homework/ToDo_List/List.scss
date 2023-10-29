@@ -1,0 +1,66 @@
+.List-ul {
+    & li {
+        cursor: pointer;
+        position: relative;
+        padding: 12px 8px 12px 40px;
+        list-style-type: none;
+        background: #eee;
+        font-size: 18px;
+        transition: 0.2s;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &:nth-child(odd) {
+            background: #f9f9f9;
+        }
+
+        &:hover {
+            background: #ddd;
+        }
+
+        &.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
+
+        &.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+    }
+
+    & .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+
+        &:hover {
+            background-color: #3C6594;
+            color: white;
+        }
+    }
+
+    & .edit {
+        position: absolute;
+        right: 43px;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+
+        &:hover {
+            background-color: #3C6594;
+            color: white;
+        }
+    }
+}
