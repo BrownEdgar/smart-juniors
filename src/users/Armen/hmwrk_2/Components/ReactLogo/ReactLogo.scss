@@ -1,0 +1,42 @@
+.ReactLogo {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	&-component {
+		border-radius: 50%;
+		position: absolute;
+
+		&.oval {
+			width: 80%;
+			height: 32%;
+			border: 18px solid rgb(0, 170, 255);
+			animation: rotate 12s linear infinite;
+			&:nth-child(2) {
+				animation-delay: -4s;
+			}
+			&:nth-child(3) {
+				animation-delay: -8s;
+			}
+		}
+
+		&.circle {
+			width: 80px;
+			height: 80px;
+			background: rgb(0, 170, 255);
+		}
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(1turn);
+	}
+}

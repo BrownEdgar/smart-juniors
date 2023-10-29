@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap');
+
+.App{
+  font-family: 'Edu TAS Beginner', cursive;
+  height: 100vh;
+  display: flex;
+  background-image: url(https://plus.unsplash.com/premium_photo-1684225765349-072e1a35afc6?auto=format&fit=crop&q=80&w=1032&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid grey;
+  &-child{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+  }
+  form{
+    font-weight: 800;
+    width: 400px;
+    height: 400px;
+    border: 1px solid grey;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  input{
+    width: 90%;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid grey;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Edu TAS Beginner', cursive;
+  }
+  }
+  &-items{
+    display: flex;
+    width: 380px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: rgba(126, 186, 238, 0.479);
+    border: 1px solid grey;
+    color: red;
+    &>ul{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      justify-content: space-between;
+      padding: 10px;
+      &>button{
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        color: red;
+        animation: scale 1s infinite;
+      }
+    }
+  }
+}
+.length{
+  animation: scale 1s infinite;
+  padding-right: 0;
+  color: red;
+}
+@keyframes scale{
+  0%{
+    transform: scale(80%);
+  }
+  100%{
+    transform: scale(100%);
+  }
+}

@@ -3,7 +3,7 @@ import Child from './Child'
 import "./App.scss"
 
 export default function App() {
-  const [posts,setPosts] = useState([])
+  const [posts] = useState([])
   
   return (
     <div>

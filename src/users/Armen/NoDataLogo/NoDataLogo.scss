@@ -1,0 +1,14 @@
+.NoDataLogo {
+	width: 70%;
+	height: 70%;
+	mix-blend-mode: multiply;
+	position: absolute;
+	place-self: center;
+	inset: 0;
+	margin: auto;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+}

@@ -1,0 +1,38 @@
+.Container {
+	width: 1280px;
+	max-width: 1280px;
+	height: 666px;
+	background: lavender;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 30px;
+	border: 2px solid #0002;
+	box-shadow: 2px 5px 5px 1px #0005;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: max-content;
+	grid-template-areas:
+		'one one two'
+		'three four two'
+		'three five five';
+	gap: 20px;
+	transform-style: preserve-3d;
+	perspective: 2000px;
+	// overflow: hidden;
+
+	@media (max-width: 1130px) {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 4fr 1fr;
+		grid-template-areas:
+			'one two three four'
+			'five five five five';
+	}
+
+	@media (max-width: 880px) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 4fr 1fr;
+		grid-template-areas:
+			'one two three'
+			'four four five';
+	}
+}
