@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Address({ address, addressStatus }) {
 	return (
-		<div className={`Address ${addressStatus === 'opened' ? 'Address_opened' : 'Address_closed'}`}>
+		<div className={`Address ${addressStatus[0] === 'opened' ? 'Address_opened' : 'Address_closed'}`}>
 			<p className="Address-street">
 				<span>street</span> {address.street}
 			</p>
@@ -17,9 +17,11 @@ export default function Address({ address, addressStatus }) {
 				<span>zipcode</span> {address.zipcode}
 			</p>
 			<div className="Address-geo">
-				<span>geo</span>
-				<p className="Address-latitude">latitude {address.geo.lat}</p>
-				<p className="Address-longitude">longitude {address.geo.lng}</p>
+				<span>
+					geo
+					<small className="Address-latitude">latitude {address.geo.lat}</small>
+					<small className="Address-longitude">longitude {address.geo.lng}</small>
+				</span>
 			</div>
 		</div>
 	);
