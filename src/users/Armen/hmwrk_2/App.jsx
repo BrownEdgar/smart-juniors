@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import './App.scss';
 import UsersContent from './Components/UsersContent/UsersContent';
+import Stand from './Components/Stand/Stand';
 
 export default function App() {
 	const [users, setUsers] = useState([]);
@@ -18,6 +19,7 @@ export default function App() {
 
 	return (
 		<div className="App">
+			<Stand />
 			<UsersContent users={users} />
 		</div>
 	);

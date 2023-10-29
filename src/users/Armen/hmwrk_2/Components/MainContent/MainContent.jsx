@@ -3,28 +3,11 @@ import Company from '../Company/Company';
 import './MainContent.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import classNames from 'classnames';
 
 export default function MainContent(props) {
 	const [addressStatus, setAddressStatus] = useState(['closed']);
 	const [companyStatus, setCompanyStatus] = useState(['closed']);
-
-	const handleMouseEnter = (e, id) => {
-		if (e.target.tagName === 'BUTTON' && e.target.id === 'addr') {
-			setAddressStatus(['opened', id]);
-		}
-		if (e.target.tagName === 'BUTTON' && e.target.id === 'comp') {
-			setCompanyStatus(['opened', id]);
-		}
-	};
-
-	const handleMouseLeave = (e, id) => {
-		if (e.target.tagName === 'BUTTON' && e.target.id === 'addr') {
-			setAddressStatus(['closed', id]);
-		}
-		if (e.target.tagName === 'BUTTON' && e.target.id === 'comp') {
-			setCompanyStatus(['closed', id]);
-		}
-	};
 
 	return (
 		<div className="MainContent">
@@ -48,27 +31,39 @@ export default function MainContent(props) {
 				<button
 					id="addr"
 					className="MainContent-viewAddress"
-					onMouseEnter={(e) => handleMouseEnter(e, props.id)}
-					onMouseLeave={(e) => handleMouseLeave(e, props.id)}
-					// onClick={() => }
+					onClick={() =>
+						setAddressStatus(() => {
+							return [addressStatus[0] === 'opened' ? 'closed' : 'opened', props.id];
+						})
+					}
 				>
 					address
-					<i className="fa-solid fa-chevron-down"></i>
+					<i
+						className={classNames('fa-solid fa-chevron-down', {
+							[`MainContent-viewAddress${addressStatus[0] === 'opened' ? '_opened' : '_closed'}`]: true,
+						})}
+					></i>
 				</button>
-				<Address address={props.address} addressStatus={addressStatus.id === props.id ? addressStatus : ''} />
+				<Address address={props.address} addressStatus={addressStatus} />
 			</div>
 			<div className="company">
 				<button
 					id="comp"
 					className="MainContent-viewCompany"
-					onMouseEnter={(e) => handleMouseEnter(e, props.id)}
-					onMouseLeave={(e) => handleMouseLeave(e, props.id)}
-					// onClick={() => }
+					onClick={() =>
+						setCompanyStatus(() => {
+							return [companyStatus[0] === 'opened' ? 'closed' : 'opened', props.id];
+						})
+					}
 				>
 					company
-					<i className="fa-solid fa-chevron-down"></i>
+					<i
+						className={classNames('fa-solid fa-chevron-down', {
+							[`MainContent-viewCompany${companyStatus[0] === 'opened' ? '_opened' : '_closed'}`]: true,
+						})}
+					></i>
 				</button>
-				<Company company={props.company} companyStatus={companyStatus.id === props.id ? companyStatus : ''} />
+				<Company company={props.company} companyStatus={companyStatus} />
 			</div>
 		</div>
 	);

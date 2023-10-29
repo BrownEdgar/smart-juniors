@@ -1,25 +1,38 @@
 import './Post.scss';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+// import { useState } from 'react';
 
-export default function Post({ post }) {
+export default function Post({ post, toggleModal, setCurrentIndex }) {
+	// const [removeCount, setRemoveCount] = useState(0);
+
 	return (
-		<div className="Post">
-			{/* <h2 className="Post-userId">1</h2>
-			<h1 className="Post-title">sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h1>
-			<p className="Post-body">
-				quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas
-				totam\nnostrum rerum est autem sunt rem eveniet architecto
-			</p> */}
-			<h2 className="Post-userId">{post.id}</h2>
-			<h1 className="Post-title">s{post.title}</h1>
-			<p className="Post-body">{post.body}</p>
-			<button className="Post-delete">
-				<i className="fa-regular fa-circle-xmark"></i>
+		<div
+			className={classNames('Post', {
+				Post_removed: post.value.droped,
+			})}
+		>
+			<h2 className="Post-userId">{post.value.id}</h2>
+			<h1 className="Post-title">{post.value.title}</h1>
+			<p className="Post-body">{post.value.body}</p>
+			<button
+				className="Post-delete"
+				onClick={() => {
+					toggleModal();
+					setCurrentIndex(post.index);
+					// setRemoveCount(removeCount + 1);
+				}}
+			>
+				<i className="fa-solid fa-xmark"></i>
 			</button>
 		</div>
 	);
 }
 
 Post.propTypes = {
+	// posts: PropTypes.array.isRequired,
 	post: PropTypes.object.isRequired,
+	toggleModal: PropTypes.func.isRequired,
+	setCurrentIndex: PropTypes.func.isRequired,
+	// setIsEmpty: PropTypes.func.isRequired,
 };

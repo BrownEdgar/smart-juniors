@@ -5,41 +5,37 @@
 	border-radius: 16px;
 	color: rgb(108, 43, 43);
 	overflow: hidden;
-	display: grid;
-	grid-template-columns: min-content;
-	grid-template-rows: min-content;
-	grid-template-areas:
-		'title title delete'
-		'body body .'
-		'body body id';
-	gap: 20px;
+	transform-style: preserve-3d;
+	perspective: 1000px;
 	box-shadow: 2px 5px 5px #0005;
 	font-size: 20px;
 	line-height: 20px;
+	position: relative;
+	user-select: none;
 
 	&:nth-child(1) {
-		grid-area: top-left;
-		background: #ff007b;
+		grid-area: one;
+		background: linear-gradient(-15deg, hsl(330, 100%, 50%), hsl(330, 100%, 75%));
 	}
 
 	&:nth-child(2) {
-		grid-area: right-top;
-		background: #0066ff;
+		grid-area: two;
+		background: linear-gradient(-15deg, hsl(216, 100%, 50%), hsl(216, 100%, 75%));
 	}
 
 	&:nth-child(3) {
-		grid-area: bottom-right;
-		background: #ffc800;
+		grid-area: three;
+		background: linear-gradient(-15deg, hsl(110, 95%, 50%), hsl(110, 95%, 75%));
 	}
 
 	&:nth-child(4) {
-		grid-area: left-bottom;
-		background: #3ff91a;
+		grid-area: four;
+		background: linear-gradient(-15deg, hsl(304, 100%, 50%), hsl(304, 100%, 75%));
 	}
 
 	&:nth-child(5) {
-		grid-area: center;
-		background: #ff00ee;
+		grid-area: five;
+		background: linear-gradient(-15deg, hsl(47, 100%, 50%), hsl(47, 100%, 75%));
 	}
 
 	&:hover > .Container-userId {
@@ -47,43 +43,95 @@
 	}
 
 	&-userId {
+		position: absolute;
+		// right: 100px;
+		inset: 0 0 0 0;
+		margin: auto;
 		border-radius: 4px;
 		text-align: center;
-		font-size: 2.5em;
-		grid-area: id;
-		justify-self: end;
-		align-self: end;
+		font-size: 14em;
+		opacity: 0.1;
+		transform: rotateX(60deg);
+		line-height: 100%;
 	}
 
 	&-title {
 		font-variant: small-caps;
-		text-align: center;
-		grid-area: title;
-		width: 100%;
-		height: 100%;
+		width: 60%;
+		text-align: left;
+		margin-bottom: 20px;
 		font-size: 26px;
-		justify-self: center;
-		align-self: center;
 		letter-spacing: 2px;
 	}
 
 	&-body {
-		grid-area: body;
-		font-size: 18px;
-		justify-self: center;
+		font-size: 20px;
+		font-weight: 500;
+		text-align: justify;
 	}
 
 	&-delete {
-		grid-area: delete;
+		position: absolute;
+		top: 14px;
+		right: 14px;
 		border-radius: 50%;
-		background: transparent;
+		background: #333;
+		color: silver;
 		border: 0;
 		cursor: pointer;
-		font-size: 1.4em;
-		width: 40px;
-		height: 40px;
-		align-self: start;
-		justify-self: end;
-		opacity: 0.7;
+		font-size: 18px;
+		line-height: 27px;
+		width: 24px;
+		height: 24px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100px;
+			height: 100px;
+		}
+		box-shadow: 0 0 3px #0004;
+	}
+
+	&_removed {
+		transform-origin: calc(100% - 60px) 50px;
+		animation: drop 1.4s ease-in 0.4s forwards;
+
+		& button {
+			box-shadow: 2px 3px 4px #0006;
+			scale: 1.01;
+			transition: 1.2s ease;
+
+			& > i {
+				transform: rotate(-2turn);
+				transition: transform 1.2s cubic-bezier(0.11, 0.34, 0.17, 1.03);
+			}
+		}
+	}
+
+	@media (max-width: 880px) {
+		&-userId {
+			font-size: 8em;
+		}
+		&-body {
+			font-size: 14px;
+		}
+	}
+}
+
+@keyframes drop {
+	0% {
+		transform: rotate(0);
+		z-index: 10;
+		box-shadow: 2px 5px 5px #0005;
+	}
+	60% {
+		transform: rotate(-10deg);
+		z-index: 10;
+		box-shadow: 2px 5px 5px #0005, inset 0 0 2px #0002;
+	}
+	100% {
+		transform: rotate(-20deg) rotateX(-90deg) translateZ(900px) translateX(-140px) translateY(100px);
+		// z-index: 10;
+		box-shadow: 10px 25px 20px 8px #0005, inset 0 -10px 2px #0002, inset 0 -30px 15px 5px #0008;
 	}
 }
