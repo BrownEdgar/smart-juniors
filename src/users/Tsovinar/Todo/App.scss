@@ -1,0 +1,58 @@
+form,
+.tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(78, 168, 168);
+    border: 2px solid black;
+    border-radius: 8px;
+    & > input{
+        width: 200px;
+        text-align: center;
+       height: 30px;
+       border: 1px solid red;
+       border-radius: 5px;
+       margin-bottom: 20px;
+    }
+    & > label{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    &-list{
+        list-style-type: none;
+        width: 300px;
+        border: 1px solid rgb(122, 96, 96);
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        // margin-bottom: 5px;
+        padding: 5px;
+        background-color: aliceblue;
+        height: auto;
+    }
+    &-text{
+        color: rgb(122, 77, 77);
+    }
+}
+.button{
+    padding: 6px;
+    border-radius: 8px;
+    border-style: none;
+}
+.tasks{
+    padding-bottom: 20px;
+}
+.clearall{
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgb(182, 149, 149);
+
+}
+.transparent{
+    opacity: 0;
+    visibility: hidden;
+}

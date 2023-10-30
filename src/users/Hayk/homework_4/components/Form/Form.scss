@@ -1,0 +1,112 @@
+.Form {
+  margin: 0 auto;
+  position: relative;
+  width: fit-content;
+  background: darkcyan;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.516);
+  border-radius: 20px;
+  font-family: "Playpen Sans";
+  backdrop-filter: blur(20px);
+
+  &> i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 32px;
+    color: #444;
+
+    &:hover {
+       cursor: pointer;
+       color: #222;
+    }
+  }
+  
+
+  &> form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: "Playpen Sans";
+
+    & label {
+      color: white;
+      font-size: 20px;
+    }
+
+    & > #titlebox {
+      position: relative;
+
+      &> i {
+        display: none;
+        position: absolute;
+        font-size: 24px;
+        right: 18px;
+        top: 35%;
+
+        &.ok {
+          color: rgb(14, 168, 0);
+        }
+        &.wrong {
+          color: rgb(255, 0, 0);
+        }
+
+        &.show {
+          display: block;
+        }
+      }
+    }
+
+    &> textarea {
+      color: white;
+      background-color: #444;
+      padding: 18px;
+      font-size: 18px;
+      border-radius: 20px;
+      resize: none;
+      outline: none;
+      border: none;
+
+      &:focus {
+        background-color: #222;
+      }
+    }
+    & input {
+      font-family: "Playpen Sans";
+      font-weight: 400;
+      padding: 12px 24px;
+      background-color: #444;
+      color: white;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      border-radius: 1000px;
+      margin: 12px 0;
+      width: 100%;
+
+
+      &[type="submit"] {
+        width: fit-content;
+        align-self: flex-end;
+        
+        &:hover {
+          cursor: pointer;
+          background-color: #222;
+        }
+      }
+      &[type="reset"] {
+        width: fit-content;
+        align-self: flex-start;
+        
+        &:hover {
+          cursor: pointer;
+          background-color: #222;
+        }
+      }
+      
+      &:focus {
+        background-color: #222;
+        color: white;
+      }
+    }
+  }
+}

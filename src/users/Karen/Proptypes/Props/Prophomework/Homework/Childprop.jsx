@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
  
+import './Childprop.scss'
+
 export default function Childprop({data}) {
   return (
-    <div>
+    <div className='Childprop'>
      <ul>
       {
          data.map((elm,index)=>{
