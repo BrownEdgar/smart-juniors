@@ -6,29 +6,21 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  form {
-    width: 450px;
+  button {
     padding: 1em;
-    border-radius: 12px;
-    border: 2px solid teal;
-    input {
-      font-size: 22px;
-      width: 100%;
-      font-family: inherit;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      margin: 10px auto;
+    margin: 30px;
+    svg {
+      transform: translateY(4px);
     }
-    label {
-      font-size: 20px;
-      font-variant: small-caps;
-    }
-    & > .error {
-      color: #ff0303;
-      text-align: center;
-      font-weight: 600;
-      font-size: 20px;
-    }
+  }
+  form {
+    width: 500px;
+  }
+  input {
+    padding: 12px;
+    margin: 10px;
+    width: 100%;
+    display: block;
+    font-size: 20px;
   }
 }

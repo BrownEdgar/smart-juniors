@@ -1,59 +1,52 @@
-import { useState } from 'react'
-
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { object, string } from 'yup'
 import './App.scss'
 
+
+
+const validationSchema = object({
+  email: string().email().required('Required!'),
+  password: string()
+    .min(8, "8-ic avel")
+    .max(18, 'es ur?')
+    .matches(/^[A-Z]/, "Must by start with uppercase!")
+    .required("Required"),
+})
+
 export default function App() {
-  const [users, setUsers] = useState([]);
-  const [hasError, setHasError] = useState({
-    message: "",
-    status: false
-  })
-
-  const [message, setMessage] = useState('Sebastian')
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const { username, password } = e.target;
-    const regexp = new RegExp(username.value, 'i')
-    const userExist = users.some(user => user.username.match(regexp))
-    if (!userExist) {
-      const user = {
-        id: Date.now(),
-        username: username.value,
-        password: password.value
-      }
-      setUsers([...users, user])
-      setHasError({
-        status: false,
-        message: ''
-      })
-    } else {
-      setHasError({
-        status: true,
-        message: 'username is exist'
-      })
-    }
+  const initialValues = {
+    email: 'example@gmail.com',
+    password: ''
   }
 
-  const handleChange = (e) => {
-    setMessage(e.target.value)
+  const handleSubmit = (values, { resetForm }) => {
+    console.log(values)
+    resetForm()
   }
 
   return (
     <div className='App'>
-      <form onSubmit={handleSubmit}>
-        {hasError.status && <p className="error">{hasError.message}</p>}
-        <label htmlFor="username">username</label>
-        <input type="text" id='username' required />
-        <label htmlFor="password">password</label>
-        <input type="password" id='password' required />
-        <input type="submit" value='add user' />
-      </form>
-      <hr />
-      <h1>{message}</h1>
-      <form >
-        <input type="text" placeholder='message' value={message} onChange={handleChange} />
-      </form>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validateOnChange={false}
+        validateOnBlur={true}
+        validationSchema={validationSchema}
+      >
+        {
+          (formik) => {
+            return (
+              <Form>
+                <Field type='email' name="email" placeholder='email' />
+                <ErrorMessage name="email" component={'p'} />
+                <Field type='password' name="password" placeholder='password' />
+                <ErrorMessage name="password" component={'p'} />
+                <input type="submit" value='add user' />
+              </Form>
+            )
+          }
+        }
+      </Formik>
     </div>
   )
 }

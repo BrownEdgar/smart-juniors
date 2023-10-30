@@ -1,11 +1,33 @@
+// @mixin scrollbar {
+// 	scrollbar-track-color: #f80000;
+// 	::-webkit-scrollbar {
+// 		width: 40px; // Width of the scroll bar
+// 	}
+
+// 	::-webkit-scrollbar-track {
+// 		background: #f80000; // Background color of the scroll track
+// 	}
+
+// 	::-webkit-scrollbar-thumb {
+// 		background: #00ff51; // Color of the scroll thumb
+// 	}
+
+// 	::-webkit-scrollbar-thumb:hover {
+// 		background: #555; // Color of the scroll thumb on hover
+// 	}
+// }
+
 .UsersContent {
 	width: 1280px;
 	height: 600px;
-	border: 4px solid rgb(3, 72, 55);
-	border-top: 0;
-	border-bottom: 0;
+	position: absolute;
+	bottom: 100px;
+	left: 100px;
+	border: 5px solid rgba(2, 34, 26, 0);
+	border-top: 5px solid rgba(2, 34, 26, 0);
+	border-bottom: 10px solid hsl(189, 69%, 8%);
 	border-radius: 10px;
-	box-shadow: 2px 5px 6px #0006, inset 0 4px 10px 4px #0004;
+	box-shadow: 20px 5px 60px 10px #0008, 0 2px 3px -1px #000, inset 0 4px 10px 4px #0004, inset 0 -20px 40px 8px #0005;
 	background: linear-gradient(rgb(4, 145, 145), rgb(9, 25, 25));
 	padding: 20px;
 	display: flex;
@@ -14,4 +36,40 @@
 	align-items: center;
 	gap: 20px;
 	overflow-y: scroll;
+	transform: rotateX(4deg) rotateY(-22deg) translateZ(-200px) translateX(-50px) translateY(30px) scale(0.9);
+	animation: intro 5s ease backwards;
+	&::-webkit-scrollbar {
+		width: 0.5vw;
+		transition: 0.2s ease;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: #2fc1ff20;
+		transition: 0.2s ease;
+	}
+	&::-webkit-scrollbar-track:hover {
+		background-color: #2fd9ff40;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 170, 255, 0.5);
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: rgb(0, 170, 255);
+	}
+	scrollbar-width: thin;
+	z-index: 2222;
+	// @include scrollbar;
+}
+
+@keyframes intro {
+	0% {
+		transform: rotateX(0) rotateY(0) translateZ(0) translateX(0) translateY(-40px) scale(0.9);
+		box-shadow: 20px 5px 60px 10px #0008, inset 0 4px 10px 4px #0004;
+	}
+	60% {
+		box-shadow: 20px 5px 60px 10px #0008, 0 0px 3px -1px #000, inset 0 4px 10px 4px #0004;
+	}
+	100% {
+		transform: rotateX(4deg) rotateY(-22deg) translateZ(-200px) translateX(-50px) translateY(30px) scale(0.9);
+		box-shadow: 20px 5px 60px 10px #0008, 0 2px 3px -1px #000, inset 0 4px 10px 4px #0004, inset 0 -20px 40px 8px #0005;
+	}
 }
