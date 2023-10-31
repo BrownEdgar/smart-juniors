@@ -1,0 +1,27 @@
+body{
+    background-color:teal;
+}
+
+.App{
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 580px;
+
+    Form{
+        width: 400px;
+        height: 400px;
+        input{
+            padding: 1em;
+            margin: 10px;
+            width: 250px;
+            border-radius: 10px;
+            border: none;
+            display: block;
+        }
+        p{
+            color: blue;
+            text-align: left;
+            margin-left: 12px;
+        }
+    }
+}
