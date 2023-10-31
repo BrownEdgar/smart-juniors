@@ -1,0 +1,120 @@
+body {
+    background: rgb(169,151,235);
+    background: linear-gradient(270deg, rgba(169,151,235,1) 0%, rgba(62,233,231,1) 100%);
+}
+.App {
+
+    Form {
+        margin-left: 400px;
+        margin-top: 150px;
+        width: 600px;
+        height: 350px;
+        background-color: aliceblue;
+       p{
+        color: red;
+        font-size: 15px;
+       }
+        & > .Lable {
+            background: -webkit-linear-gradient( 270deg, rgb(122, 91, 233) 0%, rgb(46, 186, 183) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 130px;
+            font-size: 26px;
+            font-weight: 600;
+            font-family: sans-serif;
+        }
+        & > .First {
+            margin-left: 50px;
+            margin-top: 65px;
+            height: 50px;
+            width: 225px;
+            border: none;
+            border-bottom: 1px solid rgb(105, 105, 105);
+        }
+        & > .First:focus {
+            outline: none;
+            border-bottom: 2px solid rgb(2, 180, 180);
+        }
+
+        & > .Last {
+            margin-left: 50px;
+            margin-top: 30px;
+            height: 50px;
+            width: 225px;
+            border: none;
+            border-bottom: 1px solid rgb(105, 105, 105);
+        }
+        & > .Last:focus {
+            outline: none;
+            border-bottom: 2px solid rgb(2, 180, 180);
+        }
+        & > .Email {
+            margin-left: 50px;
+            margin-top: 30px;
+            height: 50px;
+            width: 225px;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid rgb(105, 105, 105);
+        }
+        & > .Email:focus {
+            outline: none;
+            border-bottom: 2px solid rgb(2, 180, 180);
+        }
+
+        & > .Website {
+            margin-left: 50px;
+            margin-top: 30px;
+            height: 50px;
+            width: 225px;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid rgb(105, 105, 105);
+
+        }
+        & > .Website:focus {
+            outline: none;
+            border-bottom: 2px solid rgb(2, 180, 180);
+        }
+        & > .Write {
+            margin-left: 50px;
+            margin-top: 30px;
+            height: 50px;
+            width: 501px;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid rgb(105, 105, 105);
+
+        }
+        & > .Write:focus {
+            outline: none;
+            border-bottom: 2px solid rgb(2, 180, 180);
+        }
+        & > .Submit {
+            margin-top: 20px;
+            margin-left: 50px;
+            min-width: 120px;
+            height: 38px;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: none;
+            background: rgb(169,151,235);
+            background: linear-gradient(270deg, rgb(169, 103, 239) 0%, rgba(62,233,231,1) 100%);
+        }
+        & > .Submit:hover {
+            background-position: right center;
+        }
+        & > .Submit:active {
+            top: 2px;
+        }
+
+    }
+
+}
