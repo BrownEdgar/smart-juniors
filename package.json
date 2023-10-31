@@ -17,15 +17,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-modal": "^3.16.1",
-<<<<<<< HEAD
     "sass": "^1.69.5",
-=======
-<<<<<<< HEAD
-    "sass": "^1.69.4",
-=======
-    "sass": "^1.69.5",
->>>>>>> 56fc6ad8d172da71d5d3d487c3c88c0204b7806d
->>>>>>> 94d10384ee1fba1820086f8ad1cc9ec40c07e16a
     "yup": "^1.3.2"
   },
   "devDependencies": {
