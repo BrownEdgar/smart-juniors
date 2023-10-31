@@ -13,8 +13,8 @@ const [haseError,setHaseError]=useState({
 
 const handleSubmit =(e)=>{
   e.preventDefault()
+  const { city } = e.target
  if (!cities.includes(city.value)) {
-  const {city} = e.target
   setCities([...cities,city.value])
   setHaseError({
     status:false,
@@ -30,7 +30,7 @@ const handleSubmit =(e)=>{
 }
 
 const handleDelete=(index)=>{
-  setCities(cities.toSpliced(index ,1))
+  setCities(cities.toSpliced(index,1))
 }
 
 
@@ -48,7 +48,7 @@ const handleDelete=(index)=>{
       {
         cities.map((elm,index)=>{
           return(
-            <li key={index}>{elm}<span onClick={handleDelete}>&#10006;</span></li>
+            <li key={index}>{elm}<span onClick={() => handleDelete(index)}>&#10006;</span></li>
             )
           })
         }

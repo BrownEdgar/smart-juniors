@@ -1,0 +1,30 @@
+.App {
+    margin: 0 auto;
+    background-color: #dedede;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    button {
+        padding: 1em;
+        margin: 30px;
+        svg {
+            transform: translateY(4px);
+        }
+    }
+    form {
+        width: 500px;
+    }
+    input {
+        padding: 12px;
+        margin: 10px;
+        width: 100%;
+        display: block;
+        font-size: 20px;
+    }
+    p {
+        color: red;
+        margin: 0 10px;
+    }
+}

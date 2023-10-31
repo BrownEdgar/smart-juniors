@@ -34,7 +34,6 @@ export default function App() {
     const { value } = e.target;
 
     if (value.trim() !== "") {
-      setHasTitle(hasTodo);
       setMark(hasTodo)
       e.target.style.color = hasTodo ? "red" : "green";
     }

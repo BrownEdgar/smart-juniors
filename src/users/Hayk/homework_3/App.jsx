@@ -47,7 +47,7 @@ export default function App() {
       }
       {
         user.id
-          ? <Modal bgColor="antiquewhite" loading="fromTop" toggleModal={() => { setUserId(null); setUser({})}}>
+          ? <Modal bgColor="antiquewhite" loading="fromTop" toggleModal={() => { setUserId(null); setUser({}) }}>
             <User user={user} />
           </Modal>
           : null
