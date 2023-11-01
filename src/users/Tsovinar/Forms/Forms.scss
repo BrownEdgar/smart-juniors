@@ -1,0 +1,49 @@
+.App{
+width: 600px;
+background: linear-gradient(rgb(180, 207, 211) 0%, rgb(83, 177, 206) 25%, rgb(147, 192, 196) 50%, rgb(171, 58, 216) 75%, rgb(158, 76, 147) 100%);
+padding: 30px;
+margin: 0 auto;
+padding: 50px;
+border-radius: 10px;
+margin-top: 20px;
+
+ & h1{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(rgb(180, 207, 211) 0%, rgb(83, 177, 206) 25%, rgb(147, 192, 196) 50%, rgb(171, 58, 216) 75%, rgb(158, 76, 147) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      }
+
+ & input{
+    padding: 8px; 
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(65, 61, 61);
+}
+}
+.Form{
+  background-color: white; 
+  padding: 30px;
+  
+}
+
+.submit{
+    background: -webkit-linear-gradient(rgb(180, 207, 211) 0%, rgb(83, 177, 206) 25%, rgb(147, 192, 196) 50%, rgb(171, 58, 216) 75%, rgb(158, 76, 147) 100%);
+    color: white;
+    padding: 5px 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 100px;
+    display: block;
+
+}
+.div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.message{
+width: 420px
+
+}

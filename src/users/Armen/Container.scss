@@ -1,0 +1,19 @@
+// @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.Container {
+	--color-one: hsl(185, 87%, 50%);
+	--color-two: hsl(281, 97%, 44%);
+	background: linear-gradient(135deg, var(--color-one), var(--color-two) 80%);
+	// background: url('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*CmbJmfA1SkoiJGtgj5xZig.png');
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// background-position-y: 50%;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+}
