@@ -1,0 +1,96 @@
+body {
+    background: rgb(76,193,223);
+    background: linear-gradient(100deg, rgba(76,193,223,1) 0%, rgba(139,41,226,1) 65%);
+}
+.form-container {
+    margin: 100px auto;
+    width: 75%;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px; /* Added padding for better spacing */
+    border-radius: 10px; /* Added border-radius for rounded corners */
+}
+
+.form-row {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    margin-bottom: 20px;
+
+    input {
+        margin: 10px 30px;
+        width: calc(48% - 60px); /* Adjusted width to consider left and right margins */
+        height: 40px;
+        border: none; /* Remove default border */
+        border-bottom: 2px solid #DADADA; /* Add bottom border */
+        outline: none; /* Remove outline */
+        transition: border-color 0.3s; /* Add transition for border color change */
+        font-size: 20px;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+        border-bottom: 2px solid #5F8A8F;
+        & + label {
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+    }
+
+    .left {
+        position: absolute;
+        top: 0;
+        left: 30px; /* Adjusted left property considering input left margin */
+        opacity: 0;
+        color: #626262;
+        transform: translateY(40px);
+        transition: opacity 0.2s, transform 0.2s;
+    }
+    
+    .right {
+        position: absolute;
+        top: 0;
+        left: calc(30px + 48%) !important; 
+        opacity: 0;
+        color: #626262;
+        transform: translateY(40px);
+        transition: opacity 0.2s, transform 0.2s;
+    }
+    
+    label.visible {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    
+    button {
+        width: 20%;
+        padding: 15px 30px;
+        margin: 10px 30px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        background: rgb(70,240,252);
+        background: linear-gradient(90deg, rgba(70,240,252,1) 0%, rgba(181,70,252,1) 100%);
+    }   
+}
+
+
+
+h1 {
+    padding: 1em;
+    font-size: 40px; 
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 22%, rgba(68,217,189,1) 38%, rgba(131,58,180,1) 55%);
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+
+
+::placeholder {
+    font-family: "Playpen Sans";
+}
+
+.wide {
+    width: 100% !important;
+}
