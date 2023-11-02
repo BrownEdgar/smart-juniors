@@ -9,7 +9,6 @@ export default function InputField({ inputType, inputName, inputText }) {
 
 	const toggleFieldFocus = (e) => {
 		setFieldFocused({ status: !fieldFocused.status, id: inputName, val: e.target.value });
-		console.log(e.target.value.length);
 	};
 
 	return (
@@ -22,7 +21,15 @@ export default function InputField({ inputType, inputName, inputText }) {
 			>
 				{inputText}
 			</p>
-			<Field type={inputType} name={inputName} id={inputName} onFocus={toggleFieldFocus} onBlur={toggleFieldFocus} />
+			<Field
+				type={inputType}
+				name={inputName}
+				id={inputName}
+				onFocus={toggleFieldFocus}
+				onBlur={toggleFieldFocus}
+				autocomplete="off"
+				autofocus="on"
+			/>
 			<div className="errorOutput">
 				<ErrorMessage name={inputName} component={'p'} />
 			</div>
