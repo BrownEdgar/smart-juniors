@@ -1,5 +1,5 @@
 import './Container.scss';
-import App from './hmwrk_5/App';
+import App from './Hooks/useReducer/App';
 
 export default function Container() {
 	return (

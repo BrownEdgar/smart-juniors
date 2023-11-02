@@ -48,11 +48,7 @@ export default function App() {
 
   }
 
-  function handleBlur(fieldName, fieldValue, formik) {
-    formik.errors.lastName = "dsajhgfhdsa"
-    formik.setTouched({
-      lastName: true
-    })
+  function handleBlur(fieldName, fieldValue) {
     setFocusedField('');
     if (!fieldValue) {
       setPlaceholders({ ...placeholders, [fieldName]: fieldName });
@@ -77,9 +73,9 @@ export default function App() {
                 <div className="form-row">
                   <Field
                     type="text"
-                    name="firstName" // Add this line
-                    placeholder={placeholders.firstName} // Use placeholders state
-                    autoComplete="off" // Corrected attribute name
+                    name="firstName"
+                    placeholder={placeholders.firstName}
+                    autoComplete="off"
                     onFocus={() => handleFocus('firstName')}
                     onBlur={(e) => handleBlur('firstName', e.target.value)}
                   />
@@ -87,11 +83,11 @@ export default function App() {
                   <ErrorMessage name='firstname' component={'p'} />
                   <Field
                     type="text"
-                    name="lastName" // Add this line
-                    placeholder={placeholders.lastName} // Use placeholders state
-                    autoComplete="off" // Corrected attribute name
+                    name="lastName"
+                    placeholder={placeholders.lastName}
+                    autoComplete="off"
                     onFocus={() => handleFocus('lastName')}
-                    onBlur={(e) => handleBlur('lastName', e.target.value, formik)}
+                    onBlur={(e) => handleBlur('lastName', e.target.value)}
                   />
                   <label className={`${(focusedField === 'lastName' || formik.values.lastName !== '') ? 'visible ' : ''}right`}>Last Name</label>
                   <ErrorMessage name='lastName' component={'p'} />
@@ -99,9 +95,9 @@ export default function App() {
                 <div className="form-row">
                   <Field
                     type="email"
-                    name="email" // Add this line
-                    placeholder={placeholders.email} // Use placeholders state
-                    autoComplete="off" // Corrected attribute name
+                    name="email"
+                    placeholder={placeholders.email}
+                    autoComplete="off"
                     onFocus={() => handleFocus('email')}
                     onBlur={(e) => handleBlur('email', e.target.value)}
                   />
@@ -109,9 +105,9 @@ export default function App() {
                   <ErrorMessage name='email' component={'p'} />
                   <Field
                     type="text"
-                    name="website" // Add this line
-                    placeholder={placeholders.website} // Use placeholders state
-                    autoComplete="off" // Corrected attribute name
+                    name="website"
+                    placeholder={placeholders.website}
+                    autoComplete="off"
                     onFocus={() => handleFocus('website')}
                     onBlur={(e) => handleBlur('website', e.target.value)}
                   />
@@ -122,9 +118,9 @@ export default function App() {
                   <Field
                     className='wide'
                     type="text"
-                    name="message" // Add this line
-                    placeholder={placeholders.message} // Use placeholders state
-                    autoComplete="off" // Corrected attribute name
+                    name="message"
+                    placeholder={placeholders.message}
+                    autoComplete="off"
                     onFocus={() => handleFocus('message')}
                     onBlur={(e) => handleBlur('message', e.target.value)}
                   />
