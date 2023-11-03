@@ -23,7 +23,6 @@ export function shuffleArray(state, count = 10) {
   }
 
   // const shuffle = state.arr.sort(() =>  Math.random() - 0.5)
-  console.log(arr);
   return {
     ...state,
     arr,
@@ -60,7 +59,6 @@ export function replacePostId(state) {
 }
 
 export function openPostModal(state, id) {
-  console.log(state);
   return {
     ...state,
     postModal: true,
