@@ -1,0 +1,74 @@
+.DataInput {
+	width: 100%;
+	height: 100%;
+	padding: 3em 2em;
+
+	form {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 30px;
+
+		& .countInput,
+		& .devInput {
+			width: 100%;
+			height: 80px;
+		}
+
+		input:not([type='submit']) {
+			padding: 10px 0;
+			font-family: 'Poppins', sans-serif;
+			font-size: 18px;
+			background: transparent;
+			border: 0;
+			border-bottom: 1px solid #1116;
+			width: 100%;
+			transition: 0.3s ease;
+			position: relative;
+			z-index: 2;
+
+			&:focus {
+				outline: 0;
+				border-bottom: 1px solid rgba(168, 8, 149, 0.7);
+			}
+
+			& + p {
+				color: rgb(245, 77, 77);
+				font-size: 16px;
+				transition: 0.3s ease;
+			}
+		}
+
+		#addDev {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 80px;
+			border: 0;
+			transition: 0.3s ease;
+			cursor: pointer;
+			font-size: 1em;
+			background: rgb(210, 219, 212);
+
+			&:hover {
+				background: rgb(78, 243, 78);
+			}
+
+			&.animClosing {
+				animation: greenFilled 1.8s ease both;
+			}
+		}
+	}
+}
+
+@keyframes greenFilled {
+	0% {
+		height: inherit;
+	}
+	100% {
+		height: 100%;
+	}
+}
