@@ -10,7 +10,7 @@ export const initialState = {
   postId: null
 }
 
-export default function reducer(state = initialValue, { type, payload }) {
+export default function reducer(state = initialState, { type, payload }) {
   switch (type) {
     case Actions.GET_POSTS: return Call.getPosts(state, payload.posts)
     case Actions.SHUFFLE_ARRAY: return Call.shuffleArray(state, payload.count)
