@@ -55,9 +55,9 @@ export default function App() {
       </div>
       <div className='App-subheader' ref={appSubHead}>
         <div className='App-subheader_panel'>
-          {/* All todos gets complated true */}
+          {/* All todos gets completed true */}
           <button onClick={() => dispatch({ type: Type.ALL_DONE })}>Complate All</button>
-          {/* Remove all complated todos */}
+          {/* Remove all completed todos */}
           <button onClick={() => {
             dispatch({
               type: Type.REMOVE_ALL_DONE
