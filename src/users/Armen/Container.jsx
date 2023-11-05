@@ -1,5 +1,5 @@
 import './Container.scss';
-import App from './hmwrk_6/App';
+import App from './hmwrk_7_1/App';
 
 export default function Container() {
 	return (
