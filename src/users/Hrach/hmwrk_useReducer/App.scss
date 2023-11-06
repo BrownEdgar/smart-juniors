@@ -1,0 +1,13 @@
+.App{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  button{
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+
+  }
+}
