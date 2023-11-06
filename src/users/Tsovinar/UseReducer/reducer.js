@@ -1,5 +1,5 @@
 import {GET_POSTS, FILL_INPUTValue, ADD_ACTIONS, MIX_ARR, DELETE_ID} from './actionTypes';
-import axios from "axios"
+
 export const initialState = {
     actions: 0,
     developers: [],
@@ -11,36 +11,33 @@ export const initialState = {
 
 export default function reducer(state = initialState, action){
 switch (action.type) {
-    case GET_POSTS: return getPostsJson(initialState)  
-    case MIX_ARR: return sortArr(initialState) 
-    case FILL_INPUTValue: return fillInput(initialState)
+    case GET_POSTS: return getPost(state, action.payload.posts)  
+    case MIX_ARR: return sortArr(state) 
+    case FILL_INPUTValue: return fillInput(state)
   
     default: return "error"
        
 }
 }
-function getPostsJson(state) {
-    axios('https://jsonplaceholder.typicode.com/posts?_limit=10')
-    .then(res => state.posts = res.data)
-    state.actions  = state.actions+1 
-    return {...state}
-    
-   
-     
+function getPost(state, posts) {
+    console.log(posts)
+    return {
+    ...state,
+    posts,
+    actions: state.actions +  1
+}
+        
     
 }
 function sortArr(state){
-    const newArr = state.arr.toSorted((a, b)  => a > b ? 1: -1)
-   state.arr = newArr
-   state.actions  = state.actions+1 
-   console.log(initialState)
+   state.arr  = state.arr.toSorted((a, b)  => Math.random() > .5 ? 1: -1)
+   state.actions  = state.actions + 1 
    return {...state}
    
 }
 
-
 function fillInput(state){
-    state.developers = developer.value
-    state.actions  = state.actions+1 
+   state.developers.push(developer.value)
+    state.actions  = state.actions + 1 
     return {...state}
 }
