@@ -4,7 +4,7 @@ export default function useRandom(count, type, font = "lower") {
   const [randomElements, setRandomElements] = useState([]);
 
   useEffect(() => {
-    let elements = [];
+    const elements = [];
     const getRandomNumber = () => Math.floor(Math.random() * 1000) + 1;
     const getRandomLetter = (isUpperCase) => {
       const alphabet = isUpperCase ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' : 'abcdefghijklmnopqrstuvwxyz';
