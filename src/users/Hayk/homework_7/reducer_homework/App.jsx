@@ -41,13 +41,14 @@ export default function App() {
         <h1>My To do list</h1>
         <form
           onSubmit={(event) => {
+            event.preventDefault()
             dispatch({
               type: Type.ADD_TODO,
               payload: {
                 title: inputRef.current.value,
-                event 
               }
             })
+            event.target.reset()
           }}>
           <input type="text" ref={inputRef} id='titleinput' placeholder='Enter todo title...' />
           <button>add Todo</button>
