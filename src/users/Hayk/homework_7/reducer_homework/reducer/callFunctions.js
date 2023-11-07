@@ -14,9 +14,7 @@ export function removeAllDone(state) {
   return [...state].filter(todo => !todo.completed)
 }
 
-export function addTodo(state, { title, event }) {
-  event.preventDefault()
-
+export function addTodo(state, { title }) {
   const hasTitle = state.some(todo => todo.title === title.trim())
 
   if (title.trim() === '' || hasTitle) {
@@ -29,8 +27,6 @@ export function addTodo(state, { title, event }) {
     userId: 1,
     completed: false
   }
-
-  event.target.reset()
 
   return [...state, todo]
 }
