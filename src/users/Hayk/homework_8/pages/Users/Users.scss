@@ -1,0 +1,29 @@
+.Users {
+  padding: 20px;
+  table {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+
+    tr:nth-child(even) {
+      background-color: aliceblue;
+    } 
+    tr:nth-child(odd) {
+      background-color: lightcyan;
+    }
+
+    tr:hover {
+      background-color: antiquewhite;
+    }
+    td, th {
+      border: 1px solid lightgrey;
+      padding: 16px;
+    }
+    th {
+      font-size: 18px;
+      background-color: darkcyan;
+      color: white;
+      text-align: left;
+    }
+  }
+}
