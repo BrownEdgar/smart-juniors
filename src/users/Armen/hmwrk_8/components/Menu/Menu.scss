@@ -1,0 +1,28 @@
+.Menu {
+	position: absolute;
+	top: 0;
+	padding: 1em 1.6em;
+	width: 100%;
+
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		gap: 40px;
+
+		li {
+			background: linear-gradient(to right, lime, cyan);
+			background-clip: text;
+			-webkit-background-clip: text;
+		}
+
+		a {
+			color: lavenderblush;
+			transition: 0.2s ease;
+			// display: inline-block;
+
+			&:hover {
+				color: transparent;
+			}
+		}
+	}
+}
