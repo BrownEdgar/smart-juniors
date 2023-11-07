@@ -4,7 +4,7 @@ import useRandom from './customHook'
 import './App.scss'
 
 export default function App() {
-    const [value, {arr1, arr2, arr3 }] = useRandom({
+    const [value, {fillRandomNum, fillRandomUpper, fillRandomLower }] = useRandom({
       initialValue: [],
       quantity: 5,
       max: 1000,
@@ -15,9 +15,9 @@ export default function App() {
   return (
     <div>
       <h1>{value}</h1>
-      <button onClick={arr1}>Generate random num 1-1000</button>
-      <button onClick={arr2}>Generate random Uppercase letters</button>
-      <button onClick={arr2}>Generate random lowercase letters</button>
+      <button onClick={fillRandomNum}>Generate random num 1-1000</button>
+      <button onClick={fillRandomUpper}>Generate random Uppercase letters</button>
+      <button onClick={fillRandomLower}>Generate random lowercase letters</button>
     </div>
   )
 }
