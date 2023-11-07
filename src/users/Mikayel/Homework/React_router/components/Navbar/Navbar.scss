@@ -1,0 +1,18 @@
+header {
+  height: 70px;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  background-color: #6b0aa3;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+  }
+}
