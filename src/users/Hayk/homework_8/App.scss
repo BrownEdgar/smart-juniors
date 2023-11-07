@@ -1,0 +1,37 @@
+body {
+  // background: url("https://cdnb.artstation.com/p/assets/images/images/019/951/825/medium/victor-sales-tiranossauro-rex-final.jpg?1565718724");
+  background-image: url("https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.Loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 70vh;
+
+  &-header {
+    &_text {
+      font-size: 72px;
+      text-shadow: 4px 4px 4px rgb(0, 0, 0);
+      color: rgba(245, 245, 245, 0.954);
+      transform: translateX(300%);
+      opacity: 0.1;
+      animation: moveLoad 2s ease .5s forwards;
+    }
+  }
+}
+
+@keyframes moveLoad {
+  0% {
+    opacity: 0.1;
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

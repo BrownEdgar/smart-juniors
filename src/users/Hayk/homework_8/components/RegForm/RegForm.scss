@@ -1,0 +1,93 @@
+.RegForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  form {
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.336);
+    background: linear-gradient(45deg, rgb(35, 51, 59), rgba(78, 56, 87, 0.534));
+    backdrop-filter: blur(2px);
+    position: relative;
+    
+    label {
+      font-size: 18px;
+      color: white;
+    }
+
+    & select {
+      border: 1px solid lightgrey;
+    }
+
+    & ._username {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 0;
+
+      input {
+        outline: none;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid lightgrey;
+
+      }
+    }
+
+    & ._birtdayBox {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+
+      &>* {
+        border-radius: 5px;
+        width: 30%;
+        font-size: inherit;
+        padding: 10px;
+      }
+    }
+
+    button {
+      display: block;
+      border: none;
+      outline: none;
+      background-color: rgba(0, 0, 0, 0.372);
+      padding: 12px 24px;
+      color: white;
+      font-size: 18px;
+      margin: 12px auto;
+
+      &:hover {
+        cursor: pointer;
+        color: black;
+        background-color: rgb(71, 199, 199);
+      }
+
+      &:active {
+        background-color: darkcyan;
+      }
+    }
+
+    &>input {
+      display: block;
+      outline: none;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+
+      &[type="email"],
+      &[type="password"] {
+        margin: 10px 0;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+}
