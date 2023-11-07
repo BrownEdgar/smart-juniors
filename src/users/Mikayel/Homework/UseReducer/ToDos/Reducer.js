@@ -5,7 +5,7 @@ export const initialState = [];
 export default function todoReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_TODOS:
-      return fetchToDos(state, action.payload)
+      return fetchToDos(action.payload)
     case ALL_DONE:
       return markAllDone(state);
     case REMOVE_BY_ID:
@@ -17,8 +17,8 @@ export default function todoReducer(state = initialState, action) {
   }
 }
 
-const fetchToDos = (todos, fetchedTodos) => {
-  return [ ...fetchedTodos]
+const fetchToDos = (fetchedTodos) => {
+  return [...fetchedTodos]
 
 };
 
