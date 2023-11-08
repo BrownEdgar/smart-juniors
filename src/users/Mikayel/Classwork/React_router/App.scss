@@ -1,0 +1,12 @@
+.Posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  padding: 2em;
+  a {
+    padding: 10px;
+    border: 2px solid teal;
+    flex: 0 0 24%;
+  }
+}
