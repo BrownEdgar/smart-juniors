@@ -6,8 +6,11 @@ import {
   createRoutesFromElements
 } from 'react-router-dom'
 import ROUTES from './routes/routes'
-import { Home, About, Blog, ErrorPage } from './pages'
+import { Home, About, Blog, ErrorPage, Posts, Post } from './pages'
 import Layouts from './components/Navbar/Layouts/Layouts'
+import { postLoader } from './pages/Posts'
+
+import './App.scss'
 
 export default function App() {
   const [value, setValue] = useState("Lorem ipsum dolor sit.")
@@ -18,6 +21,8 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path={ROUTES.ABOUT} element={<About />} />
         <Route path={ROUTES.BLOG} element={<Blog value={value} />} />
+        <Route path={ROUTES.POSTS} element={<Posts />} loader={postLoader} />
+        <Route path={ROUTES.POST} element={<Post />} />
         {/* <Route path='*' element={<Navigate to={ROUTES.HOME} />} /> */}
         <Route path='*' element={<ErrorPage />} />
       </Route>
@@ -25,8 +30,8 @@ export default function App() {
   )
 
   return (
-    <div>
+    <>
       <RouterProvider router={router} />
-    </div>
+    </>
   )
 }
