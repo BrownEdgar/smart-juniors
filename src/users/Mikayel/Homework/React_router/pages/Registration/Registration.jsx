@@ -1,7 +1,6 @@
-import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useNavigate } from "react-router-dom";
-import * as Yup from 'yup';
+import { string, object } from 'yup';
 import './Registration.scss'
 
 export default function Registration({ addUser }) {
@@ -13,10 +12,10 @@ export default function Registration({ addUser }) {
     email: '',
   };
 
-  const validationSchema = Yup.object({
-    firstName: Yup.string().required('Required'),
-    lastName: Yup.string().required('Required'),
-    email: Yup.string().email('Invalid email address').required('Required'),
+  const validationSchema = object({
+    firstName: string().required('Required'),
+    lastName: string().required('Required'),
+    email: string().email('Invalid email address').required('Required'),
   });
 
   const onSubmit = (values) => {

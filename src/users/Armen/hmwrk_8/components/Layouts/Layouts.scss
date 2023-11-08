@@ -1,0 +1,19 @@
+.Layouts {
+	width: 100%;
+	min-height: 100vh;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	&-pageTitle {
+		letter-spacing: 2px;
+		margin-bottom: 20px;
+		font-size: 5.8em;
+		color: #fff2;
+		text-align: center;
+		user-select: none;
+	}
+}
