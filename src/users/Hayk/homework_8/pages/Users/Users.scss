@@ -6,23 +6,32 @@
     border-collapse: collapse;
 
     tr:nth-child(even) {
-      background-color: aliceblue;
+      background-color: #627794;
     } 
     tr:nth-child(odd) {
-      background-color: lightcyan;
+      background-color: #313d4e;
     }
 
     tr:hover {
-      background-color: antiquewhite;
+      background-color: #292f36;
+    }
+    td> a {
+      text-decoration: underline;
+      color: lightblue;
+
+      &:hover {
+        cursor: pointer;
+        color: darkcyan;
+      }
     }
     td, th {
-      border: 1px solid lightgrey;
+      border: 1px solid gray;
       padding: 16px;
+      color: whitesmoke;
     }
     th {
       font-size: 18px;
-      background-color: darkcyan;
-      color: white;
+      background-color: #161b22;
       text-align: left;
     }
   }

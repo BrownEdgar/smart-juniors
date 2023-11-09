@@ -1,7 +1,8 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
+
 import "./Users.scss"
 
-export default function Users({users}) {
+export default function Users({ users }) {
   return (
     <div className='Users'>
       <table>
@@ -16,7 +17,11 @@ export default function Users({users}) {
             users.map((user, index) => {
               return (
                 <tr key={index}>
-                  <td>{user.firstName}</td>
+                  <td>
+                    <Link key={user.id} to={`${user.id}`}>
+                      {user.firstName}
+                    </Link>
+                  </td>
                   <td>{user.lastName}</td>
                   <td>{user.email}</td>
                   <td>{`${user?.day} ${user?.month} ${user?.year}`}</td>

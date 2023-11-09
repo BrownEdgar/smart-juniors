@@ -1,16 +1,17 @@
-import React from 'react'
 import { NavLink } from "react-router-dom";
+
 import ROUTES from '../../routes/routes';
 
 import "./Navbar.scss"
 
+const linkActive = ({ isActive }) => {
+  return {
+    color: isActive ? "inherit" : "",
+    backgroundColor: isActive ? "#3b4758" : ""
+  };
+}
+
 export default function Navbar() {
-  const linkActive = ({ isActive }) => {
-    return {
-      color: isActive ? "inherit" : "",
-      backgroundColor: isActive ? "darkcyan" : ""
-    };
-  }
   return (
     <header>
       <ul>
