@@ -14,6 +14,15 @@ header {
     align-items: center;
     height: 100%;
     width: 40%;
+    li {
+      a {
+        &.active-link {
+          font-size: 28px;
+          color: red;
+          border-bottom: 2px solid red;
+        }
+      }
+    }
   }
 }
 
