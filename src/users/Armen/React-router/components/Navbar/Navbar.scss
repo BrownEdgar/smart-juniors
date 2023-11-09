@@ -15,5 +15,15 @@
 		align-items: center;
 		height: 100%;
 		width: 80%;
+
+		li {
+			a {
+				&.active-link {
+					font-size: 28px;
+					text-decoration: underline;
+					color: rgb(5, 115, 162);
+				}
+			}
+		}
 	}
 }
