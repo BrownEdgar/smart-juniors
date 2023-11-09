@@ -1,0 +1,26 @@
+.News {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 30px;
+  font-family: initial;
+  background-color: #0000006b;
+  backdrop-filter: blur(2px);
+
+  &-item {
+    padding: 20px;
+    border: 1px solid orange;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: -6px -6px 0px 6px antiquewhite;
+    transition: all .3s ease;
+    font-size: 18px;
+
+    &:hover {
+      border: 1px solid rgb(0, 128, 255);
+      background-color: lightcyan;
+      box-shadow: -6px -6px 0px 6px skyblue;
+      transform: scale(1.03);
+    }
+  }
+}

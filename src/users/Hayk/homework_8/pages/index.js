@@ -1,0 +1,7 @@
+export {default as Home} from "./Home/Home"
+export {default as About} from "./About/About"
+export {default as Blog} from "./Blog/Blog"
+export {default as News} from "./News/News"
+export {default as SignUp} from "./SignUp/SignUp"
+export {default as Users} from "./Users/Users"
+export {default as ErrorPage} from "./ErrorPage/ErrorPage"

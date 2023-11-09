@@ -1,0 +1,14 @@
+.App {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	background: rgba(31, 222, 109, 1);
+	background: linear-gradient(to top right, rgb(1, 16, 71), rgb(195, 3, 187));
+	color: #fff;
+	backdrop-filter: hue-rotate(0deg);
+	animation: hrt 1s linear infinite;
+}

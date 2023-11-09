@@ -19,7 +19,7 @@ export default function App() {
         <Route path= {ROUTES.REGISTER} element={<Layouts />}>
             <Route index element={<Register setUsers= {setUsers} users={users} />} />
             <Route path={ROUTES.USERS} element={<Users users={users} /> } />
-            <Route path={ROUTES.USER} element={<User users={users}/> } />
+            <Route path={ROUTES.USER} element={<User users={users}/ > } />
             <Route path='*' element={<Errorpage />} />
         </Route>
         )
