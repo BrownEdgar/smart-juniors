@@ -8,6 +8,10 @@ import ROUTES from './routes/routes'
 import Errorpage from './Pages/Errorpage'
 import { useState } from 'react'
 import Layouts from './Components/NavBar/Layouts/Layouts'
+import { Posts } from './Pages'
+import './App.scss'
+import Post from './Pages/Post'
+import { postLoader } from './Pages/Posts'
 
 
 export default function App() {
@@ -19,6 +23,8 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path={ROUTES.ABOUT} element={<About />} />
             <Route path={ROUTES.BLOG} element={<Blog value={value}  /> } />
+            <Route path={ROUTES.POSTS} element={<Posts/>} loader= {postLoader} />
+            <Route path={ROUTES.POST} element={<Post/> } />
             <Route path='*' element={<Navigate to= {ROUTES.HOME} />} />
         </Route>
         )

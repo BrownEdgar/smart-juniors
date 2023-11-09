@@ -1,18 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Navbar.scss'
 import ROUTES from '../Routes/routes'
 
 export default function Navbar() {
+  const setClassName = ({isActive}) => isActive? 'isactive-true' : ''
   return (
     <div>
       <header>
         <ul>
             <li>
-                <Link to={ROUTES.REGISTER}> register </Link>
+                <NavLink to={ROUTES.REGISTER} className={setClassName}> register </NavLink>
             </li>
             <li>
-                <Link to={ROUTES.USERS}> users </Link>
+                <NavLink to={ROUTES.USERS} className={setClassName}> users </NavLink>
             </li> 
         </ul>
     </header>

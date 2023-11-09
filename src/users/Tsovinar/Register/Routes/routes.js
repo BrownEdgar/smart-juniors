@@ -1,6 +1,8 @@
  const ROUTES = {
     REGISTER: '/',
-    USERS: 'users'
+    USERS: 'users',
+    USER: 'users/:FirstName',
+    ERROR: 'errorpage'
  }
  
  export default ROUTES
