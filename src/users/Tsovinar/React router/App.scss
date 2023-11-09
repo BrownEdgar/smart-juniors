@@ -1,0 +1,32 @@
+.Posts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding: 2em;
+    a{
+        border: 2px solid rgb(59, 180, 180);
+        flex: 0 0 24%;
+    }
+
+}
+// #root{
+//     max-width: 1140px;
+//     margin: 0 auto;
+//     // position: relative;
+// }
+
+
+footer{
+    background-color: #8a8181;
+    // width: 100%;
+    position: absolute;
+    bottom: 0%;
+    width: 95%;
+
+   
+}
+.layout{
+    margin:  0 auto;
+    width: 95%;
+}
