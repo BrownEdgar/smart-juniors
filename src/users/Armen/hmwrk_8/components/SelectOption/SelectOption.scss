@@ -1,0 +1,39 @@
+.SelectOption {
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	& > * {
+		flex-basis: 32%;
+	}
+
+	&-label {
+		font-size: 0.8em;
+	}
+
+	&-errorMessage {
+		height: 24px;
+		font-size: 14px;
+		background: linear-gradient(to right, rgb(235, 0, 165), rgb(255, 153, 224));
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: rgb(248, 62, 62);
+		color: transparent;
+		letter-spacing: 1px;
+		padding-left: 2px;
+		translate: transformY(-100%);
+		bottom: 10px;
+		text-wrap: nowrap;
+		text-shadow: 0 0 30px #fff6;
+		overflow: hidden;
+		animation: errorMessageAppear 0.6s ease;
+	}
+}
+
+@keyframes errorMessageAppear {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: default;
+	}
+}

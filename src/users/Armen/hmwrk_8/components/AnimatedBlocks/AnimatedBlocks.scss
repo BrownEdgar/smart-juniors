@@ -69,9 +69,11 @@
 
 @keyframes bgAnim {
 	0% {
-		transform: rotate(-70deg) rotateX(30deg) rotateY(20deg) translateX(400px) skew(20deg);
+		opacity: 0;
+		transform: rotate(-70deg) rotateX(30deg) rotateY(20deg) translateX(900px) skew(20deg);
 	}
 	100% {
+		opacity: 1;
 		transform: rotate(-70deg) rotateX(30deg) rotateY(20deg) translateX(0) skew(20deg);
 	}
 }
