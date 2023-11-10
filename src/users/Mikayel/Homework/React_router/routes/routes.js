@@ -1,5 +1,6 @@
 const ROUTES = {
   REGISTRATION: '/',
-  USERS: 'users'
+  USERS: 'users',
+  USER: 'user'
 }
 export default ROUTES

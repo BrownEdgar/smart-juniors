@@ -4,7 +4,8 @@ const ROUTES = {
   NEWS: "news",
   BLOG: "blog",
   SIGNUP: "signup",
-  USERS: "users"
+  USERS: "users",
+  USER: 'users/:id'
 }
 
 export default ROUTES

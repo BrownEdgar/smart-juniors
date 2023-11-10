@@ -1,18 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements
 } from "react-router-dom";
-import { Home, About, Blog, News, SignUp, Users, ErrorPage } from "./pages/index";
+import { Home, About, Blog, News, SignUp, Users, User, ErrorPage } from "./pages/index";
 
 import "./App.scss"
 import ROUTES from './routes/routes';
 import Layouts from './components/Layouts/Layouts';
+import axios from 'axios';
 
 export default function App() {
   const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    axios("https://raw.githubusercontent.com/API-Reference/src/main/users.json")
+    .then(res => setUsers(res.data))
+  }, [])
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -22,7 +28,8 @@ export default function App() {
         <Route path={ROUTES.NEWS} element={<News />} />
         <Route path={ROUTES.BLOG} element={<Blog />} />
         <Route path={ROUTES.SIGNUP} element={<SignUp users={users} setUsers={setUsers} />} />
-        <Route path={ROUTES.USERS} element={<Users users={users} />} />
+        <Route path={ROUTES.USERS} element={<Users users={users} />}/>
+        <Route path={ROUTES.USER} element={<User users={users}/>}/>
         <Route path='*' element={<ErrorPage />} />
       </Route>
     )
