@@ -17,7 +17,8 @@ export default function App() {
   axios.defaults.baseURL = "http://localhost:3000/"
 
   useEffect(() => {
-    axios("users").then(res => setUsers(res.data))
+    axios("https://raw.githubusercontent.com/API-Reference/src/main/users.json")
+      .then(res => setUsers(res.data))
   }, [])
 
   const router = createBrowserRouter(
@@ -28,8 +29,8 @@ export default function App() {
         <Route path={ROUTES.NEWS} element={<News />} />
         <Route path={ROUTES.BLOG} element={<Blog />} />
         <Route path={ROUTES.SIGNUP} element={<SignUp users={users} setUsers={setUsers} />} />
-        <Route path={ROUTES.USERS} element={<Users users={users} />}/>
-        <Route path={ROUTES.USER} element={<User users={users}/>}/>
+        <Route path={ROUTES.USERS} element={<Users users={users} />} />
+        <Route path={ROUTES.USER} element={<User users={users} />} />
         <Route path='*' element={<ErrorPage />} />
       </Route>
     )

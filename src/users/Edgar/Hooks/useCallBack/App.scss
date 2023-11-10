@@ -1,0 +1,27 @@
+.flex {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: start;
+  gap: 20px;
+  & > div {
+    flex-basis: 30%;
+    border: 2px solid grey;
+    text-align: center;
+    img {
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+}
+
+form {
+  width: 450px;
+  margin: 20px auto;
+  input {
+    font-size: 22px;
+    padding: 1em;
+    margin: 10px;
+  }
+}
