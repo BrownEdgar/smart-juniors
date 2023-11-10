@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 export default function Layouts() {
   return (
-    <div>
+    <div className='layout'>
          <Navbar />
          <Outlet />
          <h1>Lorem ipsum dolor sit.</h1>

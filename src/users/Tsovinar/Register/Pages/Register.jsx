@@ -43,6 +43,7 @@ export default function Register(props) {
                             <ErrorMessage  name='LastName' component ={'p'}/>
                             <Field type="number" name="age" placeholder="age" />
                             <ErrorMessage  name='age' component ={'p'}/>
+                            <Field type="file"  name="img" accept= "image/*"/>
                             <input className="submit" type="submit" placeholder='Submit'/>
                         </Form>
                             )

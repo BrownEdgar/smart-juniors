@@ -7,8 +7,6 @@ export default function News() {
   // useEffect(() => {
   //   axios("https://api.curator.io/restricted/feeds/5142c1c2-37df-4c39-a26b-6bdd22fcb0e3/posts?limit=50&hasPoweredBy=true&version=4.0").then(res => setNews(res.data.posts))
   // }, [])
-
-  // console.log(news);
   
   return (
     <div className='Loading'>
