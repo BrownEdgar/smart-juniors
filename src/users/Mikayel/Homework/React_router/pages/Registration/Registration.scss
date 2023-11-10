@@ -24,7 +24,7 @@ label {
 .input {
   text-align: left;
   margin-bottom: 15px;
-  & input {
+  & input, textarea {
     width: 350px;
     display: block;
     padding: 8px;

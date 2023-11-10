@@ -19,7 +19,7 @@ export default function Users({ users }) {
             <tbody>
               {users.map((user, index) => (
                 <tr key={index}>
-                  <td><Link to={ROUTES.REGISTRATION}>{`${user.firstName} ${user.lastName}`}</Link></td>
+                  <td><Link to={`/user/${index}`}>{`${user.firstName} ${user.lastName}`}</Link></td>
                   <td>{user.email}</td>
                 </tr>
               ))}
