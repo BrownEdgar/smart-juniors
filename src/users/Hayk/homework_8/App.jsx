@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   Route,
   RouterProvider,
@@ -17,7 +17,7 @@ export default function App() {
 
   useEffect(() => {
     axios("https://raw.githubusercontent.com/API-Reference/src/main/users.json")
-    .then(res => setUsers(res.data))
+      .then(res => setUsers(res.data))
   }, [])
 
   const router = createBrowserRouter(
@@ -28,8 +28,8 @@ export default function App() {
         <Route path={ROUTES.NEWS} element={<News />} />
         <Route path={ROUTES.BLOG} element={<Blog />} />
         <Route path={ROUTES.SIGNUP} element={<SignUp users={users} setUsers={setUsers} />} />
-        <Route path={ROUTES.USERS} element={<Users users={users} />}/>
-        <Route path={ROUTES.USER} element={<User users={users}/>}/>
+        <Route path={ROUTES.USERS} element={<Users users={users} />} />
+        <Route path={ROUTES.USER} element={<User users={users} />} />
         <Route path='*' element={<ErrorPage />} />
       </Route>
     )
