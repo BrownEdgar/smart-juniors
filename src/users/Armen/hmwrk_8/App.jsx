@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Navigate, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import ROUTES from './routes/routes';
-import Layouts from './components/Layouts/Layouts';
-import { Register, Users } from './pages';
+import { Layouts } from './components';
+import { Register, Users, User } from './pages';
 import './App.scss';
 
 export default function App() {
@@ -17,6 +17,7 @@ export default function App() {
 			<Route path={ROUTES.REGISTER} element={<Layouts />}>
 				<Route index element={<Register setUsers={setUsers} />} />
 				<Route path={ROUTES.USERS} element={<Users users={users} removeUser={removeUser} />} />
+				<Route path={ROUTES.USER} element={<User users={users} />} />
 				<Route path="*" element={<Navigate to={ROUTES.REGISTER} />} />
 			</Route>
 		)

@@ -6,11 +6,11 @@ export default function InputField({ inputType, inputName, inputLabel }) {
 	return (
 		<div className="InputField">
 			<Field type={inputType} name={inputName} id={inputName} autoComplete="off" />
-			<div className="InputField-label">{inputLabel}</div>
+			<div className={`InputField-label ${inputLabel}`}>{inputLabel}</div>
 			<ErrorMessage name={inputName}>
 				{(message) => {
 					return (
-						<p className="InputField-errorMessage" style={{ width: `${message.length * 11}px` }}>
+						<p className="InputField-errorMessage" style={{ width: `${message.length * 12}px` }}>
 							{message}
 						</p>
 					);
