@@ -27,8 +27,6 @@ export default function App() {
     })).catch(error => console.log(error))
   }, [])
 
-  console.log(state);
-
   return (
     <div className='App'>
       {
