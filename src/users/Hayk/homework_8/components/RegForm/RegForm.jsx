@@ -9,6 +9,7 @@ import { genDays, genYears, genMonths } from '../../helper/helper';
 import "./RegForm.scss";
 import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../routes/routes';
+import axios from 'axios';
 
 const validationSchema = object({
   firstName: string()
@@ -71,6 +72,10 @@ export default function RegForm({ users, setUsers }) {
           id: `${Date.now().toString(16)}_${values.firstName}`
         }
       ])
+      axios.post("users", {
+        // id: `${Date.now().toString(16)}_${values.firstName}`,
+        ...values
+      })
       actions.resetForm()
       navigate({ pathname: `/${ROUTES.USERS}` })
     }

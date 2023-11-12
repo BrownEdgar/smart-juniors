@@ -1,5 +1,5 @@
 body {
-  background-color: #292f36;
+  background-color: #222;
 }
 
 ::-webkit-scrollbar {
@@ -46,6 +46,12 @@ input[type="file" i] {
       animation: moveLoad 2s ease .5s forwards;
     }
   }
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 @keyframes moveLoad {

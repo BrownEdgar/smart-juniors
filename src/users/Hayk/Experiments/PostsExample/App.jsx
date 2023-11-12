@@ -11,7 +11,6 @@ export default function App() {
     }
   })
 
-  console.log(req);
   return (
     <div>
       {

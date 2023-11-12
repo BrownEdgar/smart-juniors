@@ -1,21 +1,91 @@
 .Register {
-	width: 900px;
-	// border: 1px solid red;
+	width: 1280px;
 	padding: 1em;
+
+	&-textAreaField {
+		textarea {
+			resize: none;
+			width: 100%;
+			padding: 10px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: 500;
+			color: purple;
+			&:focus {
+				outline: 0;
+			}
+		}
+	}
+
+	&-birthDateSelect {
+		display: flex;
+		gap: 14px;
+		position: relative;
+	}
+
+	&-genderSelect {
+		display: flex;
+		position: relative;
+		height: 40px;
+		flex-grow: 1;
+
+		#male,
+		#female {
+			display: none;
+		}
+
+		#male {
+			&:checked ~ div.checkLight {
+				left: 0;
+				transition: 0.4s ease;
+				filter: hue-rotate(0);
+			}
+		}
+
+		#female {
+			&:checked ~ div.checkLight {
+				left: 50%;
+				transition: 0.4s ease;
+				filter: hue-rotate(90deg);
+			}
+		}
+
+		& .checkLight {
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			background-image: linear-gradient(to right, transparent, rgba(0, 123, 255, 0.8), transparent);
+			z-index: -1;
+		}
+
+		label.gender {
+			flex-basis: 50%;
+			height: 100%;
+			line-height: 40px;
+			letter-spacing: 2px;
+			font-size: 1.2em;
+			text-align: center;
+			cursor: pointer;
+			transition: 0.4s ease;
+			user-select: none;
+		}
+	}
 
 	&-inputWrapper {
 		display: flex;
-		flex-direction: column;
+		flex-flow: row wrap;
 		gap: 30px;
 		width: 80%;
+		justify-content: space-between;
+		// height: 300px;
+		// border: 1px solid yellow;
+		& > * {
+			flex-basis: 47%;
+		}
 	}
 
 	&-form {
-		// border-right: 4px solid palevioletred;
 		display: flex;
 		justify-content: space-between;
-		// align-items: center;
-		// height: 180px;
 		overflow: hidden;
 		// border: 1px solid yellow;
 		padding: 2em 0;

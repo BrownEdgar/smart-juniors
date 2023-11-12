@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import ROUTES from '../../routes/routes';
+import { ControlPanel } from '../../components';
 import './Users.scss';
 
 export default function Users({ users, removeUser }) {
 	return (
 		<div className="Users">
 			<h1 className="Users-title Layouts-pageTitle">USERS</h1>
-			<p className="Users-count">Count: {users.length}</p>
+			<ControlPanel userCount={users.length} />
 			<table>
 				<thead>
 					<tr>
@@ -16,6 +16,7 @@ export default function Users({ users, removeUser }) {
 						<th className="tableLastName">Last Name</th>
 						<th className="tableEmail">Email Address</th>
 						<th className="tableRemove"></th>
+						<th className="tableInfo"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -30,14 +31,18 @@ export default function Users({ users, removeUser }) {
 									<td>
 										<i className="fa-solid fa-trash-can" onClick={() => removeUser(index)}></i>
 									</td>
+									<td>
+										<Link to={`${user.id}`}>
+											<i className="fa-solid fa-info"></i>
+										</Link>
+									</td>
 								</tr>
 							);
 						})
 					) : (
 						<tr className="noData">
-							<td colSpan={4}>
+							<td colSpan={6}>
 								<h3>NO DATA</h3>
-								<Link to={ROUTES.REGISTER}>Add User</Link>
 							</td>
 						</tr>
 					)}

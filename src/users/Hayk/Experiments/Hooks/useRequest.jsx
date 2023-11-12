@@ -28,8 +28,6 @@ export default function useRequest(state) {
     })
   }, [])
 
-  console.log(1);
-
   return [global, setGlobal]
 }
 
