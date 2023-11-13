@@ -1,0 +1,35 @@
+.ErrorPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: initial;
+  &-content {
+    color: white;
+    text-align: center;
+    &_error {
+      font-size: 150px;
+      text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    }
+    &> h2 {
+      text-shadow: 4px 4px 4px rgb(0, 0, 0);
+      font-size: 48px;
+    }
+    &> button {
+      border: none;
+      outline: none;
+      font-size: 18px;
+      background-color: rgba(0, 0, 0, 0.422);
+      color: white;
+      padding: 12px 24px;
+
+      &:hover {
+        cursor: pointer;
+        color: black;
+        background-color: rgb(71, 199, 199);
+      }
+      &:active {
+        background-color: darkcyan;
+      }
+    }
+  }
+}
