@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './Navbar.scss'
 import ROUTES from '../../routes/routes'
 
@@ -25,9 +25,10 @@ export default function Navbar() {
         <li>
           <NavLink
             to={ROUTES.POSTS}
+
             className={setClassName}> Posts</NavLink>
         </li>
       </ul>
-    </header>
+    </header >
   )
 }

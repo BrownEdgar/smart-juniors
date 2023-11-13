@@ -14,10 +14,15 @@ import axios from 'axios';
 
 export default function App() {
   const [users, setUsers] = useState([])
+  axios.defaults.baseURL = "http://localhost:3000/"
 
   useEffect(() => {
+<<<<<<< HEAD
     axios("https://raw.githubusercontent.com/API-Reference/src/main/users.json")
       .then(res => setUsers(res.data))
+=======
+    axios("users").then(res => setUsers(res.data))
+>>>>>>> refs/remotes/origin/main
   }, [])
 
   const router = createBrowserRouter(

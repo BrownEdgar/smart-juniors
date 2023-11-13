@@ -3,9 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 
 export default function Posts() {
-
   const posts = useLoaderData();
-  console.log(posts)
   return (
     <div className='Posts'>
       {
@@ -26,6 +24,5 @@ const postLoader = async ({ request, params }) => {
   return axios('https://jsonplaceholder.typicode.com/posts?_limit=10')
     .then(res => res.data)
 }
-
 
 export { postLoader }

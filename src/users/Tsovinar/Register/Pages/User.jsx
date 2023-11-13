@@ -3,20 +3,20 @@ import { Link, useParams } from 'react-router-dom'
 import ROUTES from '../Routes/routes'
 
 export default function User({users}) {
-    const {FirstName} = useParams()
+    const {firstName} = useParams()
     const [User, setUser] = useState({})
-console.log(FirstName)
+console.log(firstName)
 
     useEffect(() => {
-       setUser(users.filter(user => user.FirstName ==`${FirstName}`)) 
-    }, [FirstName])
+       setUser(users.find(user => user.firstName ==`${firstName}`)) 
+    }, [firstName])
 
       console.log(User)
   return (
     <div>
         <Link to = {`/${ROUTES.USERS}`}>Go to users list</Link>
         <div>
-            <h1>FirstName:  {FirstName}</h1>
+            <h1>FirstName:  {firstName}</h1>
              <h2>LastName: {User.LastName}</h2>
              <h2>Age: {User.age}</h2>
              <img src="" alt="" />

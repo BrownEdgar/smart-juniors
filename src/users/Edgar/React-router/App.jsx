@@ -21,7 +21,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path={ROUTES.ABOUT} element={<About />} />
         <Route path={ROUTES.BLOG} element={<Blog value={value} />} />
-        <Route path={ROUTES.POSTS} element={<Posts />} loader={postLoader} />
+        <Route path={ROUTES.POSTS} element={<Posts x={1} options={'posts'} />} loader={postLoader} />
         <Route path={ROUTES.POST} element={<Post />} />
         {/* <Route path='*' element={<Navigate to={ROUTES.HOME} />} /> */}
         <Route path='*' element={<ErrorPage />} />
