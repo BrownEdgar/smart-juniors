@@ -1,5 +1,0 @@
-export const GET_POSTS = "GET_POSTS"
-export const SAVE_USER = "SAVE_USER"
-export const MIX_ARRAY = "MIX_ARRAY"
-export const REPLACE_ID = "REPLACE_ID"
-export const DELETE_POST = "DELETE_POST"
