@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   Route,
   RouterProvider,
@@ -14,10 +14,10 @@ import axios from 'axios';
 
 export default function App() {
   const [users, setUsers] = useState([])
+  axios.defaults.baseURL = "http://localhost:3000/"
 
   useEffect(() => {
-    axios("https://raw.githubusercontent.com/API-Reference/src/main/users.json")
-    .then(res => setUsers(res.data))
+    axios("users").then(res => setUsers(res.data))
   }, [])
 
   const router = createBrowserRouter(
