@@ -1,0 +1,46 @@
+.Comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+
+  &-item {
+    background-color: #222;
+    border-radius: 20px;
+    padding: 20px;
+
+    &> p {
+      color: lightgray;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 10px;
+    }
+
+    &_user {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 0;
+
+      &> a {
+        font-size: 20px;
+        border-bottom: 2px solid gray;
+        transition: all .3s ease;
+
+        &:hover {
+          cursor: pointer;
+          color: orange;
+          border-color: orangered;
+        }
+      }
+
+      &> img {
+        display: block;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

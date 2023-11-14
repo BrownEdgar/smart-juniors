@@ -32,7 +32,6 @@ export default function App() {
   }
 
   const handleSubmit = (formik) => {
-    console.log(formik);
   }
   return (
     <div className='App'>

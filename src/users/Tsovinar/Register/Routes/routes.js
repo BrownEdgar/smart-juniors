@@ -1,7 +1,7 @@
  const ROUTES = {
     REGISTER: '/',
     USERS: 'users',
-    USER: 'users/:FirstName',
+    USER: 'users/:firstName',
     ERROR: 'errorpage'
  }
  
