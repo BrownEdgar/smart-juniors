@@ -1,17 +1,20 @@
-import {Home,About,Blog,Posts,Register,Post,Errorpage} from './Pages'
+import {Home,About,Blog,Posts,Register,Post,Errorpage, Users,User} from './Pages'
 import { Route,RouterProvider,createBrowserRouter,createRoutesFromElements } from "react-router-dom"
 import ROUTES from "./routes/routes"
 import { useState } from "react"
 import Layouts from "./Components/Layouts/Layouts"
 import './App.scss'
 import { postsByLoader } from './Pages/Posts'
+import { usersByLoader } from './Pages/Users'
 
 
 
 export default function App() {
-  
+
   const [value, setValue] = useState('Lorem ipsum dolor sit.') 
   
+
+
   const router=createBrowserRouter(
     createRoutesFromElements(
     <Route path={ROUTES.HOME}      element={<Layouts/>} >
@@ -21,6 +24,8 @@ export default function App() {
     <Route path={ROUTES.POSTS}     element={ <Posts />} loader={postsByLoader} />
     <Route path={ROUTES.POST}      element={ <Post/>}/> 
     <Route path={ROUTES.REGISTER}  element={ <Register/>} />
+    <Route path={ROUTES.USERS}     element={ <Users/>}  loader={usersByLoader} />
+    <Route path={ROUTES.USER}      element={ <User/>}/>
     <Route path="*"                element={ <Errorpage/>}/>
   </Route>    
   ))

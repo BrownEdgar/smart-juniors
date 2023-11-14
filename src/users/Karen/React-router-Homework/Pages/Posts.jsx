@@ -17,7 +17,7 @@ const posts = useLoaderData()
             return(
               <Link to={`${post.id}`} key={post.id}>
              <h2> {post.title}</h2>
-           <p>{post.body}</p>
+             <p>{post.body}</p>
               </Link>
             )
           })
@@ -28,7 +28,7 @@ const posts = useLoaderData()
 
 
 const postsByLoader = async({request,params}) => {
-  return axios.get('http://localhost:3000/posts')
-           .then(res => res.data)
+  return axios('http://localhost:3000/posts/')
+                  .then(res => res.data)
 } 
 export {postsByLoader}

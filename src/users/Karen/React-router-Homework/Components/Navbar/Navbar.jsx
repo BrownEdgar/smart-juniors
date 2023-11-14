@@ -6,10 +6,15 @@ import "./Navbar.scss"
 
 const setClassName=({isActive})=> isActive ? 'active-Link':''
 
+
+
+
+
 export default function Navbar() {
+
   return (
-    <header>
-        <ul>
+    <header >
+            <ul>
             <li>
                 <NavLink to={ROUTES.HOME} 
                 className={({isActive})=> isActive ? 'active-Link':''}>Home</NavLink>
@@ -25,6 +30,9 @@ export default function Navbar() {
             </li>
               <li>
                 <NavLink to={ROUTES.REGISTER} className={setClassName}>Register</NavLink>
+            </li>
+             <li>
+                <NavLink to={ROUTES.USERS} className={setClassName}>Users</NavLink>
             </li>
         </ul>
     </header>

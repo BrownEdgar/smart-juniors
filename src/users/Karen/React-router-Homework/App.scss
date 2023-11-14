@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: left 16px;
     padding-right: 16px;
+ 
 }
 
 .Posts{
@@ -16,5 +17,9 @@ a{
     border: 1px solid black;
     flex: 0 0 24%;
 }
+
 }
 
+ .isActive-dark{
+    background-color: black;
+}

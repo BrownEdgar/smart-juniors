@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "concurrently \"npm run dev\" \"json-server --watch db.json\"",
+    "start": "concurrently \"npm run dev\" \"json-server --watch Kar_db.json\"",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

@@ -14,7 +14,7 @@ const {id} = useParams()
 
 useEffect(()=>{
   if (id<=20) {
-    axios.get(`http://localhost:3000/posts/${id}`)
+    axios(`http://localhost:3000/posts/${id}`)
              .then(res=>setPost(res.data))
   }
 },[id])
@@ -22,7 +22,7 @@ useEffect(()=>{
 if (isNaN(id) || id > 20) {
   return(
     <>
-    <h1>Post N {id} not found</h1>
+    <h1>Post No {id} not found</h1>
     <Link to={`/${ROUTES.POSTS}`}>Go back to the Posts</Link>
     </>
   )
@@ -32,7 +32,7 @@ if (isNaN(id) || id > 20) {
         <h1> Post No {id}</h1>
         <h2>{post?.title}</h2>
         <h3>{post?.body}</h3>
-       <Link to={`/${ROUTES.POSTS}`}>Go back to the Posts</Link>
+        <Link to={`/${ROUTES.POSTS}`}>Go back to the Posts</Link>
     </div>
   )
 }

@@ -1,62 +1,50 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik'
-import { object,string } from 'yup'
-import '../Scss/Register.scss'
-
-
-const validationSchema = object({
-      'First Name': string().matches(/^[A-Z]/,"Enter your name with uppercase ").required("Requierd"),
-      'Email Address':string().email(),
-      'Last Name':string().matches(/^[A-Z]/,"Enter your name with uppercase ").required(),
-      'Website Name':string().required(),
-      'Write your message': string(),
-})
-
+import {Formik,Form, Field} from 'formik'
 
 export default function Register() {
+
     const initialValues={
-        'First Name':'',
-        'Email Address':'',
-        'Last Name':'',
-        'Website Name':'',
-        'Write your message':'',
+      name:'',
+      username:'',
+      email:'',
+      street:'',
+      suite:'',
+      city:'',
+      phone:'',
+      website:'',
     }
-    
-    const handleSubmit=(values,{resetForm})=>{
-        resetForm()
-        console.log(values);
-    }
+
+const handleSubmit=(values,{resetForm})=>{
+console.log(values);
+resetForm()
+}
 
 
   return (
-    <div className='App'>
-        
-     <Formik
-     initialValues={initialValues}
-     onSubmit={handleSubmit}
-     validateOnChange={false}
-     validateOnBlur={true}
-     validationSchema={validationSchema}
-     >
-        {
-            (formik)=>{
-                return(
-         <Form>
-            <label htmlFor="text" className='Lable'>Please creat your account</label>
-            <Field type="text" name="First Name" placeholder="First Name" className="First" />
-            {/* <ErrorMessage name='First Name' component={'p'}/> */}
-            <Field type="text" name="Last Name" placeholder="Last Name" className="Last" />
-            <Field type="email" name="Email Address" placeholder="Email Address" className="Email"/>
-            <Field type="text" name="Website Name" placeholder="Website Name"  className="Website"/>
-            <Field type="text" name="Write your message" placeholder="Write your message" className="Write" />
-            <Field type="submit" name="submit" value="SUBMIT"  className="Submit"/>
-        </Form>
-                )
-            }
-        }
-     </Formik>
+    <div>
+        <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validateOnBlur={true}
+        validateOnChange={false}
+        >
+              <Form>
+                    <div>
+                      <Field type="text" name='name' placeholder='name'/>
+                      <Field type="username" name='username' placeholder='username'/>
+                      <Field type="email" name='email' placeholder='email'/>
+                      <Field type="street" name='street' placeholder='street'/>
+                      <Field type="suite" name='suite' placeholder='suite'/>
+                      <Field type="city" name='city' placeholder='city'/>
+                      <Field type="phone" name='phone' placeholder='phone'/>
+                      <Field type="website" name='website' placeholder='website'/>
+                      <input type="submit" name='Add user' />
+                    </div>
+              </Form>
+        </Formik>
     </div>
   )
 }
+
 
 
 
