@@ -21,6 +21,7 @@ export default function App() {
        axios(`http://localhost:3000/posts/${id}`,{
         method: "DELETE"
        })
+       .then(() => setdeletedId(null))
     }
 
     const deletedPostId = (id) => {
