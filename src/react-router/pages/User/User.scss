@@ -1,7 +1,7 @@
 .User {
   &-rightBar {
     height: 100%;
-    margin-left: 15%;
+    margin-left: 250px;
     padding: 20px;
     &_desc {
       max-width: 60%;
@@ -21,14 +21,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: flex-start;
+    gap: 6px;
+    padding: 20px 6px;
     margin-top: 52.8px;
     background-color: #161b22;
     z-index: 999;
     overflow-y: auto;
 
-    button, a {
+    .active {
+      background-color: #292f36;
+    }
+
+    a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
       text-align: end;
       font-family: inherit;
       width: 80%;
@@ -36,7 +45,12 @@
       border: none;
       border-radius: 6px;
       color: lightgrey;
-      background-color: #22222200;
+      background-color: #0000;
+      transition: all .5s ease;
+
+      &> span {
+        white-space: nowrap;
+      }
 
       &:hover {
         cursor: pointer;

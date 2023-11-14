@@ -5,13 +5,25 @@ import {
   createBrowserRouter,
   createRoutesFromElements
 } from "react-router-dom";
-import { Home, About, Blog, News, SignUp, Users, User, ErrorPage } from "./pages/index";
+import { 
+  Home, 
+  About, 
+  Blog, 
+  News, 
+  SignUp, 
+  Users, 
+  User, 
+  UserHome,
+  UserPosts, 
+  UserPhotos, 
+  UserSettings,
+  ErrorPage 
+} from "./pages/index";
 
 import "./App.scss"
 import ROUTES from './routes/routes';
 import Layouts from './components/Layouts/Layouts';
 import axios from 'axios';
-import UserPosts from './components/UserPosts/UserPosts';
 
 export default function App() {
   const [users, setUsers] = useState([])
@@ -29,10 +41,12 @@ export default function App() {
         <Route path={ROUTES.NEWS} element={<News />} />
         <Route path={ROUTES.BLOG} element={<Blog />} />
         <Route path={ROUTES.SIGNUP} element={<SignUp users={users} setUsers={setUsers} />} />
-        <Route path={ROUTES.USERS} element={<Users users={users} />}/>
-        <Route path={ROUTES.USER} element={<User users={users}/>}>
-            <Route path={"posts"} element={<UserPosts/>}/>
-            {/* <Route path={"about"} element={<About/>}/> */}
+        <Route path={ROUTES.USERS} element={<Users users={users} />} />
+        <Route path={ROUTES.USER} element={<User users={users} />}>
+          <Route path={ROUTES.USER_HOME} element={<UserHome />} />
+          <Route path={ROUTES.POSTS} element={<UserPosts />} />
+          <Route path={ROUTES.PHOTOS} element={<UserPhotos />} />
+          <Route path={ROUTES.SETTINGS} element={<UserSettings />} />
         </Route>
         <Route path='*' element={<ErrorPage />} />
       </Route>

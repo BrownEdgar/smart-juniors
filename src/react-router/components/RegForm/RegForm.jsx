@@ -1,15 +1,15 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 import { Formik, Form, Field } from 'formik';
 import { string, object } from "yup"
+import axios from 'axios';
 
 import CustomField from '../CustomField/CustomField';
 import { genDays, genYears, genMonths } from '../../helper/helper';
+import ROUTES from '../../routes/routes';
 
 import "./RegForm.scss";
-import { useNavigate } from 'react-router-dom';
-import ROUTES from '../../routes/routes';
-import axios from 'axios';
 
 const validationSchema = object({
   firstName: string()
@@ -69,11 +69,10 @@ export default function RegForm({ users, setUsers }) {
         ...users,
         {
           ...values,
-          id: `${Date.now().toString(16)}_${values.firstName}`
+          id: `${Date.now().toString(16)}`
         }
       ])
       axios.post("users", {
-        // id: `${Date.now().toString(16)}_${values.firstName}`,
         ...values
       })
       actions.resetForm()

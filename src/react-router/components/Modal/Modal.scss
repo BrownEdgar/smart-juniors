@@ -13,6 +13,8 @@
   &-content {
     height: 80%;
     margin: auto;
+    transform: scale(0);
+    animation: modalLoad .7s ease forwards;
     &> img {
       display: block;
       object-fit: cover;
@@ -21,4 +23,8 @@
       height: 100%;
     }
   }
+}
+
+@keyframes modalLoad {
+  to{transform: scale(1);}
 }

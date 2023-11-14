@@ -1,7 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import "./ErrorPage.scss"
+
 import ROUTES from '../../routes/routes'
+
+import "./ErrorPage.scss"
 
 export default function ErrorPage() {
 

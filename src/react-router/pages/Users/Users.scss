@@ -1,5 +1,6 @@
 .Users {
   padding: 20px;
+
   table {
     margin: 0 auto;
     width: 100%;
@@ -7,7 +8,8 @@
 
     tr:nth-child(even) {
       background-color: #627794;
-    } 
+    }
+
     tr:nth-child(odd) {
       background-color: #313d4e;
     }
@@ -15,7 +17,8 @@
     tr:hover {
       background-color: #292f36;
     }
-    td> a {
+
+    td>a {
       text-decoration: underline;
       color: lightblue;
 
@@ -24,11 +27,14 @@
         color: darkcyan;
       }
     }
-    td, th {
+
+    td,
+    th {
       border: 1px solid gray;
       padding: 16px;
       color: whitesmoke;
     }
+
     th {
       font-size: 18px;
       background-color: #161b22;

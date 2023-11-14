@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import "./Modal.scss"
 
 export default function Modal({children, toggleModal}) {

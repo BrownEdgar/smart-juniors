@@ -1,4 +1,5 @@
 import React from 'react'
+
 import "./ImageBox.scss"
 
 export default function ImageBox({images}) {

@@ -13,6 +13,29 @@
     backdrop-filter: blur(2px);
     position: relative;
 
+    input::-webkit-file-upload-button  {
+      display: none;
+      border: none;
+      border-radius: 0;
+    }
+    
+    input[type="file"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: none !important;
+      width: 100%; 
+      height: 100%;
+    }
+    
+    input[type="file"]:hover {
+      cursor: pointer;
+    }
+    
+    input[type="file" i] {
+      font-size: 0;
+    }
+
     ._textArea {
       display: flex;
       flex-direction: column;
@@ -164,3 +187,5 @@
     }
   }
 }
+
+

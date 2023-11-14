@@ -1,6 +1,8 @@
 import React from 'react'
-import "./SignUp.scss"
+
 import RegForm from "../../components/RegForm/RegForm";
+
+import "./SignUp.scss"
 
 export default function SignUp({users, setUsers}) {
   return (
