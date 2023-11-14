@@ -1,0 +1,25 @@
+header{
+    height: 100px;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: yellow;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 100%;
+        width: 40%;
+        li{
+            a{
+                &.active-Link{
+                    color: black;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
