@@ -1,0 +1,92 @@
+.FetchButton {
+  &-btns {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    button {
+      display: block;
+      border: none;
+      outline: none;
+      font-size: 22px;
+      padding: 16px 48px;
+      background: linear-gradient(90deg, #2567a4 0% 50%, #333 0% 50%);
+      background-size: 200%;
+      background-position: 100%;
+      color: lightgrey;
+      transition: all .3s ease;
+      animation: loadAnim 4s linear forwards, dataExist 1s 4s linear infinite;
+      animation-play-state: paused;
+
+      &.load {
+        animation-play-state: running;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: #222;
+      }
+
+      &:active {
+        color: #2567a4;
+        box-shadow: 0 0 8px 4px #2567a4;
+      }
+
+      &:first-child:active {
+        color: orangered;
+        box-shadow: 0 0 8px 4px orangered;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    &_item {
+      width: 22%;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: rgb(210, 231, 250);
+      transition: all .7s ease;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: -6px -6px skyblue, -12px -12px rgb(51, 184, 236);
+      }
+
+      ._imgBox {
+        width: 100%;
+      }
+
+      & img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@keyframes loadAnim {
+  to {
+    background-position-x: 0%;
+  }
+}
+
+@keyframes dataExist {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
