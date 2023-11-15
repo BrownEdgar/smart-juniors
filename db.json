@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "pic": "https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/Imagejtb7-1684960500563.jpg?w=1152&fm=auto&ar=2:1&mode=crop&crop=faces",
+      "name": "Vincent Willem van Gogh",
+      "Country": "Netherlands",
+      "life": "1853 - 1890",
+      "about": "Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created approximately 2100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold, symbolic colours, and dramatic, impulsive and highly expressive brushwork that contributed to the foundations of modern art. Only one of his paintings was known by name to have been sold during his lifetime. Van Gogh became famous after his suicide at age 37, which followed years of poverty and mental illness.",
+     
+    },
+    {
+      "id": 2,
+      "name": "Pablo Picasso",
+      "pic": "https://victorhugomariano.com/cdn/shop/products/canvas-_in_-24x36-wall-621a97fd9823f.jpg?v=1665609626",
+      "Country": "Spain",
+      "life": "1881 - 1973",
+      "about": "Spanish painter, sculptor, printmaker, ceramicist and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement, the invention of constructed sculpture,[8][9] the co-invention of collage, and for the wide variety of styles that he helped develop and explore. Among his most famous works are the proto-Cubist Les Demoiselles d'Avignon (1907) and the anti-war painting Guernica (1937), a dramatic portrayal of the bombing of Guernica by German and Italian air forces during the Spanish Civil War."
+    },
+    {
+      "id": 3,
+      "name": "Amadeo Modigliani",
+      "pic": "https://www.passion-estampes.com/deco2/modigliani/modigliani-jeanne-hebuterne.jpg",
+      "Country": "Italy",
+      "life": "1884 - 1920",
+      "about": "Italian painter and sculptor who worked mainly in France. He is known for portraits and nudes in a modern style characterized by a surreal elongation of faces, necks, and figures that were not received well during his lifetime, but later became much sought-after. Modigliani spent his youth in Italy, where he studied the art of antiquity and the Renaissance. In 1906, he moved to Paris, where he came into contact with such artists as Pablo Picasso and Constantin Brâncuși. By 1912, Modigliani was exhibiting highly stylized sculptures with Cubists of the Section d'Or group at the Salon d'Automne."
+    },
+    {
+      "id": 4,
+      "name": "Martiros Saryan",
+      "pic": "https://yerevancard.com/system/cat_items/img2s/000/000/016/defaultsize/martiros_saryan.jpg?1519555884",
+      "Country": "Armenia",
+      "life": "1880 - 1972",
+      "about": "Armenian painter, the founder of a modern Armenian national school of painting.[2].He was born into an Armenian family in Nakhichevan-on-Don (now part of Rostov-on-Don, Russia). In 1895 at the age of 15, he completed the Nakhichevan school and from 1897 to 1904 studied at the Moscow School of Arts, including in the workshops of Valentin Serov and Konstantin Korovin. He was heavily influenced by the work of Paul Gauguin and Henri Matisse. He exhibited his works in various shows. He had works shown at the Blue Rose Exhibit in Moscow.[1]"
+    }
+  ]
+}

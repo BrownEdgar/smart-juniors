@@ -13,7 +13,7 @@ export default function Modal({ children, toggleModal, theme }) {
     window.addEventListener("click", handleClick)
     return () => {
       window.removeEventListener("click", handleClick)
-    }s
+    }
   }, [])
   const myFunction = () => { }
   return (
