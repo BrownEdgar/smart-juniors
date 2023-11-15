@@ -20,4 +20,15 @@ a {
 
 ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+li {
+  border-radius: 4px;
+  border: 1px solid grey;
+  padding: 5px;
 }

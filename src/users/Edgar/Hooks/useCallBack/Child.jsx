@@ -1,16 +1,18 @@
 import React from 'react'
 
-export default function Child() {
+export default function Child({ photos }) {
   console.log("child render")
-  let sum = 0;
-
-  for (let i = 0; i < 1e6; i++) {
-    sum += i
-  }
-
   return (
-    <div>
-      <h1>Total: {sum}</h1>
-    </div>
+    <>
+      {photos
+        .map(photo => {
+          return (
+            <div key={photo.id}>
+              <img src={photo.url} />
+              <h2>{photo.title}</h2>
+            </div>
+          )
+        })}
+    </>
   )
 }
