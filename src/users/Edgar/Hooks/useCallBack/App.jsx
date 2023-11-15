@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import axios from 'axios'
 import { useCallback, useEffect, useMemo, useState, useTransition } from 'react'
 
@@ -49,5 +50,24 @@ export default function App() {
         {child}
       </div>
     </>
+=======
+import React, { useMemo, useState } from 'react'
+import Child from './Child'
+
+export default function App() {
+  const [caount, setCaount] = useState(0)
+
+
+  const child = useMemo(() => <Child />, [caount])
+
+  return (
+    <div>
+      <h1>Count: {caount}</h1>
+      <button onClick={() => setCaount(caount + 1)}>add count</button>
+
+      {child}
+
+    </div>
+>>>>>>> 01dbccb (fix)
   )
 }

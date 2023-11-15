@@ -17,8 +17,12 @@ export default function App() {
   axios.defaults.baseURL = "http://localhost:3000/"
 
   useEffect(() => {
+<<<<<<< HEAD
     axios("https://raw.githubusercontent.com/API-Reference/src/main/users.json")
       .then(res => setUsers(res.data))
+=======
+    axios("users").then(res => setUsers(res.data))
+>>>>>>> 01dbccb (fix)
   }, [])
 
   const router = createBrowserRouter(
