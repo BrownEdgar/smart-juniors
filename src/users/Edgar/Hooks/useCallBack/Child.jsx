@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Child({ photos }) {
   console.log("child render")
   return (
