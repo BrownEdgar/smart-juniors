@@ -1,17 +1,10 @@
 {
   "posts": [
     {
-<<<<<<< HEAD
       "userId": 1,
       "id": 1,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-=======
-      "userId": 5,
-      "id": 1,
-      "title": "aaaaaa",
-      "body": "aaaaaasdsakabsdkashkdaskdhsakhd"
->>>>>>> fe1948e (json-server)
     },
     {
       "userId": 1,
@@ -87,15 +80,12 @@
     },
     {
       "userId": 2,
-<<<<<<< HEAD
       "id": 14,
       "title": "voluptatem eligendi optio",
       "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
     },
     {
       "userId": 2,
-=======
->>>>>>> fe1948e (json-server)
       "id": 15,
       "title": "eveniet quod temporibus",
       "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
@@ -114,15 +104,12 @@
     },
     {
       "userId": 2,
-<<<<<<< HEAD
       "id": 18,
       "title": "voluptate et itaque vero tempora molestiae",
       "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
     },
     {
       "userId": 2,
-=======
->>>>>>> fe1948e (json-server)
       "id": 19,
       "title": "adipisci placeat illum aut reiciendis qui",
       "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
@@ -132,21 +119,10 @@
       "id": 20,
       "title": "doloribus ad provident suscipit at",
       "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
-<<<<<<< HEAD
     }
   ],
   "comments": [],
   "profile": {
     "name": "typicode"
   }
-=======
-    },
-    {
-      "userId": 10,
-      "id": 21,
-      "title": "Lorem ipsum dolor sit.",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste odio incidunt dolorem tempore eveniet recusandae quae. Ab consectetur cumque fugit exercitationem consequuntur temporibus totam earum error. Accusamus ipsum voluptatum consequuntur natus totam. Incidunt, facere tenetur error sit eveniet aut tempora."
-    }
-  ]
->>>>>>> fe1948e (json-server)
 }
