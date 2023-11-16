@@ -61,10 +61,11 @@ export default function RegForm({ users, setUsers }) {
   }
 
   const formSubmit = (values, actions) => {
+    console.log(values)
     profileImg.current.src = `/${values.profile_image}`
     const hasUser = users.some(user => values.email === user.email)
 
-    if(!hasUser) {
+    if (!hasUser) {
       setUsers([
         ...users,
         {
