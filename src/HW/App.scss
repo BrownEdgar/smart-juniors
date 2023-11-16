@@ -1,0 +1,13 @@
+.green{
+    background-color: rgb(98, 190, 98);
+}
+.buttons{
+    margin:0 auto;
+    text-align: center;
+    & > button{
+        padding: 5px 30px;
+        margin: 10px;
+        border-radius: 8px;
+        text-align: center;
+    }
+}

@@ -32,7 +32,10 @@ export default function App() {
         setbuttonthreeisActive(true)   
     }
 
+   
   return (
+    <>
+    
     <div className='buttons'>
         <h1>{text}</h1>
         <button className={classNames(null,{'green': isActive})} onClick={firstButtonClick} type='submit' name='A'>A</button>
@@ -40,5 +43,6 @@ export default function App() {
         <button className={classNames(null,{'green': buttonthreeisActive})} onClick={thirdButtonClick} type='submit' name='C'>C</button>
 
     </div>
+    </>
   )
 }
