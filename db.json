@@ -1,128 +1,114 @@
 {
-  "posts": [
+  "people": [
     {
-      "userId": 1,
       "id": 1,
-      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+      "firstname": "Elon",
+      "lastname": "Musk",
+      "email": "elon.musk@example.com",
+      "birthday": "June 28, 1971",
+      "info": "Elon Musk is known for his ambitious ventures in the tech and space industries, pushing boundaries with companies like SpaceX, Tesla, Neuralink, and The Boring Company.",
+      "workIndustry": "Entrepreneurship, Technology",
+      "successInField": "Founder and CEO of SpaceX, CEO and product architect of Tesla, Inc., co-founder of Neuralink and The Boring Company",
+      "image": "Musk.jpeg"
     },
     {
-      "userId": 1,
       "id": 2,
-      "title": "qui est esse",
-      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+      "firstname": "Beyoncé",
+      "lastname": "Knowles",
+      "email": "beyonce.knowles@example.com",
+      "birthday": "September 4, 1981",
+      "info": "Beyoncé is a global icon in the music industry, recognized for her powerful vocals, stage presence, and activism. She has achieved numerous accolades, including multiple Grammy Awards.",
+      "workIndustry": "Music, Entertainment",
+      "successInField": "Grammy-winning singer, songwriter, and actress. One of the best-selling music artists in the world.",
+      "image": "Knowles.jpeg"
     },
     {
-      "userId": 1,
       "id": 3,
-      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+      "firstname": "Jeff",
+      "lastname": "Bezos",
+      "email": "jeff.bezos@example.com",
+      "birthday": "January 12, 1964",
+      "info": "Jeff Bezos founded Amazon, transforming it from an online bookstore into one of the largest and most diverse e-commerce and technology companies globally.",
+      "workIndustry": "Entrepreneurship, Technology",
+      "successInField": "Founder and former CEO of Amazon, and as of 2022, one of the wealthiest people in the world.",
+      "image": "Bezos.jpeg"
     },
     {
-      "userId": 1,
       "id": 4,
-      "title": "eum et est occaecati",
-      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+      "firstname": "Malala",
+      "lastname": "Yousafzai",
+      "email": "malala.yousafzai@example.com",
+      "birthday": "July 12, 1997",
+      "info": "Malala Yousafzai is an advocate for girls' education, surviving a Taliban assassination attempt and becoming the youngest-ever Nobel Prize laureate for her inspiring activism.",
+      "workIndustry": "Activism, Education",
+      "successInField": "Advocate for female education and the youngest Nobel Prize laureate.",
+      "image": "Yousafzai.jpg"
     },
     {
-      "userId": 1,
       "id": 5,
-      "title": "nesciunt quas odio",
-      "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+      "firstname": "LeBron",
+      "lastname": "James",
+      "email": "lebron.james@example.com",
+      "birthday": "December 30, 1984",
+      "info": "LeBron James is a basketball legend, celebrated for his on-court prowess and philanthropic efforts. He's considered one of the greatest basketball players in history.",
+      "workIndustry": "Basketball, Sports",
+      "successInField": "Professional basketball player widely regarded as one of the greatest in the history of the NBA.",
+      "image": "James.jpeg"
     },
     {
-      "userId": 1,
       "id": 6,
-      "title": "dolorem eum magni eos aperiam quia",
-      "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+      "firstname": "Angela",
+      "lastname": "Merkel",
+      "email": "angela.merkel@example.com",
+      "birthday": "July 17, 1954",
+      "info": "Angela Merkel, as the Chancellor of Germany, played a key role in European and global politics, known for her leadership during challenging times, including the Eurozone crisis.",
+      "workIndustry": "Politics",
+      "successInField": "Former Chancellor of Germany, one of the most powerful women in the world.",
+      "image": "Merkel.jpg"
     },
     {
-      "userId": 1,
       "id": 7,
-      "title": "magnam facilis autem",
-      "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+      "firstname": "Cristiano",
+      "lastname": "Ronaldo",
+      "email": "cristiano.ronaldo@example.com",
+      "birthday": "February 5, 1985",
+      "info": "Cristiano Ronaldo is a soccer icon, known for his incredible goal-scoring abilities and international success. He has won numerous championships and individual awards.",
+      "workIndustry": "Soccer, Sports",
+      "successInField": "One of the greatest soccer players, multiple-time FIFA Ballon d'Or winner.",
+      "image": "Ronaldo.jpg"
     },
     {
-      "userId": 1,
       "id": 8,
-      "title": "dolorem dolore est ipsam",
-      "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+      "firstname": "Oprah",
+      "lastname": "Winfrey",
+      "email": "oprah.winfrey@example.com",
+      "birthday": "January 29, 1954",
+      "info": "Oprah Winfrey is a media mogul, influential talk show host, and philanthropist. Her impact extends beyond media, making her a powerful figure in various fields.",
+      "workIndustry": "Media, Television",
+      "successInField": "Media mogul, television host, and philanthropist.",
+      "image": "Winfrey.jpeg"
     },
     {
-      "userId": 1,
       "id": 9,
-      "title": "nesciunt iure omnis dolorem tempora et accusantium",
-      "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+      "firstname": "Xi",
+      "lastname": "Jinping",
+      "email": "xi.jinping@example.com",
+      "birthday": "June 15, 1953",
+      "info": "Xi Jinping is the paramount leader of China, overseeing significant political and economic developments in the country. His leadership has shaped China's global influence.",
+      "workIndustry": "Politics",
+      "successInField": "General Secretary of the Communist Party of China and the paramount leader of China.",
+      "image": "Jinping.jpg"
     },
     {
-      "userId": 1,
       "id": 10,
-      "title": "optio molestias id quia eum",
-      "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
-    },
-    {
-      "userId": 2,
-      "id": 11,
-      "title": "et ea vero quia laudantium autem",
-      "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
-    },
-    {
-      "userId": 2,
-      "id": 12,
-      "title": "in quibusdam tempore odit est dolorem",
-      "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
-    },
-    {
-      "userId": 2,
-      "id": 13,
-      "title": "dolorum ut in voluptas mollitia et saepe quo animi",
-      "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
-    },
-    {
-      "userId": 2,
-      "id": 14,
-      "title": "voluptatem eligendi optio",
-      "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
-    },
-    {
-      "userId": 2,
-      "id": 15,
-      "title": "eveniet quod temporibus",
-      "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
-    },
-    {
-      "userId": 2,
-      "id": 16,
-      "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
-      "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
-    },
-    {
-      "userId": 2,
-      "id": 17,
-      "title": "fugit voluptas sed molestias voluptatem provident",
-      "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo"
-    },
-    {
-      "userId": 2,
-      "id": 18,
-      "title": "voluptate et itaque vero tempora molestiae",
-      "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
-    },
-    {
-      "userId": 2,
-      "id": 19,
-      "title": "adipisci placeat illum aut reiciendis qui",
-      "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
-    },
-    {
-      "userId": 2,
-      "id": 20,
-      "title": "doloribus ad provident suscipit at",
-      "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
+      "firstname": "Taylor",
+      "lastname": "Swift",
+      "email": "taylor.swift@example.com",
+      "birthday": "December 13, 1989",
+      "info": "Taylor Swift is a multi-talented artist, renowned for her country and pop music. She is known for her songwriting skills and addressing personal experiences in her work.",
+      "workIndustry": "Music",
+      "successInField": "Award-winning singer-songwriter known for her narrative songwriting and global success.",
+      "image": "Swift.png"
     }
-  ],
-  "comments": [],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

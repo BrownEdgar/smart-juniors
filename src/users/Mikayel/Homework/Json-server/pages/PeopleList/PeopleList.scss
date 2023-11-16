@@ -1,0 +1,28 @@
+.PeopleList {
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #6b0aa3;
+    color: #ffffff;
+  }
+  
+  td {
+    background-color: #f9f9f9;
+  }
+}

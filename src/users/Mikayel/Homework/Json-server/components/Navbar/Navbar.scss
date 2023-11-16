@@ -1,0 +1,23 @@
+header {
+  height: 70px;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  background-color: #2d0346;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+  }
+}
+
+.active {
+  color: #ffcc00;
+  font-weight: bold;
+}
