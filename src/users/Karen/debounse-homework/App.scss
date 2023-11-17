@@ -1,0 +1,27 @@
+.App{
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: start;
+    gap: 20px;
+    padding: 1em;
+    h1{
+        text-align: center;
+        position: relative;
+    }
+    input{
+        padding: 1em;
+        border-radius: 10px;
+        border: 1px solid grey;
+        margin: 10px;
+    }
+    .activeA{
+        background-color: blue;
+    }
+    .activeB{
+        background-color: rgb(255, 81, 0);
+    } .activeC{
+        background-color: rgb(0, 255, 110);
+    }    
+} 
