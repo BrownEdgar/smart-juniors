@@ -4,15 +4,12 @@ import About from './About'
 import './App.scss'
 
 
-
-
 export const  MyContext= createContext()
 
 export default function App() {
     const [data, setData] = useState([])
     const [products, setProducts] = useState(['bread' , 'chesse', 'butter' , 'salt'])
 
-    
     const setProductLocalStorage = () =>{
         localStorage.setItem('products', JSON.stringify(products))
     }
@@ -20,7 +17,6 @@ export default function App() {
     const getProducts = () =>{
         setData(JSON.parse(localStorage.getItem('products') || '[]'))
     }
-    
     
   return ( 
     <div className='App'>

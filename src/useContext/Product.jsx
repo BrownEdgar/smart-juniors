@@ -5,7 +5,6 @@ import { useContext } from 'react'
 export default function Product() {
     const value = useContext(MyContext)
     
-
   return (
     <div>
         <h1>Add products in local storage</h1>

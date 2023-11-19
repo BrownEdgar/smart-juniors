@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-
 import { MyContext } from './App'
 import Product from './product'
 
@@ -8,8 +7,7 @@ export default function About() {
     const deleteProduct = (ind) =>{
         value.setProducts([...value.products].toSpliced(ind, 1))
         value.setProductLocalStorage()
-        value.getProducts()
-        
+        value.getProducts()  
     }
   return (
     <div>
