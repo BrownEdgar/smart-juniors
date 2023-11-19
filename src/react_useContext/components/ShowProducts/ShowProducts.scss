@@ -1,0 +1,77 @@
+.ShowProducts {
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+    ._item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 15px;
+      width: 100%;
+      padding: 20px;
+      background-color: aliceblue;
+      border-radius: 20px;
+      border: 1px solid #0080ff;
+      position: relative;
+      transition: all .3s ease;
+
+
+      &:hover {
+        cursor: pointer;
+        border-color: orange;
+        background-color: #faebd7;
+        transform: scale(1.03);
+      }
+
+      h1 {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      p {
+        text-align: center;
+        max-height: 100px;
+        overflow: hidden;
+      }
+
+      ._imgBox {
+        width: 100%;
+
+        &>img {
+          width: 100%;
+        }
+      }
+
+      ._priceBox {
+        display: flex;
+        justify-content: space-between;
+
+        ._price::after {
+          content: " \0024";
+          font-size: inherit;
+          color: orange;
+        }
+      }
+
+      ._removeMark {
+        font-style: normal;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 24px;
+        color: grey;
+        transition: all .3s ease;
+        &:hover {
+          cursor: pointer;
+          color: #0080ff;
+        }
+      }
+    }
+  }
+}
