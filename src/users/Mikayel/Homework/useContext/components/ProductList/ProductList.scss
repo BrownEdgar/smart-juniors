@@ -1,0 +1,25 @@
+.ProductList{
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 10px 0;
+    border: 1px solid #444;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    border-radius: 5px;
+    color: #fff;
+
+    button {
+      background-color: #ff0000;
+      border: none;
+      color: #fff;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+  }
+}
