@@ -1,0 +1,26 @@
+.App {
+	--navbar-height: 60px;
+}
+
+@keyframes openContainer {
+	0% {
+		height: 0%;
+		overflow-y: hidden;
+	}
+	70% {
+		overflow-y: hidden;
+	}
+	100% {
+		height: default;
+		overflow-y: auto;
+	}
+}
+
+@keyframes openUserWindow {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}

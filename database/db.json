@@ -1,0 +1,79 @@
+{
+	"users": [
+		{
+			"id": "AlbEin_1479",
+			"profile_image": "AlbEin_1479.png",
+			"firstname": "Albert",
+			"lastname": "Einstein",
+			"email": "alberteinstein@gmail.com",
+			"username": "genius.albert",
+			"password": "Abo1479",
+			"birthday": 14,
+			"birthmonth": 3,
+			"birthyear": "1879",
+			"birthplace": "Ulm, Germany",
+			"known_as": "Scientist, Theoretical physicist",
+			"about": "Hello, my full name is Albert Einstein. I am a German-born theoretical physicist who is widely held to be one of the greatest and most influential scientists of all time. Best known for developing the theory of relativity, I also made important contributions to quantum mechanics."
+		},
+		{
+			"id": "SteHaw_0842",
+			"profile_image": "SteHaw_0842.png",
+			"firstname": "Stephen",
+			"lastname": "Hawking",
+			"email": "stephenhawking@mail.com",
+			"username": "genius.hawking",
+			"password": "Stepan0842",
+			"birthday": 8,
+			"birthmonth": 1,
+			"birthyear": 1942,
+			"birthplace": "Oxford, United Kingdom",
+			"known_as": "Scientist, Physicist, Cosmologist",
+			"about": "Hello, my full name is Stephen William Hawking. I am an English theoretical physicist, cosmologist, and author. I am the director of research at the Centre for Theoretical Cosmology at the University of Cambridge. Between 1979 and 2009, I was the Lucasian Professor of Mathematics at Cambridge, widely viewed as one of the most prestigious academic posts in the world."
+		},
+		{
+			"id": "KeaRee_0264",
+			"profile_image": "KeaRee_0264.png",
+			"firstname": "Keanu",
+			"lastname": "Reeves",
+			"email": "keanureeves@outlook.com",
+			"username": "actor.keanu",
+			"password": "Revaz0264",
+			"birthday": 2,
+			"birthmonth": 9,
+			"birthyear": 1964,
+			"birthplace": "Beirut, Lebanon",
+			"known_as": "Actor",
+			"about": "Hello, my full name is Keanu Charles Reeves. I am a Canadian actor. Born in Beirut and raised in Toronto, I made my acting debut in the Canadian television series Hangin' In, before making my feature film debut in Youngblood. Greater stardom came for playing Neo in the science fiction series The Matrix, beginning in 1999."
+		},
+		{
+			"id": "TomHid_0981",
+			"profile_image": "TomHid_0981.png",
+			"firstname": "Tom",
+			"lastname": "Hiddleston",
+			"email": "tomhiddleston@outlook.com",
+			"username": "god.loki",
+			"password": "GloriousPurpose",
+			"birthday": 9,
+			"birthmonth": 2,
+			"birthyear": 1981,
+			"birthplace": "Westminster, London, United Kingdom",
+			"known_as": "Actor",
+			"about": "Hi, my full name is Thomas William Hiddleston. I am an English actor. I gained international fame portraying Loki in the Marvel Cinematic Universe, starting with Thor in 2011 and most recently headlining the Disney+ series Loki since 2021. He started his film career in the Joanna Hogg films Unrelated and Archipelago."
+		},
+		{
+			"id": 1700430589347,
+			"profile_image": "lanadelrey.png",
+			"firstname": "Elizabeth",
+			"lastname": "Grant",
+			"email": "lanadelrey@gmail.com",
+			"username": "lana_del_rey",
+			"password": "LanaDelRey",
+			"birthday": 21,
+			"birthmonth": 6,
+			"birthyear": 1985,
+			"birthplace": "New York City, U.S.",
+			"known_as": "Singer-Songwriter",
+			"about": "Hi, my full name is Elizabeth Woolridge Grant but i known professionally as Lana Del Rey. I am an American singer-songwriter. My music is noted for its cinematic quality and exploration of tragic romance, glamour, and melancholia, with frequent references to contemporary pop culture and 1950s–70s Americana."
+		}
+	]
+}

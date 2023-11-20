@@ -1,0 +1,61 @@
+.SignForm {
+	form {
+		width: 500px;
+		padding: 1em 1.2em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		background: lavender;
+		border-radius: 10px;
+
+		label {
+			display: flex;
+			& > p {
+				width: 40%;
+				font-weight: 600;
+			}
+		}
+
+		input:not([type='submit']) {
+			width: 100%;
+			height: 40px;
+			padding: 2px 6px;
+			border: 0;
+			border-radius: 6px;
+			font-size: 1em;
+		}
+
+		input[type='date'] {
+			width: 60%;
+			align-self: end;
+		}
+
+		input[type='submit'] {
+			width: 40%;
+			height: 36px;
+			font-size: 1em;
+			margin-top: 10px;
+			font-weight: 600;
+			border-radius: 6px;
+			border: 0;
+			box-shadow: 1px 2px 4px 1px #0002;
+			cursor: pointer;
+			transition: 0.2s ease;
+
+			&:hover {
+				background: white;
+			}
+		}
+
+		textarea {
+			padding: 10px;
+			border: 1px solid #0003;
+			font-size: 1em;
+			font-family: 'Imprima', sans-serif;
+			width: 100%;
+			height: 140px;
+			resize: none;
+		}
+	}
+}
