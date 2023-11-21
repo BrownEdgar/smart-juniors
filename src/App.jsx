@@ -1,11 +1,17 @@
+import { useDispatch, useSelector } from "react-redux"
+import { addCount } from "./features/count/countSlice"
+
 export default function App() {
+  const state = useSelector((state) => state)
+
+  const dispatch = useDispatch()
+  const handleClick = () =>{
+    dispatch(addCount())
+  }
   return (
     <div>
-
-      <h1>Lorem ipsum dolor sit amet. Lorem, ipsum.</h1>
-
-      <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi quae quaerat hic vero eveniet fuga obcaecati sed quisquam voluptatibus! Assumenda suscipit aliquid perspiciatis provident molestiae voluptatem, velit expedita facilis. Qui quae commodi quas dolore architecto harum, dolor officiis eaque nisi.</h1>
-
+      <h1>{state.count}</h1>
+      <button onClick={handleClick}>add count</button>
     </div>
   )
 }
