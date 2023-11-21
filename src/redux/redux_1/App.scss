@@ -1,0 +1,100 @@
+.App {
+
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 20px;
+
+    h1 {
+      min-width: 100px;
+      text-align: center;
+    }
+
+    button {
+      width: fit-content;
+      height: fit-content;
+      border: none;
+      outline: none;
+      font-size: 24px;
+      padding: 10px 13.1px;
+      background: #333;
+      color: lightgrey;
+      border-radius: 50%;
+      transition: all .3s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: orange;
+      }
+
+      &:active {
+        box-shadow: 0 0 4px 2px orangered;
+      }
+    }
+  }
+
+  &-content {
+    &_btns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+      
+      button {
+        display: block;
+        border: none;
+        outline: none;
+        padding: 12px 48px;
+        font-size: 24px;
+        border-radius: 1000px;
+        background: #222;
+        color: white;
+        transition: all .3s ease;
+
+        &:hover {
+          cursor: pointer;
+          color: orange;
+          box-shadow: 0 0 2px 5px gray;
+        }
+
+        &:active {
+          color: orangered;
+          box-shadow: 0 0 2px 5px darkslategray;
+        }
+      }
+    }
+
+    &_array {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      &>span {
+        min-width: 50px;
+        user-select: none;
+        text-align: center;
+        background: #222;
+        color: white;
+        font-size: 24px;
+        border-radius: 50%;
+        transition: all .3s ease;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          color: orange;
+          box-shadow: 0 0 2px 5px gray;
+        }
+
+        &:active {
+          color: orangered;
+          box-shadow: 0 0 2px 5px darkslategray;
+        }
+      }
+    }
+  }
+}
