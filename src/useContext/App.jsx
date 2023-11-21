@@ -13,6 +13,7 @@ export default function App() {
     const setProductLocalStorage = () =>{
         localStorage.setItem('products', JSON.stringify(products))
     }
+    
 
     const getProducts = () =>{
         setData(JSON.parse(localStorage.getItem('products') || '[]'))

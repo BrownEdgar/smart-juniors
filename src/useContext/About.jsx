@@ -5,9 +5,9 @@ import Product from './product'
 export default function About() {
     const value = useContext(MyContext)
     const deleteProduct = (ind) =>{
-        value.setProducts([...value.products].toSpliced(ind, 1))
-        value.setProductLocalStorage()
-        value.getProducts()  
+        value.setProducts(value.products.toSpliced(ind, 1))
+        
+        value.getProducts(value.setProductLocalStorage())  
     }
   return (
     <div>
