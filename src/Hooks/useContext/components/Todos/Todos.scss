@@ -1,0 +1,14 @@
+.Todos {
+	width: 100%;
+	flex-grow: 1;
+	padding: 1em 0;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	&-noData {
+		color: #fff7;
+		text-align: center;
+		font-size: 5.6em;
+	}
+}

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
 	margin: 0;
@@ -9,7 +11,7 @@
 
 body {
 	line-height: 1.6;
-	font-family: 'Imprima', sans-serif;
+	/* font-family: 'Imprima', sans-serif; */
 }
 
 a {
