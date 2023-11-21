@@ -6,11 +6,12 @@ import './AddTodo.scss';
 export default function AddTodo() {
 	const { addinStorage, updateState } = useContext(TodosContext);
 
-	const handleSubmit = ({ preventDefault, target }) => {
-		preventDefault();
-		addinStorage(target.addField.value);
-		target.addField.value = '';
-		target.addField.focus();
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const { addField } = e.target;
+		addinStorage(addField.value);
+		addField.value = '';
+		addField.focus();
 		updateState();
 	};
 
