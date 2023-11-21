@@ -13,25 +13,31 @@ export default function App() {
 		setTodoList(storageData || []);
 	}, []);
 
-	const update = () => {
+	const updateState = () => {
 		setTodoList(JSON.parse(localStorage.getItem(TODO_LIST) || '[]'));
 	};
 
-	const addinStorage = (body) => {
-		const currentData = JSON.parse(localStorage.getItem(TODO_LIST) || '[]');
-		const updatedList = [...currentData, { id: Date.now(), body }];
+	const updateStorage = (updatedList) => {
 		localStorage.setItem(TODO_LIST, JSON.stringify(updatedList));
 	};
 
+	const getFromStorage = () => {
+		return JSON.parse(localStorage.getItem(TODO_LIST) || '[]');
+	};
+
+	const addinStorage = (body) => {
+		const currentData = getFromStorage();
+		updateStorage([...currentData, { id: Date.now(), body }]);
+	};
+
 	const removeFromStorage = (index) => {
-		const currentData = JSON.parse(localStorage.getItem(TODO_LIST));
-		const updatedList = currentData.toSpliced(index, 1);
-		localStorage.setItem(TODO_LIST, JSON.stringify(updatedList));
+		const currentData = getFromStorage();
+		updateStorage(currentData.toSpliced(index, 1));
 	};
 
 	return (
 		<div className="App">
-			<TodosContext.Provider value={{ todoList, update, addinStorage, removeFromStorage }}>
+			<TodosContext.Provider value={{ todoList, updateState, addinStorage, removeFromStorage }}>
 				<Container />
 			</TodosContext.Provider>
 		</div>

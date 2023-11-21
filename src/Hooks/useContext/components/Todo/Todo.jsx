@@ -5,17 +5,17 @@ import { TodosContext } from '../../App';
 import './Todo.scss';
 
 export default function Todo({ todo, index }) {
-	const { removeFromStorage, update } = useContext(TodosContext);
+	const { removeFromStorage, updateState } = useContext(TodosContext);
 
-	const handleSubmit = (index) => {
+	const handleClick = (index) => {
 		removeFromStorage(index);
-		update();
+		updateState();
 	};
 
 	return (
 		<div key={todo.id} className="Todo">
 			<p className="Todo-body">{todo.body}</p>
-			<button className="Todo-deleteBtn" onClick={() => handleSubmit(index)}>
+			<button className="Todo-deleteBtn" onClick={() => handleClick(index)}>
 				<RiDeleteBin4Fill />
 			</button>
 		</div>

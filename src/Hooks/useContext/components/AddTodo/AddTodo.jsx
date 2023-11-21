@@ -4,15 +4,14 @@ import { MdAddTask } from 'react-icons/md';
 import './AddTodo.scss';
 
 export default function AddTodo() {
-	const { addinStorage, update } = useContext(TodosContext);
+	const { addinStorage, updateState } = useContext(TodosContext);
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		const { addField } = e.target;
-		addinStorage(addField.value);
-		addField.value = '';
-		addField.focus();
-		update();
+	const handleSubmit = ({ preventDefault, target }) => {
+		preventDefault();
+		addinStorage(target.addField.value);
+		target.addField.value = '';
+		target.addField.focus();
+		updateState();
 	};
 
 	return (
