@@ -1,11 +1,14 @@
-import {configureStore} from '@reduxjs/toolkit'
-import countReducer from '../features/count/countSlice'
+import {configureStore, getDefaultMiddleware} from '@reduxjs/toolkit'
+import usersSlice from '../features/users/usersSlice'
+import countersSlice from '../features/count/countersSlice';
+import mainMiddleWare from '../middleWares/main';
 
 const store = configureStore({
     reducer:{
-        count: countReducer
-
-    }
+        counters: countersSlice,
+        users: usersSlice
+    },
+    middleware: mainMiddleWare, 
 })
 
 export default store
