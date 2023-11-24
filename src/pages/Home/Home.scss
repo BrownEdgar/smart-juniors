@@ -1,0 +1,28 @@
+.Home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	-webkit-box-reflect: right;
+
+	&-title {
+		width: 300px;
+		letter-spacing: 3px;
+		animation: appear 3s ease;
+		user-select: none;
+
+		&.small {
+			font-size: 1.2em;
+			color: lime;
+			text-shadow: 0 0 26px rgba(56, 255, 56, 40%);
+			margin-left: 10px;
+		}
+
+		&.large {
+			font-size: 5em;
+			color: rgb(0, 170, 255);
+			text-shadow: 0 0 56px rgba(0, 170, 255, 20%);
+			line-height: 100%;
+		}
+	}
+}

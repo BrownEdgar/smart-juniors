@@ -1,0 +1,49 @@
+.AddGroup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+
+		input:not([type='submit']) {
+			width: 400px;
+			height: 36px;
+			padding-left: 10px;
+			font-size: 1em;
+			border: 0;
+			border-left: 2px solid lime;
+			border-radius: 6px;
+			background: transparent;
+			color: white;
+
+			&:focus {
+				outline: 0;
+			}
+		}
+
+		input[type='submit'] {
+			background: blueviolet;
+			border: 0;
+			height: 36px;
+			border-radius: 8px;
+			font-size: 1.2em;
+			font-weight: 500;
+			transition: 0.2s ease;
+			cursor: pointer;
+
+			&:hover {
+				background: violet;
+			}
+		}
+
+		p {
+			color: red;
+			letter-spacing: 1px;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.Counter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	gap: 20px;
+
+	& .pageTitle {
+		color: rgba(0, 162, 255, 0.2);
+	}
+
+	&-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		animation: appear 1s ease 1s backwards;
+	}
+
+	&-countWrapper {
+		width: 400px;
+		font-size: 4.6em;
+		color: rgb(91, 255, 91);
+		display: flex;
+		text-align: right;
+	}
+
+	&-label {
+		width: 60%;
+	}
+
+	&-count {
+		width: 40%;
+	}
+
+	&-btnSection {
+		display: flex;
+		gap: 40px;
+	}
+}

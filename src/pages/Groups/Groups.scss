@@ -1,0 +1,70 @@
+.Groups {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 30px;
+	letter-spacing: 1px;
+
+	&-addGroup {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		right: 18px;
+		color: rgb(70, 138, 205);
+		font-size: 3.8em;
+		cursor: pointer;
+		transition: 0.2s ease;
+
+		&:hover {
+			color: rgb(73, 255, 73);
+		}
+	}
+
+	& > .pageTitle {
+		color: rgb(70, 138, 205);
+	}
+
+	&-content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: flex-start;
+		gap: 40px;
+		transform: translateY(200px);
+	}
+
+	&-group {
+		min-width: 420px;
+		background: #333;
+		padding: 10px 14px;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		box-shadow: 2px 5px 4px #0006;
+	}
+
+	&-groupName {
+		color: rgb(67, 175, 252);
+		margin-bottom: 10px;
+	}
+
+	&-contact {
+		display: flex;
+		gap: 16px;
+		color: lavender;
+
+		& > .label {
+			width: 80px;
+			color: rgb(255, 186, 57);
+		}
+	}
+
+	&-noData {
+		color: rgb(67, 175, 252);
+	}
+}

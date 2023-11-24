@@ -1,18 +1,26 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { addCount } from './features/count/countSlice';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { Layouts } from './components';
+import { Home, Counter, Randomizer, Groups, AddGroup } from './pages';
+import ROUTES from './routes/routes';
+import './App.scss';
 
 export default function App() {
-	const state = useSelector((state) => state);
-	const dispatch = useDispatch();
-
-	const handleClick = () => {
-		dispatch(addCount());
-	};
+	const router = createBrowserRouter(
+		createRoutesFromElements(
+			<Route path={ROUTES.HOME} element={<Layouts />}>
+				<Route index element={<Home />} />
+				<Route path={ROUTES.COUNTER} element={<Counter />} />
+				<Route path={ROUTES.RANDOMIZER} element={<Randomizer />} />
+				<Route path={ROUTES.GROUPS} element={<Groups />} />
+				<Route path={ROUTES.ADD_GROUP} element={<AddGroup />} />
+				<Route path="*" element={<Home />} />
+			</Route>
+		)
+	);
 
 	return (
-		<div>
-			<h1>Hello react in git {state.count}</h1>
-			<button onClick={handleClick}>Add count</button>
-		</div>
+		<>
+			<RouterProvider router={router} />
+		</>
 	);
 }
