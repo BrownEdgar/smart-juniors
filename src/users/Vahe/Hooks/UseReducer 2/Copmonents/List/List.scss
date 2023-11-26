@@ -1,0 +1,50 @@
+.List {
+  & > ul {
+    padding: 2em;
+    & > li {
+      width: 90%;
+      height: 70px;
+      border: 1px solid black;
+      border-radius: 7px;
+      padding: 0.6em;
+      margin: 10px;
+      font-size: 23px;
+      transition: 0.8s;
+      cursor: pointer;
+      & > span {
+        cursor: pointer;
+        font-size: 34px;
+        margin-left: 0.5em;
+        float: right;
+      }
+      & > span:hover {
+        color: red;
+        transition: 0.4s;
+      }
+    }
+    & > li:hover {
+      transform: scale(1.05); 
+    }
+    & > .checkd{
+      text-decoration-line:  line-through ;
+      background-color: yellowgreen;
+    }
+    & > button{
+      height: 50px;
+      padding: 1em;
+      margin-right: 3em;
+      margin-bottom: 1em;
+      border:0;
+      border-radius: 15px;
+      font-size: 15px;
+    }
+    & > button:hover {
+      background-color: yellowgreen;
+      transition: 1.5s ease-in-out;
+      transform: scale(1.1); 
+    }
+  }
+}
+
+
+

@@ -1,0 +1,65 @@
+*{
+  font-family: monospace;
+}
+
+body{
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.App {
+  & > h1 {
+    text-align: center;
+    font-size: 6vh;
+  }
+
+  &>form {
+    width: 70vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 89vh;
+    position: fixed;
+    border-radius: 15px;
+    top: 10vh;
+    display: block;
+    padding: 4vh;
+    left: 36vh;
+    border: 1px solid black;
+    transform: translate(-50%, 0);
+    & > button , input , select {
+      font-size: 8vh;
+      width: 60vh;
+      height: 12vh;
+      margin-bottom: 12vh;
+      background-color: aliceblue;
+      border: 0;
+      border-radius: 15px;
+      padding: 0.2em;
+    }    
+  }
+
+  &>.arr {
+    width: 130vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 5vh;
+    padding-left: 10vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    border: 1px solid black;
+    grid-auto-rows: 100px;
+    gap: 30px;
+    top: 0.5vh;
+    overflow: auto;
+    margin-right: 1vh;
+    float: right;
+    height: 89vh;
+    & > .block {
+      font-size: 56px;
+      background-color: white;
+      border-radius: 15px;
+    }
+  }
+}
+
