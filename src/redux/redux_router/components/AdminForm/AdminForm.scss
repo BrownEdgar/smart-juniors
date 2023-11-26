@@ -1,0 +1,41 @@
+.AdminForm {
+  width: 40%;
+  background: white;
+
+  form {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &> * {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      outline: none;
+      border: 1px solid lightgray;
+    }
+
+    button {
+      padding: 8px 24px;
+      width: fit-content;
+      border: 1px solid lightgray;
+      transition: all .3s ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: white;
+        box-shadow: 0 0 4px 2px lightgrey;
+      }
+
+      &:active {
+        background-color: white;
+        box-shadow: 0 0 4px 2px darkslategrey;
+      }
+    }
+  }
+}
