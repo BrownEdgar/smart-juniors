@@ -9,6 +9,7 @@ const initialState = [
 			phone: '025.415.9443 x5894',
 			email: 'Esta36@gmail.com',
 		},
+		opened: false,
 	},
 	{
 		id: '42354',
@@ -18,6 +19,7 @@ const initialState = [
 			phone: '711.874.8437 x58199',
 			email: 'Lloyd_Shanahan73@hotmail.com',
 		},
+		opened: false,
 	},
 ];
 
@@ -26,12 +28,13 @@ const groupsSlice = createSlice({
 	initialState,
 	reducers: {
 		addGroup: (state, { payload }) => {
-			console.log(payload);
-
 			state.push(payload);
+		},
+		toggleOpen: (state, { payload }) => {
+			state.splice(payload, 1, { ...state[payload], opened: !state[payload].opened });
 		},
 	},
 });
 
 export default groupsSlice.reducer;
-export const { addGroup } = groupsSlice.actions;
+export const { addGroup, toggleOpen } = groupsSlice.actions;

@@ -8,7 +8,7 @@ export default function InputField({ inputType, inputName, inputId, inputPlaceho
 			<Field type={inputType} name={inputName} id={inputId} placeholder={inputPlaceholder} autoComplete="off" />
 			<ErrorMessage name={inputName}>
 				{(message) => {
-					return <p className="AddGroup-errorMessage">{message}</p>;
+					return <p className="InputField-errorMessage">{message}</p>;
 				}}
 			</ErrorMessage>
 		</div>

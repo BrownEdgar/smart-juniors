@@ -35,18 +35,21 @@ export default function AddGroup() {
 					phone: values.phone,
 					email: values.email,
 				},
+				opened: false,
 			})
 		);
+
 		resetForm();
 		navigate({ pathname: `/${ROUTES.GROUPS}` });
 	};
 
 	return (
 		<section className="AddGroup">
+			<h1 className="pageTitle">Add a Company</h1>
 			<Formik
 				initialValues={initialValues}
 				validateOnBlur={true}
-				validateOnChange={false}
+				validateOnChange={true}
 				validationSchema={validationSchema}
 				onSubmit={handleSubmit}
 			>

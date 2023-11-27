@@ -1,34 +1,40 @@
 .Counter {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 1em;
 	gap: 20px;
 
 	& .pageTitle {
-		color: rgba(0, 162, 255, 0.2);
+		background-image: linear-gradient(to right bottom, rgba(0, 162, 255), rgba(0, 162, 255));
 	}
 
 	&-container {
+		width: 1000px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 20px;
+		gap: 30px;
 		animation: appear 1s ease 1s backwards;
 	}
 
 	&-countWrapper {
-		width: 400px;
+		width: 100%;
+		border-radius: 100px;
+		padding-left: 30px;
 		font-size: 4.6em;
 		color: rgb(91, 255, 91);
 		display: flex;
-		text-align: right;
+		gap: 14px;
+		justify-content: flex-start;
+		text-align: left;
+		border: 2px dashed rgb(147, 253, 147);
 	}
 
 	&-label {
-		width: 60%;
+		width: 30%;
 	}
 
 	&-count {
@@ -36,7 +42,147 @@
 	}
 
 	&-btnSection {
+		width: 100%;
 		display: flex;
-		gap: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 30px;
+
+		& > button {
+			position: relative;
+			&:hover {
+				&::before {
+					content: '';
+					position: absolute;
+					top: -5%;
+					left: -5%;
+					border-radius: 50%;
+					width: 106%;
+					height: 106%;
+					border: 3px dashed white;
+					z-index: -1;
+					animation: rotate 6s linear infinite;
+				}
+			}
+		}
+	}
+
+	& button.decrementBtn {
+		background: rgb(218, 53, 53);
+		color: lavender;
+
+		&:hover {
+			background: rgb(249, 132, 132);
+			color: #260101;
+
+			&::before {
+				border-color: rgb(249, 132, 132);
+			}
+		}
+	}
+
+	& button.incrementBtn {
+		background: rgb(18, 177, 216);
+		color: lavender;
+
+		&:hover {
+			background: rgb(108, 226, 255);
+			color: rgb(2, 15, 39);
+
+			&::before {
+				border-color: rgb(108, 226, 255);
+			}
+		}
+	}
+
+	& button.resetBtn {
+		background: #393939;
+		color: lavender;
+
+		&:hover {
+			background: lavender;
+			color: #000;
+
+			&::before {
+				border-color: lavender;
+			}
+		}
+	}
+
+	& button.divideBtn {
+		background: rgb(212, 7, 223);
+		color: lavender;
+
+		&:hover {
+			background: rgb(235, 84, 243);
+			color: #000;
+
+			&::before {
+				border-color: rgb(235, 84, 243);
+			}
+		}
+	}
+
+	& button.multiplyBtn {
+		background: rgb(12, 210, 12);
+		color: lavender;
+
+		&:hover {
+			background: rgb(92, 253, 92);
+			color: rgb(39, 2, 39);
+
+			&::before {
+				border-color: rgb(92, 253, 92);
+			}
+		}
+	}
+
+	& button.randomBtn {
+		background: rgb(210, 101, 12);
+		color: lavender;
+
+		&:hover {
+			background: rgb(241, 155, 84);
+			color: rgb(39, 16, 2);
+
+			&::before {
+				border-color: rgb(241, 155, 84);
+			}
+		}
+	}
+
+	& button.truncBtn {
+		background: rgb(210, 15, 12);
+		color: lavender;
+
+		&:hover {
+			background: rgb(228, 80, 78);
+			color: rgb(39, 2, 2);
+
+			&::before {
+				border-color: rgb(228, 80, 78);
+			}
+		}
+	}
+
+	button {
+		&:active {
+			scale: 0.98;
+			box-shadow: 1px 2px 1px #0006;
+
+			&::before {
+				border-top: 6px dotted white;
+				border-bottom: 6px dotted white;
+			}
+		}
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(1turn);
 	}
 }

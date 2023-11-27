@@ -16,7 +16,7 @@ export default function NavBar() {
 					<NavLink to={ROUTES.RANDOMIZER}>Randomizer</NavLink>
 				</li>
 				<li>
-					<NavLink to={ROUTES.GROUPS}>Groups</NavLink>
+					<NavLink to={ROUTES.GROUPS}>Companies</NavLink>
 				</li>
 				<li>
 					<NavLink to={ROUTES.ADD_GROUP}>Add Group</NavLink>

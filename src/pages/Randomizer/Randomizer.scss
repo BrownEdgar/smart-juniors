@@ -1,12 +1,12 @@
 .Randomizer {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	gap: 20px;
 
 	& .pageTitle {
-		color: rgba(0, 247, 0, 0.2);
+		background-image: linear-gradient(to right bottom, rgb(4, 116, 4), rgb(4, 116, 4));
 	}
 
 	&-container {

@@ -9,9 +9,13 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--dark-background: rgb(15, 15, 15);
+}
+
 body {
 	line-height: 1.6;
-	background-color: #202020;
+	background-color: var(--dark-background);
 	font-size: 16px;
 	font-family: 'Imprima', sans-serif;
 }

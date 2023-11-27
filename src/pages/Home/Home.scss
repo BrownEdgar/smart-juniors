@@ -20,7 +20,10 @@
 
 		&.large {
 			font-size: 5em;
-			color: rgb(0, 170, 255);
+			color: transparent;
+			background-image: linear-gradient(to right bottom, rgb(0, 170, 255), rgb(0, 170, 255));
+			background-clip: text;
+			-webkit-background-clip: text;
 			text-shadow: 0 0 56px rgba(0, 170, 255, 20%);
 			line-height: 100%;
 		}

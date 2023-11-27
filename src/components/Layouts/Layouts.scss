@@ -5,8 +5,7 @@
 	& > section {
 		margin-top: var(--navbar-height);
 		width: 100%;
-		min-height: 100%;
-		background: rgb(23, 18, 23);
+		min-height: 100vh;
 		position: relative;
 		font-family: 'Sansita Swashed', sans-serif;
 		padding: 1em;
@@ -14,37 +13,30 @@
 
 	& .pageTitle {
 		font-size: 5.8em;
-		position: absolute;
-		top: 20px;
 		text-shadow: 2px 5px 5px #0004;
 		animation: moveFromLeft 1s ease-out;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
 		user-select: none;
 	}
 
 	button {
-		width: 150px;
-		height: 42px;
+		width: 130px;
+		height: 130px;
 		font-family: 'Sansita Swashed', sans-serif;
 		font-size: 1.3em;
 		text-shadow: 1px 1px 1px #0006;
 		color: #000;
 		letter-spacing: 1px;
 		background: rgb(36, 203, 245);
-		border-radius: 6px;
+		text-shadow: 1px 2px 2px #0003;
+		border-radius: 50%;
 		border: 0;
 		box-shadow: 2px 5px 5px #0008;
 		cursor: pointer;
+		user-select: none;
 		transition: 0.2s ease;
-
-		&:hover {
-			background: rgb(62, 248, 62);
-			color: purple;
-		}
-
-		&:active {
-			scale: 0.98;
-			box-shadow: 1px 2px 1px #0006;
-		}
 	}
 }
 
