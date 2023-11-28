@@ -1,12 +1,20 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addUser, deleteUser } from "./features/users/usersSlice";
 import { addCount } from "./features/counters/countersSlice";
+import { useEffect } from "react";
+import { getAsyncPosts } from "./features/posts/postsSlice";
 
 export default function App() {
   const users = useSelector((state) => state.users)
   const counters = useSelector((state) => state.counters)
+  const posts = useSelector((state) => state.posts)
 
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getAsyncPosts())
+  }, [])
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,6 +57,16 @@ export default function App() {
           })
         }
       </ul>
+      <h1>POSTS</h1>
+      {
+        posts.status === 'pending'
+          ? <h2>pending...</h2>
+          : (
+            <pre>
+              {JSON.stringify(posts, null, 1)}
+            </pre>
+          )
+      }
     </div>
   )
 }

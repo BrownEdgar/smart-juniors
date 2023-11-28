@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import usersSlice from "../features/users/usersSlice";
 import countersSlice from "../features/counters/countersSlice";
+import postsSlice from "../features/posts/postsSlice";
 
 const checkUserMiddleWare = (store) => (next) => (action) => {
   if (action.type === 'users/addUser') {
@@ -45,7 +46,8 @@ const nonRepeatedNumbersMiddleWare = (store) => (next) => (action) => {
 const store = configureStore({
   reducer: {
     users: usersSlice,
-    counters: countersSlice
+    counters: countersSlice,
+    posts: postsSlice
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(checkUserMiddleWare, myFirstMiddleWare, nonRepeatedNumbersMiddleWare)
 })
