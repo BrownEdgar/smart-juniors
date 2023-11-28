@@ -1,0 +1,41 @@
+.Carts {
+	padding: 1em;
+	margin: 1em;
+
+	& > .pageTitle {
+		background-image: linear-gradient(to right bottom, rgb(221, 145, 4), rgb(205, 183, 70));
+	}
+
+	&-content {
+		width: 1280px;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+		font-family: 'Imprima', sans-serif;
+	}
+
+	&-btnSection {
+		display: flex;
+		gap: 24px;
+
+		& > button {
+			font-family: 'Imprima', sans-serif;
+			font-weight: 400;
+			border-radius: 20px;
+			width: 180px;
+			height: 56px;
+			background: orange;
+
+			&:hover {
+				background: rgb(243, 230, 179);
+				color: rgb(96, 64, 6);
+			}
+
+			&:active {
+				scale: 0.98;
+				box-shadow: 0 0 4px 1px #0004;
+			}
+		}
+	}
+}

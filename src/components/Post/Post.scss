@@ -1,0 +1,9 @@
+.Post {
+	color: lavender;
+
+	&-title {
+		text-transform: capitalize;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+}

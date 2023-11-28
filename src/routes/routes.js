@@ -4,6 +4,9 @@ const ROUTES = {
 	RANDOMIZER: 'randomizer',
 	GROUPS: 'groups',
 	ADD_GROUP: 'newgroup',
+	BOOKS: 'books',
+	POSTS: 'posts',
+	CARTS: 'carts',
 };
 
 export default ROUTES;

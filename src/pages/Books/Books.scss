@@ -1,0 +1,17 @@
+.Books {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 1em;
+
+	& > .pageTitle {
+		background-image: linear-gradient(to right bottom, rgb(163, 4, 221), rgb(70, 189, 205));
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+}

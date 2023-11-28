@@ -19,7 +19,16 @@ export default function NavBar() {
 					<NavLink to={ROUTES.GROUPS}>Companies</NavLink>
 				</li>
 				<li>
-					<NavLink to={ROUTES.ADD_GROUP}>Add Group</NavLink>
+					<NavLink to={ROUTES.ADD_GROUP}>New Company</NavLink>
+				</li>
+				<li>
+					<NavLink to={ROUTES.BOOKS}>Books</NavLink>
+				</li>
+				<li>
+					<NavLink to={ROUTES.POSTS}>Posts</NavLink>
+				</li>
+				<li>
+					<NavLink to={ROUTES.CARTS}>Carts</NavLink>
 				</li>
 			</ul>
 		</div>

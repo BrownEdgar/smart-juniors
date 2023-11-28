@@ -1,6 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import mainMiddlewares from '../middlewares/main';
-import { counterReducer, groupsReducer, inputTypesReducer, randomizerReducer } from '../features';
+import {
+	booksReducer,
+	cartsReducer,
+	counterReducer,
+	groupsReducer,
+	inputTypesReducer,
+	postsReducer,
+	randomizerReducer,
+} from '../features';
 
 const store = configureStore({
 	reducer: {
@@ -8,6 +16,9 @@ const store = configureStore({
 		randomizer: randomizerReducer,
 		groups: groupsReducer,
 		inputTypes: inputTypesReducer,
+		books: booksReducer,
+		posts: postsReducer,
+		carts: cartsReducer,
 	},
 	middleware: mainMiddlewares,
 });

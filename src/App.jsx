@@ -1,6 +1,6 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { Layouts } from './components';
-import { Home, Counter, Randomizer, Groups, AddGroup } from './pages';
+import { Home, Counter, Randomizer, Groups, AddGroup, Books, Posts, Carts } from './pages';
 import ROUTES from './routes/routes';
 import './App.scss';
 
@@ -13,6 +13,9 @@ export default function App() {
 				<Route path={ROUTES.RANDOMIZER} element={<Randomizer />} />
 				<Route path={ROUTES.GROUPS} element={<Groups />} />
 				<Route path={ROUTES.ADD_GROUP} element={<AddGroup />} />
+				<Route path={ROUTES.BOOKS} element={<Books />} />
+				<Route path={ROUTES.POSTS} element={<Posts />} />
+				<Route path={ROUTES.CARTS} element={<Carts />} />
 				<Route path="*" element={<Home />} />
 			</Route>
 		)
