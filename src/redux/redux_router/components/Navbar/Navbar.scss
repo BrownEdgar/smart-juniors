@@ -3,13 +3,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 25px 50px;
-  background: #222;
-  color: white;
+  background: white;
+  color: black;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
+  box-shadow: 2px 2px 3px 3px gray;
 
   &-leftSide {
     height: 100%;

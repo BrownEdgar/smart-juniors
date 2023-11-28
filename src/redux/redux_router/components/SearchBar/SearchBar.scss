@@ -1,0 +1,17 @@
+.SearchBar {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  input {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 18px;
+    border: 1px solid lightgrey;
+    border-radius: 1000px;
+    background-color: aliceblue;
+    outline: none;
+  }
+}

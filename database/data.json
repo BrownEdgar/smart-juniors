@@ -82,5 +82,11 @@
     "login": "admin",
     "password": "admin",
     "status": ""
-  }
+  },
+  "blogs": [
+    {
+      "id": 1,
+      "title": "JSON is incredibly slow: Here’s What’s Faster!"
+    }
+  ]
 }

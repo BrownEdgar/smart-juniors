@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1980 769">
+  <defs>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10"/>
+      <feGaussianBlur result="blur" stdDeviation="10"/>
+      <feFlood flood-color="#000" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path d="m20,420.27c29.79,40.15,78.82,92.92,152.55,119.7,74.02,26.88,116.93,7.22,265.15-7.58,206.42-20.61,314.22-29.92,392.42,33.33,59.96,48.5,37.74,87.26,100,127.27,109.11,70.12,297.73,28.44,331.82-57.58,14.16-35.73-6.92-57.48,9.09-74.24,41.53-43.46,192.86,92.86,390.66,117.28,111.27,13.74,208.44-11.49,278.31-38.49V20H20v400.27Z" style="fill: #fff; filter: url(#drop-shadow-1);"/>
+</svg>

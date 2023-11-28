@@ -18,6 +18,8 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { getProducts } from "./features/products/productsSlice";
 
+import "./App.scss"
+
 export default function App() {
   axios.defaults.baseURL = "http://localhost:3000/"
   const dispatch = useDispatch()

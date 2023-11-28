@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { toggleModal } from '../../features/modal/modalSlice';
 import ROUTES from '../../routes/routes'
 import './Navbar.scss'
+import SearchBar from '../SearchBar/SearchBar';
 
 const linkActive = ({ isActive }) => {
   return isActive ? "active" : "";
@@ -17,6 +18,7 @@ export default function Navbar() {
       <div className='Navbar-leftSide'>
         <img src="./images/logo/maxtron-labs-1.svg" alt="maxtron" />
       </div>
+      <SearchBar />
       <div className='Navbar-rightSide'>
         <ul>
           <li>
@@ -47,9 +49,6 @@ export default function Navbar() {
                 ? null
                 : <i className="fa-solid fa-user-plus" onClick={() => dispatch(toggleModal("AdminForm"))}></i>
             }
-          </li>
-          <li>
-            <i className="fa-solid fa-magnifying-glass"></i>
           </li>
           <li>
             <div>
