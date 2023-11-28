@@ -1,11 +1,14 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from '../HW redux/features/usersSlice'
+import getAsyncPosts from './features/postsSlice'
+import { useEffect } from 'react'
 
 
 export default function App() {
     const dispatch = useDispatch()
     const users = useSelector((state) => state.users)
+    const posts =  useSelector((state) => state.posts)
 
    const saveUser = (e) =>{
     e.preventDefault()
@@ -24,6 +27,10 @@ export default function App() {
     console.log(newUser)
    }
 
+   useEffect(() => {
+   dispatch(getAsyncPosts)
+   }, [])
+
   return (
     <div>
         <form onSubmit={saveUser}>
@@ -41,6 +48,11 @@ export default function App() {
                 <p key={user.id}>Contact: address:{user.contact.address} email:{user.contact.email}</p>
             </li>)
         }
+        <pre>
+            <h1>Lorem ipsum dolor sit.</h1>
+            {JSON.stringify(posts, null, 1)}
+        </pre>
+
     </div>
   )
 }
