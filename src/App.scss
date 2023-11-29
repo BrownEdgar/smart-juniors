@@ -1,1 +1,8 @@
-
+.App{
+    width: 800px;
+    margin: 0 auto;
+    &  li{
+        border: 2px solid green;
+        margin: 10px 0;
+    }
+}
