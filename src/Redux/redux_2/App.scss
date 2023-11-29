@@ -1,0 +1,54 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+body {
+  background-color: #f8f9fa;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App-header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.App-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.App-content {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: $secondary-color;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.button--primary {
+  background-color: $primary-color;
+}
+
+.button--danger {
+  background-color: #dc3545;
+}
