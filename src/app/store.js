@@ -2,6 +2,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import usersSlice from '../features/users/usersSlice';
 import countersSlice from '../features/counters/countersSlice';
 import mainMiddleWares from '../middleWares/main';
+import postsSlice from '../features/posts/postsSlice';
+import booksSlice from '../features/books/booksSlice';
 
 
 
@@ -24,7 +26,9 @@ import mainMiddleWares from '../middleWares/main';
 const store = configureStore({
   reducer: {
     users: usersSlice,
-    counters: countersSlice
+    // counters: countersSlice,
+    // posts: postsSlice,
+    books: booksSlice
   },
   middleware: mainMiddleWares,
 })
