@@ -4,8 +4,7 @@ export const getCarts = createAsyncThunk(
     'carts/getcarts',
     async () =>{
         const response = await fetch("https://dummyjson.com/carts");
-        const data = await response.json();
-        console.log(data)
+        const data = await response.json()
         return data.carts
     }
 )
@@ -19,6 +18,12 @@ const cartsSlice = createSlice({
         
     },
     reducers: {
+        sortPrice: (state) => {
+            state.data.map(elm =>elm.products.sort((a, b) => a.price- b.price))
+        },
+        filterPrice: (state)=> {
+            state.data.filter(elm  => elm.products.price> 3000)
+        },
     },
     extraReducers: (builder) =>{
         builder
@@ -48,3 +53,4 @@ const cartsSlice = createSlice({
 })
 
 export default cartsSlice.reducer
+export const {sortPrice, filterPrice} = cartsSlice.actions
