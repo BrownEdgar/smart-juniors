@@ -1,9 +1,10 @@
 .Home {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	-webkit-box-reflect: right;
+	&.centerAlign {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
 	&-title {
 		width: 300px;
