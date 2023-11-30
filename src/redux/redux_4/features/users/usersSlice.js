@@ -1,7 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  data: []
+  data: [],
+  uniqueID: 1
 }
 
 const usersSlice = createSlice({
@@ -10,11 +11,18 @@ const usersSlice = createSlice({
   reducers: {
     addUser: (state, action) => {
       state.data.push(action.payload)
+      state.uniqueID++;
     }
   }
 })
 
-export const getAllUsers = (state) => state.users.data
+export const getAllUsers = ({ users }) => users.data
+export const getAllUsersId = ({ users: { data } }) => data.map(user => user.id)
 
-export const {addUser} = usersSlice.actions
+export const getAllUsersIdSelector = createSelector(
+  [getAllUsersId],
+  (usersId) => usersId
+)
+
+export const { addUser } = usersSlice.actions
 export default usersSlice.reducer

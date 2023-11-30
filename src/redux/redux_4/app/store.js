@@ -12,6 +12,7 @@ import {
 import storage from "redux-persist/lib/storage";
 import usersReducer from "../features/users/usersSlice";
 import todosReducer from "../features/todos/todosSlice";
+import addUserId from "../middlewares/addUserId";
 
 const rootReducers = combineReducers({
   users: usersReducer,
@@ -32,8 +33,8 @@ const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }),
+    }).concat(addUserId),
 })
 
-export const persister = persistStore(store)
+export const persistor = persistStore(store)
 export default store
