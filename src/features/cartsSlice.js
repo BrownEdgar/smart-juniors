@@ -3,8 +3,10 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 export const getCarts = createAsyncThunk(
     'carts/getcarts',
     async () =>{
-        const response = await fetch("https://dummyjson.com/carts");
+        const response = await fetch("https://dummyjson.com/carts?limit=3");
         const data = await response.json()
+        console.log
+        console.log(data.carts)
         return data.carts
     }
 )
