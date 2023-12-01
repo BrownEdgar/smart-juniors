@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700&family=Roboto&display=swap");
-
+/* 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
-
-
-body {
+/* body {
   line-height: 1.6;
   font-family: "Playpen Sans";
-}
+  background-color: rgb(101, 101, 101);
+  color: beige;
+} */
 
-a {
+ 
+/* a {
   text-decoration: none;
   color: inherit;
 }
@@ -30,4 +31,4 @@ li{
   border-radius: 4px;
   border: 1px solid black;
   padding: 5px;   
- }
+ }  */
