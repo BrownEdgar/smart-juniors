@@ -1,36 +1,42 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import usersSlice from '../features/users/usersSlice';
-import countersSlice from '../features/counters/countersSlice';
-import mainMiddleWares from '../middleWares/main';
-import postsSlice from '../features/posts/postsSlice';
 import booksSlice from '../features/books/booksSlice';
 
 
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
+const persistConfig = {
+  key: 'root',
+  storage: storage,
+};
 
-// const myFirstMiddleWare = (store) => (next) => (action) => {
-//   console.log({ store, next, action });
-//   console.log(new Date().toLocaleTimeString())
-
-//   if (action.type === 'users/addUser') {
-//     const newpayload = {
-//       id: Math.random().toString(36).slice(2, 8),
-//       username: action.payload
-//     }
-//     action.payload = newpayload
-//   }
-
-//   next(action)
-// }
-
-const store = configureStore({
-  reducer: {
-    users: usersSlice,
-    // counters: countersSlice,
-    // posts: postsSlice,
-    books: booksSlice
-  },
-  middleware: mainMiddleWares,
+const rootReducer = combineReducers({
+  users: usersSlice,
+  books: booksSlice
 })
 
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+
+const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+})
+
+export const persistor = persistStore(store)
 export default store

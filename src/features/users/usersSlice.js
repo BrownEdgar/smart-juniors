@@ -2,7 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 const initialStateVelue = {
-  data: [],
+  data: [
+    {
+      id: 1, name: "sebastian"
+    },
+    {
+      id: 2, name: "Jhon"
+    }
+  ],
   status: '',
   actions: 0
 }

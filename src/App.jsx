@@ -4,6 +4,7 @@ import Books from './components/Books/Books'
 import Select from './components/Select/Select'
 import { addUser } from './features/users/usersSlice'
 import Users from './components/Users/Users'
+import Test from './components/test/Test'
 
 
 
@@ -17,9 +18,7 @@ export default function App() {
   return (
     <div>
       <button onClick={handleClick}>add user</button>
-      <Select />
-      <Books />
-      <Users />
+      <Test id={2} />
     </div>
   )
 }

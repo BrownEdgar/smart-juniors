@@ -20,12 +20,6 @@ const booksSlice = createSlice({
       state.filter = action.payload
     }
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase()
-      .addCase()
-      .addCase()
-  }
 })
 
 //selectors
