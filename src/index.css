@@ -10,7 +10,7 @@
 
 body {
   line-height: 1.6;
-  font-family: "Playpen Sans";
+  font-family: "Monserrat";
 }
 
 a {
@@ -20,4 +20,30 @@ a {
 
 ul {
   list-style: none;
+}
+.slick-slider{
+  width: 96%;
+  margin: 20px auto;
+  position: relative;
+}
+.slick-list{
+  height: 100%;
+  width: 90%;
+  margin: 20px auto;
+  
+}
+.slick-slide > div{
+height: 100%;
+}
+.slick-track{
+  height: 100%;
+  
+  margin: 20px auto;
+}
+.slick-arrow, .slick-prev{
+  border: 2px solid black;
+  border-radius: 5px;
+  color: black !important;
+  background-color: white;
+  position: absolute !important;
 }

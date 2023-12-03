@@ -4,6 +4,7 @@ import { filterPrice, getCarts, sortPrice } from './features/cartsSlice'
 import './App.scss'
 import { addtodo } from './features/todosSlice'
 import { adduser } from './features/usersSlice'
+import MainSlider from './MainSlider/MainSlider'
 
 export default function App() {
 
@@ -23,6 +24,7 @@ export default function App() {
     dispatch(addtodo(todo.value))
     
   }
+  
 
   const handleUsers=(e) => {
     e.preventDefault()
@@ -52,6 +54,7 @@ export default function App() {
           <h1>Todos</h1>
             <form onSubmit={handleTodos}>
               <input type="text" placeholder='todos' id='todo' required/>
+
               <input type="submit" value='addtodo' />
             </form>
             {
@@ -72,5 +75,7 @@ export default function App() {
         
       </div>
     // </div>
-  )
+    
+    )
+  
 }
