@@ -1,0 +1,40 @@
+.Slide {
+	font-family: 'Montserrat', sans-serif;
+
+	& #product {
+		display: flex !important;
+		flex-direction: column;
+		gap: 30px;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&-titleTop {
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	&-titleBottom {
+		font-size: 100px;
+		font-weight: 700;
+		// -webkit-text-stroke: 2px;
+		// -webkit-text-stroke-color: #000;
+		color: lavender;
+		text-shadow: 0 0 3px #000;
+	}
+
+	&-imgWrapper {
+		width: 277px;
+		height: 312px;
+		& img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&-productPrice {
+		color: hsl(225, 9%, 17%, 30%);
+	}
+}

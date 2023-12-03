@@ -1,0 +1,9 @@
+.Layouts {
+	--navBar-height: 50px;
+	& > section {
+		height: calc(100vh - var(--navBar-height));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
