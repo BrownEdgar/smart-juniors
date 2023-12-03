@@ -82,7 +82,7 @@ const initialStateValue = {
     },
     {
       "id": 8,
-      "name": "Nicholas Runolfsdottir V",
+      "name": "Nicholas Runolfsdottir",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
       "street": "Ellsworth Summit",
@@ -134,7 +134,7 @@ const usersSlice = createSlice({
     }) {
       state.data.push({
         id: Math.round(Math.random() * 856) * 123,
-        name: [payload.name, ' ', payload.lastname],
+        name: `${payload.name} ${payload.lastname}`,
         username: payload.lastname.concat(Math.random().toString(36).slice(4, 12)),
         email: payload.name.concat(payload.lastname.concat("@gmail.com")).toLowerCase(),
         phone: "+374" + Math.random().toString().slice(2, 10),
@@ -142,9 +142,7 @@ const usersSlice = createSlice({
       })
 
     },
-    userDelet(state, {
-      payload
-    }) {
+    userDelet(state, {payload}) {
       state.data.splice(payload, 1)
     },
     updateFilter(state, action) {
