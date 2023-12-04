@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700&family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
 
 * {
   margin: 0;
@@ -6,11 +6,9 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   line-height: 1.6;
-  font-family: "Playpen Sans";
+  font-family: 'Montserrat';
 }
 
 a {
@@ -18,17 +16,29 @@ a {
   color: inherit;
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+
+
+.slick-slider {
+  width: 90%;
+  margin: 20px auto;
+  background-color: green;
+  height: 900px;
 }
 
-li {
-  border-radius: 4px;
-  border: 1px solid grey;
-  padding: 5px;
+.slick-list {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slick-track {
+  height: 100%;
+
+}
+
+
+
+.slick-slide>div {
+  height: 100%;
+  color: #fff;
 }
