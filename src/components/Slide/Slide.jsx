@@ -10,6 +10,8 @@ export default function Slide() {
 		dots: false,
 		infinite: false,
 		slidesToShow: 4,
+		slidesToScroll: 1,
+		speed: 500,
 	};
 	return (
 		<div className="Slide">

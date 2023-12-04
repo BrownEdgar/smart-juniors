@@ -26,6 +26,30 @@ const initialState = {
 			image: './public/slide/clockCute.png',
 			price: 331,
 		},
+		{
+			id: 5,
+			name: 'Modern lamp study',
+			image: './public/slide/modernLampStudy.png',
+			price: 258,
+		},
+		{
+			id: 6,
+			name: 'Chair',
+			image: './public/slide/chair.png',
+			price: 135,
+		},
+		{
+			id: 7,
+			name: 'Classic lamp',
+			image: './public/slide/classicLamp.png',
+			price: 425,
+		},
+		{
+			id: 8,
+			name: 'Clock cute',
+			image: './public/slide/clockCute.png',
+			price: 331,
+		},
 	],
 };
 
