@@ -6,7 +6,6 @@ export default function ShopConfig() {
   const priceRange = useRef(null)
   const price = useRef(null)
   const dispatch = useDispatch();
-  console.log(1);
 
   const changePrice = (e) => {
     price.current.textContent = e.target.value
