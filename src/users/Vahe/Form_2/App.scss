@@ -1,0 +1,93 @@
+body{
+    background-color: bisque;
+}
+
+.forum{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 24px 24px 24px 24px;
+    -moz-border-radius: 24px 24px 24px 24px;
+    -webkit-border-radius: 24px 24px 24px 24px;
+    border: 0;
+    width: 35%;
+    height: 720px;
+    margin: 30px;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    & .forumtext {
+        margin: 50px;
+        font-size: 48px;
+        text-align: center;
+    }
+    & input{
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        height: 45px;
+        width: 400px;
+        margin: 20px;
+        font-size: 25px;
+        background-color: rgba($color: #000000, $alpha: 0) ;
+        color: white;
+        outline: none;
+    }
+    & ::placeholder{
+        font-size: 25px;
+        color: black;
+    }
+    & #sub {
+        border-radius: 15px;
+        border: 0;
+    }
+    & #sub:hover{
+        background: none;
+        background-color: white;
+        color: #000000;
+        cursor: pointer;
+        transition: 1.5s;
+    }
+    & .err {
+        font-size: 28px;
+        color: red;
+    }
+}
+
+.Users{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 24px 24px 24px 24px;
+    -moz-border-radius: 24px 24px 24px 24px;
+    -webkit-border-radius: 24px 24px 24px 24px;
+    border: 0;
+    width: 60%;
+    height: 720px;
+    margin: 30px;
+    padding: 3em;
+    float: right;
+    overflow: auto;
+    & .forumtext {
+        font-size: 48px;
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+    & li {
+        font-size: 22px;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    & .delete {
+        font-size: 40px;
+        margin-right: 10px;
+        margin-top: -30px;
+        float: right;
+        cursor: pointer;
+    }
+    & .delete:hover {
+        color: red;
+        transition: 1.5s;
+    }
+      
+}

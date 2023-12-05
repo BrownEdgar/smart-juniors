@@ -1,0 +1,51 @@
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  font-size: 36px;
+  text-align: center;
+}
+
+li {
+  padding: 0.5em;
+  list-style-type: none;
+  background-color: white;
+  margin: 30px;
+  width: 400px;
+  border-radius: 12px;
+}
+
+ul {
+  display: inline-block; 
+  vertical-align: middle; 
+  line-height: 1.25; 
+  margin-left: 0;
+  padding-left: 0;
+}
+
+button {
+  padding: 1em;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 0;
+  margin: 40px;
+}
+
+.delete {
+  float: right;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: red;
+  transition: 1.5s;
+}
+
+.isActive {
+  background-color: rgb(53, 235, 17);
+  transition: 1.5s;
+}
