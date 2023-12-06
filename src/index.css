@@ -33,12 +33,42 @@ a {
 
 .slick-track {
   height: 100%;
-
 }
 
 
 
 .slick-slide>div {
   height: 100%;
+  color: #fff;
+}
+
+p {
+  padding: 1em;
+  border: 2px solid teal;
+  margin: 10px auto;
+  width: 805px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  padding: 6px;
+  border: 1px solid #111;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+li:hover {
+  background: #000;
   color: #fff;
 }
