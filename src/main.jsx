@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client';
 // import { Provider } from 'react-redux'
 // import store, { persistor } from './users/Karen/Redux-Homework/app/store'
 // import { PersistGate } from 'redux-persist/integration/react';
-import App from './users/Karen/Slider/MainSlider';
+import App from './users/Karen/Pagination/App';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
