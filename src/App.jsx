@@ -1,24 +1,32 @@
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import Layouts from './components/Layouts/Layouts';
-import { Home, SliderPage } from './pages';
-import ROUTES from './routes/routes';
+import { useState } from 'react';
 import './App.scss';
-import Pagination from './pages/Pagination/Pagination';
+import Translate from './i18n/Translate';
+import { LOCALES } from './i18n/locale';
+import Provider from './i18n/Provider';
 
 export default function App() {
-	const router = createBrowserRouter(
-		createRoutesFromElements(
-			<Route path={ROUTES.HOME} element={<Layouts />}>
-				<Route index element={<Home />} />
-				<Route path={ROUTES.SLIDER} element={<SliderPage />} />
-				<Route path={ROUTES.PAGINATION} element={<Pagination />} />
-				<Route path="*" element={<Home />} />
-			</Route>
-		)
-	);
+	const [language, setLanguage] = useState(LOCALES.ENGLISH);
+
+	const handleChange = (e) => {
+		setLanguage(LOCALES[e.target.value]);
+	};
+
 	return (
-		<div className="App">
-			<RouterProvider router={router} />
-		</div>
+		<Provider locale={language}>
+			<div className="App">
+				<select name="language" id="language" onChange={handleChange}>
+					{Object.keys(LOCALES).map((elem) => {
+						return (
+							<option value={elem} key={elem}>
+								{LOCALES[elem]}
+							</option>
+						);
+					})}
+				</select>
+				<h2>{Translate('title', { secretWord: 'v18.2.0' })}</h2>
+				<p>{Translate('description')}</p>
+				<button>{Translate('btnText')}</button>
+			</div>
+		</Provider>
 	);
 }

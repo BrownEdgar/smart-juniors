@@ -1,7 +1,0 @@
-.Layouts {
-	--navBar-height: 50px;
-	& > section {
-		padding: 1em;
-		min-height: calc(100vh - var(--navBar-height));
-	}
-}
