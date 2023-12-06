@@ -1,0 +1,26 @@
+.PageNumbers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	font-family: 'Imprima', sans-serif;
+	font-size: 16px;
+
+	&-pageNumber {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		border: 1px solid #fff3;
+		border-radius: 4px;
+		text-align: center;
+		padding: 0 4px;
+		user-select: none;
+		cursor: pointer;
+		transition: 0.2s ease;
+
+		&:hover {
+			color: #111;
+			background: lavender;
+		}
+	}
+}

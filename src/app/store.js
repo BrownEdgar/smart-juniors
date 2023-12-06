@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { slickSlideReducer } from '../features';
+import { postsReducer, slickSlideReducer } from '../features';
 
 const store = configureStore({
 	reducer: {
 		slickSlide: slickSlideReducer,
+		posts: postsReducer,
 	},
 });
 

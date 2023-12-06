@@ -8,7 +8,7 @@ export default function Slide() {
 
 	const settings = {
 		dots: false,
-		infinite: false,
+		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		speed: 500,

@@ -1,72 +1,71 @@
 .Slide {
-  font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 
-  & #product {
-    display: flex !important;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+	& #product {
+		display: flex !important;
+		flex-direction: column;
+		gap: 30px;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
 
-  &-titleTop {
-    font-size: 40px;
-    font-weight: 600;
-  }
+	&-titleTop {
+		font-size: 40px;
+		font-weight: 600;
+	}
 
-  &-titleBottom {
-    font-size: 100px;
-    font-weight: 700;
-    color: lavender;
-    text-shadow: 0 0 3px #000;
-  }
+	&-titleBottom {
+		font-size: 100px;
+		font-weight: 700;
+		color: lavender;
+		text-shadow: 0 0 3px #000;
+	}
 
-  &-imgWrapper {
-    width: 277px;
-    height: 312px;
-    & img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
+	&-imgWrapper {
+		width: 277px;
+		height: 312px;
+		& img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
 
-  &-productPrice {
-    color: hsl(225, 9%, 17%, 30%);
-  }
-}
+	&-productPrice {
+		color: hsl(225, 9%, 17%, 30%);
+	}
 
-.slick-next,
-.slick-prev {
-  color: #282a30;
-  top: 0;
-  background: transparent;
-  border-radius: 8px;
-  border: 2px solid #282a30;
-  width: 48px;
-  height: 48px;
-}
+	.slick-next,
+	.slick-prev {
+		color: #282a30;
+		top: 0;
+		// background: red;
+		border-radius: 8px;
+		border: 2px solid #282a30;
+		width: 48px;
+		height: 48px;
+	}
 
-.slick-slider .slick-prev {
-  // left: calc(100% - 150px);
-  left: auto;
-  right: 140px;
-}
+	.slick-slider .slick-prev {
+		left: auto;
+		right: 140px;
+	}
 
-.slick-slider .slick-next {
-  right: 12px;
-}
+	.slick-slider .slick-next {
+		right: 12px;
+	}
 
-.slick-prev::before {
-  content: url("./Vector 1.svg");
-  opacity: 1;
-}
-.slick-next::before {
-  content: url("./Vector 2.svg");
-  opacity: 1;
-}
+	.slick-prev::before {
+		content: url('./slide/btnPrev.svg');
+		opacity: 1;
+	}
+	.slick-next::before {
+		content: url('./slide/btnNext.svg');
+		opacity: 1;
+	}
 
-.slick-list {
-  padding-top: 80px;
+	.slick-list {
+		padding-top: 80px;
+	}
 }

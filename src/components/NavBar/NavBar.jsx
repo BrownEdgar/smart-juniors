@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { FcHome } from 'react-icons/fc';
 import { TfiLayoutSlider } from 'react-icons/tfi';
+import { FaPage4 } from 'react-icons/fa';
 import ROUTES from '../../routes/routes';
 import './NavBar.scss';
 
@@ -16,6 +17,11 @@ export default function NavBar() {
 				<li className="NavBar-sliderLink">
 					<NavLink to={ROUTES.SLIDER} title="slider">
 						<TfiLayoutSlider />
+					</NavLink>
+				</li>
+				<li className="NavBar-sliderLink">
+					<NavLink to={ROUTES.PAGINATION} title="pagination">
+						<FaPage4 />
 					</NavLink>
 				</li>
 			</ul>

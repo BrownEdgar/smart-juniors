@@ -1,4 +1,5 @@
 .App {
-	background: #080808;
-	height: 100vh;
+	--bg-olor: #080808;
+	background: var(--bg-olor);
+	min-height: 100vh;
 }

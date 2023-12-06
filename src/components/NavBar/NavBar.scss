@@ -2,7 +2,8 @@
 	height: var(--navBar-height);
 	background: #121212;
 	padding: 6px 10px;
-	z-index: 10;
+	position: relative;
+	z-index: 99;
 
 	&-homeLink {
 		margin-right: auto;
