@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700&family=Roboto&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  max-width: 1280px;
+  margin: 0 auto;
   line-height: 1.6;
   font-family: "Playpen Sans";
 }
@@ -18,19 +18,4 @@ a {
 
 ul {
   list-style: none;
-}
-
-.slick-slider {
-  width: 96%;
-  margin: 20px auto;
-}
-
-.slick-list {
-  height: 500px;
-  background-color: #222;
-}
-
-.slick-slide {
-  padding: 1em;
-  color: #fff;
 }
