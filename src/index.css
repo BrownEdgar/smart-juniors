@@ -6,8 +6,6 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   line-height: 1.6;
   font-family: "Playpen Sans";
@@ -20,4 +18,19 @@ a {
 
 ul {
   list-style: none;
+}
+
+.slick-slider {
+  width: 96%;
+  margin: 20px auto;
+}
+
+.slick-list {
+  height: 500px;
+  background-color: #222;
+}
+
+.slick-slide {
+  padding: 1em;
+  color: #fff;
 }
