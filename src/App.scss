@@ -1,1 +1,56 @@
 
+.App{
+    margin: 0 auto;
+    width: 1140px;
+    & h1{
+        font-size: 40px;
+        color: rgb(37, 172, 172);
+        margin: 20px 0;
+        text-align: center;
+        text-transform:uppercase
+    }
+    & h2{
+        background-color: rgb(37, 172, 172);
+        color: white;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    & h2:hover{
+        background-color: black;
+        transform: scale(1.1);
+    }
+    & p{
+        background-color: rgb(160, 212, 212);
+        color: white;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    & p:hover{
+        background-color: black;
+        transform: scale(1.1);
+    }
+    & select{
+        background-color: aqua;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+    & button{
+        background-color: aqua;
+        padding: 10px;
+        border-radius: 8px;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 30px;
+    }
+    & button:active{
+        background-color: grey;
+        
+    }
+    & option{
+        background-color: rgb(187, 173, 173);
+        color: rgb(17, 17, 17);
+    }
+}
