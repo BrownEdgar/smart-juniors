@@ -1,1 +1,54 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #181818;
 
+  &-langBox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    h2 {
+      color: white;
+      font-size: 18px;
+    }
+
+    #language {
+      font-size: 18px;
+      outline: none;
+      border: 1px solid grey;
+      color: white;
+      background-color: #131313;
+      padding: 12px;
+      // border-radius: 12px;
+    }
+  }
+
+  &-content {
+    max-width: 768px;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 41px;
+  }
+
+  p {
+    color: #e6e6e6;
+    font-size: 16.8px;
+    line-height: 1.6;
+    padding: 20px 0;
+  }
+}
+
+option {
+  display: block;
+  padding: 20px;
+  margin: 10px;
+}

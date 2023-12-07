@@ -1,12 +1,6 @@
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
-import App from './react_pagination/App';
-import store from './react_pagination/app/store';
+import App from './App';
 
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <App />
-  </Provider>
-);
+ReactDOM.createRoot(document.getElementById('root')).render( <App />);
