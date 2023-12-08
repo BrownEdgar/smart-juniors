@@ -1,1 +1,44 @@
+body {
+  background-color: #131313;
+}
 
+select {
+  margin-left: 30px;
+  outline: none;
+  background-color: #131313;
+  color: #FEFEFE;
+  padding: 0 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: '2px solid #3498db';
+  cursor: pointer;
+  appearance: 'none';
+}
+
+.header {
+  display: flex;
+  background-color: '#131313';
+  color: #FEFEFE;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  li {
+      margin-right: 30px;
+      cursor: pointer;
+    }
+}
+
+.container {
+  margin-top: 100px;
+  width: 53%;
+  color: #FEFEFE;
+  h1 {
+    font-size: 42px;
+  }
+  p {
+    text-align: left;
+  }
+}

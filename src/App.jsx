@@ -13,18 +13,34 @@ export default function App() {
   return (
     <Provider locale={language}>
       <div className='App'>
-        <select name="language" id="language" onChange={handleChange}>
-          {
-            Object.keys(LOCALES).map(elem => {
-              return (
-                <option value={elem} key={elem}>{LOCALES[elem]}</option>
-              )
-            })
-          }
-        </select>
-        <h2>{Translate('title', { secretWord: "18.2.0" })}</h2>
+        <header className='header'>
+          <nav>
+            <ul className='menu'>
+              <li>{Translate('about')}</li>
+              <li>{Translate('blog')}</li>
+              <li>{Translate('projects')}</li>
+              <li>{Translate('illustration')}</li>
+              <li>GitHub</li>
+            </ul>
+          </nav>
+          <select name="language" id="language" onChange={handleChange}>
+            {
+              Object.keys(LOCALES).map(elem => {
+                return (
+                  <option value={elem} key={elem}>{LOCALES[elem]}</option>
+                )
+              })
+            }
+          </select>
+        </header>
+
+        <div className='container'>
+          <h1>{Translate('mainTitle')}</h1>
+          <p>{Translate('mainContent')}</p>
+        </div>
+        {/* <h2>{Translate('title', { secretWord: "18.2.0" })}</h2>
         <p>{Translate('desc')}</p>
-        <button>{Translate('btnText')}</button>
+        <button>{Translate('btnText')}</button> */}
       </div>
     </Provider>
   )
