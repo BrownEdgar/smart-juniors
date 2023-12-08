@@ -8,7 +8,7 @@ export default function PageNumbers({ totalPosts, perPage, changePage }) {
 		<div className="PageNumbers">
 			{numbers.map((number) => {
 				return (
-					<p
+					<div
 						key={number}
 						className="PageNumbers-pageNumber"
 						onClick={() => {
@@ -16,7 +16,7 @@ export default function PageNumbers({ totalPosts, perPage, changePage }) {
 						}}
 					>
 						{number}
-					</p>
+					</div>
 				);
 			})}
 		</div>
@@ -26,5 +26,5 @@ export default function PageNumbers({ totalPosts, perPage, changePage }) {
 PageNumbers.propTypes = {
 	totalPosts: PropTypes.number.isRequired,
 	perPage: PropTypes.number.isRequired,
-	changePage: PropTypes.function.isRequired,
+	changePage: PropTypes.func.isRequired,
 };

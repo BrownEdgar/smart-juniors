@@ -1,0 +1,53 @@
+.Post {
+	width: 42%;
+	height: 80px;
+	text-align: center;
+	text-transform: capitalize;
+	box-shadow: 4px 7px 5px #0005;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(to right, cyan, magenta);
+	background-clip: border-box;
+	-webkit-background-clip: border-box;
+	border: 2px solid #111;
+	border-radius: 20px;
+	transition: 0.2s ease;
+	cursor: pointer;
+	// overflow: hidden;
+
+	&-title {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 6px 14px;
+		font-size: 1em;
+		font-weight: 400;
+		border: 2px solid #111;
+		border-radius: 8px;
+		background-image: linear-gradient(to bottom, #080808, #121212);
+
+		& > h4 {
+			background-clip: text;
+			-webkit-background-clip: text;
+			background-image: linear-gradient(to right, cyan, magenta);
+			transition: 0.2s ease;
+		}
+
+		&:hover {
+			& > h4 {
+				color: transparent;
+			}
+		}
+	}
+
+	&:hover {
+		border-color: transparent;
+
+		& > div {
+			border-color: transparent;
+		}
+	}
+}

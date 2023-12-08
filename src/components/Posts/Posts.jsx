@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAsyncPosts, getPosts } from '../../features/posts/postsSlice';
 import PageNumbers from '../PageNumbers/PageNumbers';
+import Post from '../Post/Post';
+import { ThreeDots } from '../Loaders';
 import './Posts.scss';
 
 const totalPosts = 100;
@@ -16,12 +18,10 @@ export default function Posts() {
 
 	useEffect(() => {
 		dispatch(getAsyncPosts(options));
-	}, []);
+	}, [options, dispatch]);
 
 	const changePage = (page) => {
 		setOptions((preOptions) => {
-			console.log({ ...preOptions, page });
-
 			return {
 				...preOptions,
 				page,
@@ -31,22 +31,13 @@ export default function Posts() {
 
 	return (
 		<section className="Posts">
-			<h2 className="Posts-title">Posts</h2>
+			<h2 className="Posts-title">POSTS</h2>
 			<div className="Posts-postWrapper">
 				{posts.status === 'pending' ? (
-					<h2 className="pending">
-						<span>.</span>
-						<span>.</span>
-						<span>.</span>
-					</h2>
+					<ThreeDots />
 				) : (
 					posts.data.map((post) => {
-						return (
-							<div className="Posts-post" key={post.id}>
-								<div className="Posts-backPostWrapper">NO DATA</div>
-								<div className="Posts-frontPostWrapper">{post.title}</div>
-							</div>
-						);
+						return <Post post={post} key={post.id} />;
 					})
 				)}
 			</div>

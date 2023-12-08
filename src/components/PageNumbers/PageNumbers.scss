@@ -10,15 +10,28 @@
 		width: 30px;
 		height: 30px;
 		line-height: 30px;
-		border: 1px solid #fff3;
 		border-radius: 4px;
 		text-align: center;
 		padding: 0 4px;
+		background: linear-gradient(to right, cyan, magenta);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: lavender;
+		font-weight: 600;
+		border: 1px solid #111;
+		border-radius: 2px;
 		user-select: none;
 		cursor: pointer;
 		transition: 0.2s ease;
 
 		&:hover {
+			color: transparent;
+			border-image: linear-gradient(to right, cyan, magenta);
+			border-image-slice: 1;
+			border-radius: 6px;
+		}
+
+		&:active {
 			color: #111;
 			background: lavender;
 		}
