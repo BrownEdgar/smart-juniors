@@ -1,0 +1,112 @@
+{
+  "deals": [
+    {
+      "id": 1,
+      "title": "Meadow view",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 2.532,
+      "price": 570,
+      "image": "https://i.pinimg.com/564x/96/9e/29/969e29466c4040aa181f7d80e6cac331.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Orchard House",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 3.240,
+      "price": 820,
+      "image": "https://i.pinimg.com/564x/63/fb/e8/63fbe803f1db8c41289abd266f8f68ab.jpg"
+    },
+    {
+      "id": 3,
+      "title": "School House",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 4.214,
+      "price": 550,
+      "image": "https://i.pinimg.com/564x/27/71/9a/27719a59927e2da90e93e54520d83729.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Meadow view",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 2.486,
+      "price": 1420,
+      "image": "https://i.pinimg.com/564x/a0/61/5d/a0615d8f00e7b0695730b36d90d257a1.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Orchard House",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 3.451,
+      "price": 1200,
+      "image": "https://i.pinimg.com/564x/32/c9/06/32c906ef9d3ddc1219c7d2ca9cb07a8f.jpg"
+    },
+    {
+      "id": 6,
+      "title": "School House",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 5.214,
+      "price": 750,
+      "image": "https://i.pinimg.com/564x/ae/fa/06/aefa065be3212471971782bdbc51a77d.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Meadow view",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 1.948,
+      "price": 680,
+      "image": "https://i.pinimg.com/564x/e0/8f/a7/e08fa78de1bb293e8093ff80454040a7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Orchard House",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 4.125,
+      "price": 1320,
+      "image": "https://i.pinimg.com/564x/54/bf/e3/54bfe397850c0409944f9d7a59909ef8.jpg"
+    },
+    {
+      "id": 9,
+      "title": "School House",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 5.134,
+      "price": 1800,
+      "image": "https://i.pinimg.com/564x/63/90/e9/6390e91e2387fd44623deed545890cb2.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Meadow view",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 2.847,
+      "price": 1420,
+      "image": "https://i.pinimg.com/564x/de/c1/e2/dec1e28ac741d47f1c8f6ebb5ff9d7f4.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Orchard House",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 3.132,
+      "price": 970,
+      "image": "https://i.pinimg.com/564x/f5/b0/19/f5b019e9de2b7c470d25eea0cf3fba68.jpg"
+    },
+    {
+      "id": 12,
+      "title": "School House",
+      "bads": 3,
+      "baths": 3,
+      "sqFoot": 4.124,
+      "price": 830,
+      "image": "https://i.pinimg.com/564x/17/b1/be/17b1bec5be23849b242c6edbb559405d.jpg"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+.DealsCarts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 0;
+  row-gap: 30px;
+
+  .item {
+    width: 30%;
+
+    .imgBox {
+      width: 100%;
+      aspect-ratio: 1;
+
+      &>img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .contentBox {
+      padding: 24px;
+      border: 1px solid #c4c4c4;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .title {
+        color: #1b213a;
+        font-size: 28px;
+      }
+
+      ._params {
+        display: flex;
+        gap: 10px;
+        color: #646464;
+      }
+
+      .priceBox {
+        ._price {
+          color: #fb5e16;
+          font-size: 21px;
+          font-weight: 600;
+
+          &::before {
+            content: "\0024";
+          }
+        }
+      }
+    }
+  }
+
+}
