@@ -25,6 +25,11 @@ ul {
 	list-style: none;
 }
 
+/* input {
+	
+
+} */
+
 .centerAlign {
 	display: flex;
 	flex-direction: column;

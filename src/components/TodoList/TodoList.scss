@@ -1,0 +1,20 @@
+.TodoList {
+	width: 1280px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 18px;
+	padding: 1em;
+
+	li {
+		width: 800px;
+		height: 46px;
+		border: 2px solid royalblue;
+		border-radius: 40px;
+		height: 46px;
+		padding: 4px 20px;
+		color: lavender;
+		font-size: 1.2em;
+	}
+}

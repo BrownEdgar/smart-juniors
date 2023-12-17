@@ -1,21 +1,14 @@
 .NavBar {
 	height: var(--navBar-height);
 	background: #121212;
-	padding: 6px 10px;
+	padding: 6px 16px;
 	position: relative;
 	z-index: 99;
 
-	&-homeLink {
-		margin-right: auto;
-	}
-
-	&-sliderLink {
-		margin-left: auto;
-	}
-
-	ul {
+	&-list {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: left;
+		gap: 22px;
 		color: lavender;
 		li {
 			a {
@@ -26,5 +19,13 @@
 				}
 			}
 		}
+	}
+
+	&-homeLink {
+		margin-right: auto;
+	}
+
+	&-sliderLink:nth-child(1) {
+		margin-left: auto;
 	}
 }

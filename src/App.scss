@@ -1,5 +1,7 @@
 .App {
-	--bg-olor: #080808;
-	background: var(--bg-olor);
+	--bg-color: rgb(41, 42, 45);
+	--inputBtn-height: 46px;
+	background: var(--bg-color);
+	color: lavender;
 	min-height: 100vh;
 }
