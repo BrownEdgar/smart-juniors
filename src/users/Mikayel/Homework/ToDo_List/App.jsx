@@ -128,7 +128,7 @@ export default function App() {
         <Modal
           isOpen={isModalOpen}
           onClose={closeModal}
-          onEdit={saveEdit}
+          saveEdit={saveEdit}
           editText={editText}
           setEditText={setEditText}
         />

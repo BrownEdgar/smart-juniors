@@ -2,7 +2,7 @@ import React from 'react';
 import './Modal.scss';
 
 // eslint-disable-next-line react/prop-types
-export default function Modal({ isOpen, onClose, onEdit, editText, setEditText }) {
+export default function Modal({ isOpen, onClose, saveEdit, editText, setEditText }) {
   if (!isOpen) return null;
 
   return (
@@ -21,7 +21,7 @@ export default function Modal({ isOpen, onClose, onEdit, editText, setEditText }
             value={editText}
             onChange={e => setEditText(e.target.value)}
           />
-          <span className="App-btn" onClick={onEdit}>
+          <span className="App-btn" onClick={saveEdit}>
             Save
           </span>
         </div>
